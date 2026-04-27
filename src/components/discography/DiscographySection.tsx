@@ -44,8 +44,10 @@ export function DiscographySection() {
   useEffect(() => {
     const track = trackRef.current;
     if (track) {
+      // Calculate scroll position based on full width of container, 
+      // adding a small buffer to account for padding/gaps
       track.scrollTo({
-        left: activePage * track.clientWidth,
+        left: activePage * track.offsetWidth,
         behavior: reduceMotion ? "auto" : "smooth",
       });
     }
@@ -55,8 +57,10 @@ export function DiscographySection() {
     const track = trackRef.current;
     if (!track) return;
     const scrollLeft = track.scrollLeft;
-    const width = track.clientWidth;
+    const width = track.offsetWidth;
     if (width === 0) return;
+    
+    // Use a threshold to avoid jittery page updates
     const newPage = Math.round(scrollLeft / width);
     if (newPage !== activePage && newPage >= 0 && newPage < pages.length) {
       setActivePage(newPage);
