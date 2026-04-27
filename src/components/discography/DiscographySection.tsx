@@ -51,13 +51,15 @@ export function DiscographySection() {
     }
   }, [activePage, reduceMotion]);
 
-  const goToPage = (pageIndex: number) => {
-    if (!pages.length) {
-      return;
-    }
+  const goToPage = (direction: 'next' | 'prev') => {
+    if (!pages.length) return;
 
-    const nextPage = ((pageIndex % pages.length) + pages.length) % pages.length;
-    setActivePage(nextPage);
+    setActivePage((current) => {
+      if (direction === 'next') {
+        return (current + 1) % pages.length;
+      }
+      return (current - 1 + pages.length) % pages.length;
+    });
   };
 
   return (
@@ -84,18 +86,18 @@ export function DiscographySection() {
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 p-1 text-slate-800/70">
               <button
                 type="button"
-                onClick={() => goToPage(activePage - 1)}
+                onClick={() => goToPage('prev')}
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-slate-100/80 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-eb-accent/70"
                 aria-label="Previous carousel page"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
               <span className="min-w-20 px-2 text-center text-[10px] font-bold uppercase tracking-widest text-slate-700/55">
-                {Math.min(activePage + 1, Math.max(pages.length, 1))}/{Math.max(pages.length, 1)}
+                {activePage + 1}/{Math.max(pages.length, 1)}
               </span>
               <button
                 type="button"
-                onClick={() => goToPage(activePage + 1)}
+                onClick={() => goToPage('next')}
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-slate-100/80 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-eb-accent/70"
                 aria-label="Next carousel page"
               >
