@@ -1,0 +1,115 @@
+{
+  "title": "Implement Eric Bellinger requested album tracklists, credits, and music-video URLs",
+  "projectRoot": "/eric-bellinger",
+  "inputDataFile": "/eric-bellinger/eric_bellinger_requested_album_tracklists_credits_videos.json",
+  "preferredTargetFiles": [
+    "src/data/discography.ts",
+    "src/data/index.ts",
+    "src/components/discography/DiscographySection.tsx",
+    "src/components/discography/DiscographyDetailsSheet.tsx"
+  ],
+  "context": "The data file contains full best-effort public-source tracklists for these albums: It'll All Make Sense Later, The Rebirth 3: The Party & The Bedroom, The Rebirth 3: Remixes & More, 1(800)HIT-EAZY: Line 2, 1-800-HIT-EAZY, Eazy Call, and In the Meantime, Pt. 2. Each track includes primary artists, featured artists, available public-visible credits, credit status, and a music_video object with YouTube URLs when verified.",
+  "primaryGoal": "Wire this data into the existing discography/detail-sheet experience so each requested album displays its complete tracklist, feature credits, public-visible song credits, and YouTube music-video actions where available.",
+  "rules": [
+    "Do not invent credits or YouTube links.",
+    "Preserve the section order and heading hierarchy already used by the site.",
+    "Keep the existing visual design and interactions intact unless a minimal data-driven UI adjustment is required.",
+    "Use the new JSON as source of truth for these seven requested albums.",
+    "Do not overwrite unrelated albums unless merging by album title/id is required.",
+    "If an existing album already exists in src/data/discography.ts, merge the new track data into that album record rather than duplicating it.",
+    "For credits_status values that are partial or artist/features-only, render the data honestly and do not label it as complete liner notes.",
+    "Only show a YouTube button when track.music_video.youtube_url is a non-empty URL.",
+    "If track.music_video.has_music_video is true but youtube_url is null, show a subtle 'video needs verification' admin/debug note only if the app already has admin/debug states; otherwise hide it from the public UI.",
+    "Keep navbar/footer unrelated changes untouched."
+  ],
+  "implementationSteps": [
+    {
+      "step": 1,
+      "name": "Preflight",
+      "instructions": [
+        "cd /eric-bellinger",
+        "Confirm the data file exists at ./eric_bellinger_requested_album_tracklists_credits_videos.json or move it into the project root if needed.",
+        "Inspect package.json and existing src/data files to confirm whether the site uses TypeScript objects, JSON imports, or static arrays."
+      ]
+    },
+    {
+      "step": 2,
+      "name": "Place data",
+      "instructions": [
+        "Preferred: copy the JSON into src/data/ericBellingerRequestedAlbumTracklists.json.",
+        "Alternative: convert it into a typed TS export at src/data/albumTracklistsRequested.ts if the repo avoids JSON imports.",
+        "Make sure the source_registry and meta fields are preserved for future auditing."
+      ]
+    },
+    {
+      "step": 3,
+      "name": "Create or update types",
+      "instructions": [
+        "Create or update TypeScript interfaces for AlbumTracklist, TrackCredit, TrackMusicVideo, and RequestedAlbumTracklistData if needed.",
+        "Credits should support role, name, and optional source.",
+        "Music video should support has_music_video, youtube_url, youtube_video_id, youtube_status, video_type, confidence, notes, and optional non_youtube_evidence."
+      ]
+    },
+    {
+      "step": 4,
+      "name": "Merge into discography data",
+      "instructions": [
+        "Open src/data/discography.ts.",
+        "Find matching albums by normalized title and/or id.",
+        "For the seven requested albums, replace incomplete/placeholder tracklists with the new tracks array from the JSON.",
+        "Preserve existing cover art, platform links, release metadata, and animations if they are already better than the incoming data.",
+        "If an album is missing from the current discography, add it using the incoming album record."
+      ]
+    },
+    {
+      "step": 5,
+      "name": "Update DiscographyDetailsSheet rendering",
+      "instructions": [
+        "Open src/components/discography/DiscographyDetailsSheet.tsx.",
+        "Ensure the details sheet renders: track number, title/display_title, duration, featured artists, available credits, and music-video CTA.",
+        "Group The Rebirth 3: The Party & The Bedroom by disc_number if the data has disc 1 and disc 2.",
+        "For credits, render a compact line like: Featured: Mozzy | Writers: Eric Aldwin Bellinger Jr., Timothy Cornell Patterson | Producers: Dave O, Tariq, Dylan Graham.",
+        "If writers/producers are missing, do not show 'pending' unless the existing UI already uses metadata warning states."
+      ]
+    },
+    {
+      "step": 6,
+      "name": "YouTube video behavior",
+      "instructions": [
+        "Only render 'Watch Video' or 'Open on YouTube' when track.music_video.youtube_url exists.",
+        "If the app has an in-page YouTube modal, pass the youtube_video_id into the embed.",
+        "If no modal exists, open the YouTube URL in a new tab with rel='noopener noreferrer'.",
+        "Do not use non-YouTube evidence as a YouTube link."
+      ]
+    },
+    {
+      "step": 7,
+      "name": "QA checks",
+      "instructions": [
+        "Run the project typecheck/build/lint commands available in package.json.",
+        "Verify the seven requested albums render with complete track counts: 15, 24, 9, 14, 14, 15, and 3 respectively.",
+        "Verify no duplicate album cards were created.",
+        "Verify only tracks with YouTube URLs show a video button.",
+        "Verify The Rebirth 3 disc split does not break layout on mobile.",
+        "Verify the page still builds with no runtime console errors."
+      ]
+    },
+    {
+      "step": 8,
+      "name": "Implementation report",
+      "instructions": [
+        "Create /eric-bellinger/album_tracklists_implementation_report.md.",
+        "Report files changed, commands run, pass/fail status, album counts, video URL counts, and unresolved credits/video items."
+      ]
+    }
+  ],
+  "acceptanceCriteria": [
+    "The seven requested albums show full ordered tracklists.",
+    "Features are visible on track rows/details.",
+    "Available public-visible credits are displayed without claiming missing credits are complete.",
+    "YouTube buttons appear only where a verified YouTube URL exists.",
+    "Existing site design remains intact.",
+    "Build/typecheck passes or the report documents exact failures."
+  ],
+  "copyPastePrompt": "Hermes, implement the Eric Bellinger requested album tracklists and video data inside /eric-bellinger. Use /eric-bellinger/eric_bellinger_requested_album_tracklists_credits_videos.json as the source of truth. Copy it into src/data/ericBellingerRequestedAlbumTracklists.json or convert it into a typed TS export if that matches the repo. Merge the seven requested albums into src/data/discography.ts by title/id without duplicating albums: It'll All Make Sense Later, The Rebirth 3: The Party & The Bedroom, The Rebirth 3: Remixes & More, 1(800)HIT-EAZY: Line 2, 1-800-HIT-EAZY, Eazy Call, and In the Meantime, Pt. 2. Update DiscographyDetailsSheet so track rows display track number, title, duration, features, available public-visible credits, and a YouTube video action only when track.music_video.youtube_url exists. Do not invent writer/producer/personnel credits. Do not convert non-YouTube evidence into YouTube links. Group The Rebirth 3 by disc_number if useful. Preserve the existing design and section hierarchy. Run build/typecheck/lint if available and write album_tracklists_implementation_report.md with files changed, counts, commands, pass/fail, and unresolved items."
+}

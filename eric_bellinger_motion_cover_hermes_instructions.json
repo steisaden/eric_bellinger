@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "project": "Eric Bellinger motion cover pitch package",
+    "purpose": "Creative pitch deck / proof of concept for subtle motion-cover treatments applied to existing album covers.",
+    "intended_user": "Hermes agent",
+    "created_for": "User pitch to Eric Bellinger team",
+    "version": "1.0",
+    "date_context": "2026-04-26",
+    "note": "This package assumes the original high-resolution album covers will be supplied locally. Hermes should animate the supplied artwork only and should not redesign or materially alter the original cover art beyond the specified subtle motion effects."
+  },
+  "hermes_master_prompt": "You are Hermes, acting as a motion-cover production agent. Your job is to create subtle, premium, loopable motion-cover executions for Eric Bellinger album covers using the user-supplied still cover art. Do not redesign the covers. Preserve the original composition, typography, color palette, and identity of each cover. Only add tasteful, restrained motion according to the per-album instructions below. The final result should feel official, polished, and pitch-ready. Each animation should be a seamless loop, subtle rather than flashy, and should never distract from the original artwork. If any source cover is missing, stop and request the missing source file before proceeding. If layer separation is needed, create masks/cutouts carefully and document all assumptions. Deliver final motion covers and preview exports with a concise handoff report.",
+  "execution_mode": {
+    "style": "subtle, premium, cinematic, restrained",
+    "priority_order": [
+      "Preserve original cover art",
+      "Use only the requested motion effects",
+      "Keep motion believable and elegant",
+      "Ensure seamless looping",
+      "Avoid over-animation",
+      "Deliver export-ready files and a handoff summary"
+    ],
+    "behavior_rules": [
+      "Do not recreate the cover from scratch.",
+      "Do not move or distort typography unless explicitly instructed.",
+      "Do not change Eric Bellinger's likeness or overall composition.",
+      "Do not add extra effects beyond the requested motion and subtle enhancement unless absolutely necessary to make the loop feel natural.",
+      "If a requested motion target is ambiguous, preserve the art and apply the effect conservatively.",
+      "Keep all motion slow and organic.",
+      "Mask edges cleanly to avoid visible cutout artifacts.",
+      "Maintain album-cover readability at all times."
+    ]
+  },
+  "inputs_required": {
+    "required_assets": [
+      "High-resolution cover image for each album/project (PNG or JPG preferred)",
+      "Output folder path",
+      "Project workspace path"
+    ],
+    "optional_assets": [
+      "Layered PSD/AI files if available",
+      "Reference clips for smoke/water/glow style",
+      "Brand deck or pitch deck template if these clips will be embedded in a presentation"
+    ],
+    "if_missing_assets": "Pause execution and ask the user to provide the missing source cover files before building the motion covers."
+  },
+  "recommended_implementation": {
+    "preferred_stack": [
+      "Remotion or Motion Canvas for code-driven motion assembly",
+      "FFmpeg for export/transcode tasks",
+      "ImageMagick or Photoshop scripting for prep if needed",
+      "Optional: After Effects if Hermes has access to that workflow"
+    ],
+    "suggested_repo_structure": {
+      "root": "eric-bellinger-motion-covers/",
+      "folders": [
+        "assets/source-covers/",
+        "assets/derived-masks/",
+        "projects/cuffing-season/",
+        "projects/cuffing-season-pt2/",
+        "projects/cuffing-season-3/",
+        "projects/itll-all-make-sense-later/",
+        "projects/itll-all-make-sense-later-deluxe/",
+        "projects/it-all-makes-sense/",
+        "projects/it-all-makes-sense-deluxe/",
+        "exports/final/",
+        "exports/previews/",
+        "docs/"
+      ]
+    },
+    "workflow_steps": [
+      "1. Ingest the source album cover into the correct project folder.",
+      "2. Inspect the image and identify the exact visual regions that need motion.",
+      "3. Create masks or isolate motion layers (smoke, clouds, water, foliage, stars, spotlight glow, etc.).",
+      "4. Build subtle looping animation curves for each motion element.",
+      "5. Composite the moving elements back into the original cover without breaking the composition.",
+      "6. Export a seamless square loop.",
+      "7. Render a preview MP4 and a final deliverable MP4.",
+      "8. Generate a handoff note describing what was animated on each cover and any assumptions made."
+    ]
+  },
+  "global_output_spec": {
+    "primary_format": "MP4",
+    "codec": "H.264",
+    "secondary_format_optional": "WEBM or GIF preview",
+    "resolution": "1080x1080",
+    "frame_rate": 24,
+    "duration_seconds": 8,
+    "loop_type": "seamless loop",
+    "quality": "high",
+    "audio": "none",
+    "naming_convention": "{album_slug}_motion_cover_v1.mp4",
+    "additional_deliverables": [
+      "1 still poster frame JPG or PNG",
+      "1 short preview file for quick review",
+      "1 notes file per album describing motion treatment"
+    ]
+  },
+  "global_art_direction": {
+    "motion_philosophy": "Subtle ambient life. The viewer should feel the art is breathing, not being transformed into a flashy visualizer.",
+    "acceptable_motion_profile": {
+      "water": "slow ebb and flow with minimal displacement",
+      "smoke_clouds": "gentle drift with low-opacity variation",
+      "flora": "light wind sway with small arc movement",
+      "particles": "soft, sparse, slow-moving particles",
+      "stars": "small twinkle/pulse with slight intensity variance",
+      "glow": "soft pulse with restrained brightness"
+    },
+    "avoid": [
+      "Harsh zooms",
+      "Rapid particle systems",
+      "Heavy camera motion",
+      "Overly bright glows",
+      "Warping faces or text",
+      "Anything that makes the cover look fan-made in a cheap way"
+    ]
+  },
+  "album_instructions": [
+    {
+      "id": "cuffing-season",
+      "title": "Cuffing Season",
+      "objective": "Create a subtle ambient nature treatment that makes the cover feel alive while preserving its romantic, dreamy mood.",
+      "motion_targets": [
+        {
+          "element": "clouds / smoke",
+          "instruction": "Add slow cloud/smoke movement with a gentle horizontal drift and light opacity breathing. Keep it soft and atmospheric."
+        },
+        {
+          "element": "flowers and trees inside the head outlines",
+          "instruction": "Animate the flowers and trees so they sway lightly as if moved by a soft breeze. The movement should be gentle and organic, not exaggerated."
+        },
+        {
+          "element": "sun",
+          "instruction": "Add a subtle twinkling or shimmer effect to the sun. Keep it elegant and intermittent rather than flashy."
+        },
+        {
+          "element": "water",
+          "instruction": "Create a mild ebb-and-flow motion in the water so it feels alive. Use restrained ripple displacement only."
+        }
+      ],
+      "loop_notes": "Make the smoke and water loops long and smooth so the loop point is invisible.",
+      "avoid": [
+        "Do not animate the heads themselves",
+        "Do not create strong wave motion",
+        "Do not make the sun blink hard"
+      ]
+    },
+    {
+      "id": "cuffing-season-pt2",
+      "title": "Cuffing Season Pt. 2",
+      "objective": "Animate each quadrant with its own subtle environmental movement while preserving the collage structure.",
+      "motion_targets": [
+        {
+          "element": "top right square",
+          "instruction": "Add drifting smoke and a few subtle falling particles. The particles should be sparse and soft, not dense."
+        },
+        {
+          "element": "bottom right square",
+          "instruction": "Add soft star twinkles with minimal brightness pulsing so the stars feel alive."
+        },
+        {
+          "element": "top left square",
+          "instruction": "Add a gentle blowing-snow effect. The snow should move diagonally as if driven by wind and remain subtle."
+        },
+        {
+          "element": "bottom left square",
+          "instruction": "Add cloud movement with a slow, natural drift. Keep the effect ambient rather than dramatic."
+        }
+      ],
+      "loop_notes": "Because this cover has multiple zones, balance the motion so no quadrant overpowers the others.",
+      "avoid": [
+        "Do not let particle density become distracting",
+        "Do not move panel borders or typography",
+        "Do not make the snowstorm intense"
+      ]
+    },
+    {
+      "id": "cuffing-season-3",
+      "title": "Cuffing Season 3",
+      "objective": "Add soft wind-driven environmental motion and subtle water movement while keeping the cover classy and calm.",
+      "motion_targets": [
+        {
+          "element": "flowers",
+          "instruction": "Animate the flowers with a subtle sway/rustle, as though touched by light wind."
+        },
+        {
+          "element": "palm tree limbs",
+          "instruction": "Make the palm fronds gently move and rustle with the same wind profile as the flowers."
+        },
+        {
+          "element": "leaves",
+          "instruction": "Add subtle leaf movement to reinforce the breeze effect."
+        },
+        {
+          "element": "water in the background of the middle image",
+          "instruction": "Animate the water with a restrained ebb-and-flow effect. Keep the movement minimal and seamless."
+        }
+      ],
+      "loop_notes": "Use one unified wind rhythm across the foliage so the scene feels cohesive.",
+      "avoid": [
+        "Do not animate faces or body posture",
+        "Do not create choppy foliage motion",
+        "Do not make the water noticeably turbulent"
+      ]
+    },
+    {
+      "id": "itll-all-make-sense-later",
+      "title": "It'll All Make Sense Later",
+      "objective": "Bring the scene to life with restrained environmental motion.",
+      "motion_targets": [
+        {
+          "element": "water",
+          "instruction": "Animate the water so it has a gentle, continuous moving-water effect."
+        },
+        {
+          "element": "flora",
+          "instruction": "Animate the plant life with a slight sway as if moved by a light breeze."
+        },
+        {
+          "element": "smoke",
+          "instruction": "Add soft drifting smoke motion with subtle opacity variation."
+        }
+      ],
+      "loop_notes": "Keep the overall movement introspective and mature, not energetic.",
+      "avoid": [
+        "Do not add extra glow or particles unless needed for realism",
+        "Do not overcomplicate the scene"
+      ]
+    },
+    {
+      "id": "itll-all-make-sense-later-deluxe",
+      "title": "It'll All Make Sense Later (Deluxe)",
+      "objective": "Create a restrained hero glow treatment behind Eric Bellinger.",
+      "motion_targets": [
+        {
+          "element": "green glow behind Eric Bellinger",
+          "instruction": "Add a soft green glow or aura behind Eric Bellinger. The glow should subtly pulse or breathe, remaining elegant and not overpowering the art."
+        }
+      ],
+      "loop_notes": "This motion cover should be extremely minimal and premium. The glow pulse should be slow and smooth.",
+      "avoid": [
+        "Do not turn the glow into a neon effect",
+        "Do not add unrelated motion elsewhere unless necessary for integration"
+      ]
+    },
+    {
+      "id": "it-all-makes-sense",
+      "title": "It All Makes Sense",
+      "objective": "Add a tasteful flowing-water effect while leaving everything else largely intact.",
+      "motion_targets": [
+        {
+          "element": "water",
+          "instruction": "Create a slow flowing-water effect that feels natural and understated."
+        }
+      ],
+      "loop_notes": "This should be one of the cleanest and simplest motion covers in the set.",
+      "avoid": [
+        "Do not animate non-water areas unless necessary to hide seams",
+        "Do not add extra effects"
+      ]
+    },
+    {
+      "id": "it-all-makes-sense-deluxe",
+      "title": "It All Makes Sense (Deluxe)",
+      "objective": "Enhance the spotlight with a subtle atmospheric glow.",
+      "motion_targets": [
+        {
+          "element": "spotlight",
+          "instruction": "Add a subtle glow/pulse to the spotlight. Keep the effect soft, cinematic, and understated."
+        }
+      ],
+      "loop_notes": "Keep the spotlight pulse almost imperceptible but noticeable on repeat viewing.",
+      "avoid": [
+        "Do not blow out highlights",
+        "Do not add lens flares unless they are extremely subtle"
+      ]
+    }
+  ],
+  "execution_checklist": [
+    "Confirm all source covers are present.",
+    "Create an isolated mask plan for each motion element.",
+    "Ensure every animation is subtle and visually coherent.",
+    "Check for mask edge artifacts.",
+    "Check for loop seam visibility.",
+    "Verify typography remains crisp and stationary.",
+    "Export the final loop in the requested specs.",
+    "Produce a quick preview render for review.",
+    "Write a short handoff note for each album."
+  ],
+  "acceptance_criteria": {
+    "creative": [
+      "The original cover is clearly preserved.",
+      "Motion feels tasteful and official.",
+      "Effects match the user's requested treatment per album.",
+      "No effect looks gimmicky or excessive."
+    ],
+    "technical": [
+      "1080x1080 export",
+      "8-second seamless loop",
+      "No visible jump at the loop point",
+      "No broken alpha edges or warping artifacts",
+      "Final MP4 plays cleanly"
+    ]
+  },
+  "deliverables": {
+    "per_album": [
+      "1 final MP4 motion cover",
+      "1 preview MP4",
+      "1 still poster frame",
+      "1 text notes file"
+    ],
+    "final_handoff": [
+      "A folder containing all exports",
+      "A summary file listing all completed albums and effect treatments",
+      "Any project/config files Hermes used to generate the outputs"
+    ]
+  },
+  "optional_addon_prompt_for_hermes": "If you need to generate an implementation plan before animating, produce a short preflight report for each album listing: motion targets, masking approach, loop strategy, expected technical risks, and export filenames. Then proceed with execution.",
+  "direct_copy_prompt": "Hermes, implement a motion-cover pitch package for the following Eric Bellinger projects using the original supplied album covers only: Cuffing Season, Cuffing Season Pt. 2, Cuffing Season 3, It'll All Make Sense Later, It'll All Make Sense Later (Deluxe), It All Makes Sense, and It All Makes Sense (Deluxe). Preserve the original artwork and apply only subtle ambient motion. Use seamless 8-second square loops at 1080x1080, 24fps, exported as H.264 MP4. For Cuffing Season, animate cloud/smoke movement, make the flowers and trees inside the head outlines sway, make the sun subtly twinkle, and make the water ebb and flow. For Cuffing Season Pt. 2, add smoke and falling particles in the top right square, stars twinkling in the bottom right square, gentle blowing snow in the top left square, and clouds moving in the bottom left square. For Cuffing Season 3, animate the flowers, palm tree limbs, and leaves with subtle wind movement, and make the water in the background of the middle image ebb and flow. For It'll All Make Sense Later, animate the water, flora, and smoke. For It'll All Make Sense Later Deluxe, add a restrained green glow behind Eric Bellinger. For It All Makes Sense, animate the water flowing effect only. For It All Makes Sense Deluxe, add a subtle glow to the spotlight only. Keep everything elegant, restrained, pitch-ready, and seamless. Export final files, preview files, still frames, and a short handoff summary for each album."
+}

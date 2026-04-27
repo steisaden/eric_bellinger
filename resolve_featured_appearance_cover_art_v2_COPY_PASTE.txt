@@ -1,0 +1,579 @@
+#!/usr/bin/env node
+/**
+ * Eric Bellinger featured-appearance cover-art resolver v2
+ *
+ * Node: 16+ recommended. No npm dependencies. Does NOT rely on global fetch.
+ *
+ * Usage:
+ *   node resolve_featured_appearance_cover_art_v2.mjs \
+ *     ./eric_bellinger_featured_appearances_best_effort.json \
+ *     ./eric_bellinger_featured_appearances_cover_art_verified.json
+ *
+ * Safer test run:
+ *   node resolve_featured_appearance_cover_art_v2.mjs ./input.json ./output.json --limit=5 --verbose
+ *
+ * Resume-ish run:
+ *   node resolve_featured_appearance_cover_art_v2.mjs ./input.json ./output.json --start=25 --limit=25
+ *
+ * Apple only:
+ *   node resolve_featured_appearance_cover_art_v2.mjs ./input.json ./output.json --apple-only
+ *
+ * MusicBrainz / Cover Art Archive only:
+ *   node resolve_featured_appearance_cover_art_v2.mjs ./input.json ./output.json --mb-only
+ */
+
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import https from 'node:https';
+import http from 'node:http';
+import {URL} from 'node:url';
+
+const DEFAULT_INPUT = './eric_bellinger_featured_appearances_best_effort.json';
+const DEFAULT_OUTPUT = './eric_bellinger_featured_appearances_cover_art_verified.json';
+
+const argv = process.argv.slice(2);
+const positional = argv.filter((a) => !a.startsWith('--'));
+const flags = Object.fromEntries(
+  argv
+    .filter((a) => a.startsWith('--'))
+    .map((a) => {
+      const [k, ...rest] = a.replace(/^--/, '').split('=');
+      return [k, rest.length ? rest.join('=') : true];
+    })
+);
+
+const inputPath = path.resolve(process.cwd(), positional[0] || DEFAULT_INPUT);
+const outputPath = path.resolve(process.cwd(), positional[1] || DEFAULT_OUTPUT);
+const verbose = Boolean(flags.verbose);
+const limit = flags.limit ? Math.max(0, Number(flags.limit)) : null;
+const start = flags.start ? Math.max(0, Number(flags.start)) : 0;
+const delayMs = flags.delay ? Math.max(0, Number(flags.delay)) : 850;
+const appleOnly = Boolean(flags['apple-only']);
+const mbOnly = Boolean(flags['mb-only']);
+const checkpointEvery = flags['checkpoint-every'] ? Math.max(1, Number(flags['checkpoint-every'])) : 10;
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const clean = (value) => String(value || '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, ' ').trim();
+const compact = (value) => clean(value).replace(/\s+/g, '');
+const unique = (arr) => [...new Set((arr || []).filter(Boolean))];
+
+function includesLoose(a, b) {
+  const aa = clean(a);
+  const bb = clean(b);
+  if (!aa || !bb) return false;
+  return aa.includes(bb) || bb.includes(aa) || compact(aa).includes(compact(bb)) || compact(bb).includes(compact(aa));
+}
+
+function parseJsonSafe(text, url) {
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    throw new Error(`Invalid JSON from ${url}: ${err.message}. First 200 chars: ${text.slice(0, 200)}`);
+  }
+}
+
+function httpGetText(url, {headers = {}, timeoutMs = 30000, redirects = 5} = {}) {
+  return new Promise((resolve, reject) => {
+    let parsed;
+    try {
+      parsed = new URL(url);
+    } catch (err) {
+      reject(new Error(`Bad URL: ${url}`));
+      return;
+    }
+
+    const client = parsed.protocol === 'http:' ? http : https;
+    const req = client.request(
+      parsed,
+      {
+        method: 'GET',
+        timeout: timeoutMs,
+        headers: {
+          'User-Agent': 'EricBellingerArtworkResolver/2.0 metadata verification local script',
+          'Accept': 'application/json,text/plain,*/*',
+          ...headers,
+        },
+      },
+      (res) => {
+        const status = res.statusCode || 0;
+        const location = res.headers.location;
+
+        if ([301, 302, 303, 307, 308].includes(status) && location && redirects > 0) {
+          const nextUrl = new URL(location, parsed).toString();
+          res.resume();
+          httpGetText(nextUrl, {headers, timeoutMs, redirects: redirects - 1}).then(resolve).catch(reject);
+          return;
+        }
+
+        let body = '';
+        res.setEncoding('utf8');
+        res.on('data', (chunk) => {
+          body += chunk;
+        });
+        res.on('end', () => {
+          if (status < 200 || status >= 300) {
+            reject(new Error(`${status} ${res.statusMessage || ''} from ${url}. Body: ${body.slice(0, 200)}`.trim()));
+            return;
+          }
+          resolve(body);
+        });
+      }
+    );
+
+    req.on('timeout', () => {
+      req.destroy(new Error(`Timeout after ${timeoutMs}ms: ${url}`));
+    });
+    req.on('error', reject);
+    req.end();
+  });
+}
+
+async function fetchJson(url, options = {}) {
+  const text = await httpGetText(url, options);
+  return parseJsonSafe(text, url);
+}
+
+async function fetchJsonWithRetry(url, {attempts = 3, baseDelayMs = 1000, ...options} = {}) {
+  let lastErr;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      return await fetchJson(url, options);
+    } catch (err) {
+      lastErr = err;
+      const msg = String(err.message || '');
+      const retryable = /429|500|502|503|504|timeout|econnreset|socket|network/i.test(msg);
+      if (!retryable || attempt === attempts) break;
+      await sleep(baseDelayMs * attempt);
+    }
+  }
+  throw lastErr;
+}
+
+function normalizeEntry(entry, sourceIndex) {
+  const title = entry.title || entry.song_title || entry.track_title || '';
+  const artistCredit = entry.artist_credit || entry.artist || entry.resolver_inputs?.itunes_search_term || '';
+  const primaryArtist = entry.primary_artist || entry.primaryArtist || '';
+  const releaseGroups = unique(entry.release_groups || entry.releaseGroups || []);
+  const isrcs = unique(entry.isrcs || entry.isrc || []);
+
+  return {
+    source_index: Number.isInteger(entry.source_index) ? entry.source_index : sourceIndex,
+    title,
+    artist_credit: artistCredit,
+    primary_artist: primaryArtist,
+    release_groups: releaseGroups,
+    isrcs,
+    raw: entry,
+  };
+}
+
+function appleArtworkSizes(url) {
+  if (!url) return null;
+  const replaceSize = (size) => {
+    let next = url;
+    next = next.replace(/\/\d+x\d+bb\.(jpg|jpeg|png|webp)$/i, `/${size}x${size}bb.$1`);
+    next = next.replace(/\/\d+x\d+bb-([a-z0-9]+)\.(jpg|jpeg|png|webp)$/i, `/${size}x${size}bb-$1.$2`);
+    next = next.replace(/\/\d+x\d+\.(jpg|jpeg|png|webp)$/i, `/${size}x${size}.$1`);
+    return next;
+  };
+  return {
+    thumb_100: url,
+    square_600: replaceSize(600),
+    square_1200: replaceSize(1200),
+    square_3000: replaceSize(3000),
+  };
+}
+
+function scoreAppleResult(entry, result) {
+  let score = 0;
+  const reasons = [];
+  const title = entry.title || '';
+  const primaryArtist = entry.primary_artist || '';
+  const artistCredit = entry.artist_credit || '';
+  const releaseGroups = entry.release_groups || [];
+  const haystack = `${result.trackName || ''} ${result.artistName || ''} ${result.collectionName || ''}`;
+
+  if (includesLoose(result.trackName, title)) {
+    score += 6;
+    reasons.push('track title matched');
+  }
+
+  if (primaryArtist && includesLoose(result.artistName, primaryArtist)) {
+    score += 4;
+    reasons.push('primary artist matched');
+  } else if (artistCredit && clean(artistCredit).split(' ').some((part) => part.length > 3 && clean(result.artistName).includes(part))) {
+    score += 1;
+    reasons.push('partial artist-credit match');
+  }
+
+  if (releaseGroups.some((rg) => includesLoose(result.collectionName, rg))) {
+    score += 3;
+    reasons.push('release/collection matched');
+  }
+
+  if (entry.isrcs?.length && result.isrc && entry.isrcs.includes(result.isrc)) {
+    score += 8;
+    reasons.push('ISRC matched');
+  }
+
+  if (/eric bellinger/i.test(haystack)) {
+    score += 1;
+    reasons.push('Eric Bellinger present in Apple result metadata');
+  }
+
+  return {score, reasons};
+}
+
+function buildAppleQueries(entry) {
+  const terms = [];
+  for (const isrc of entry.isrcs || []) terms.push(isrc);
+  terms.push(`${entry.title} ${entry.primary_artist || ''}`.trim());
+  terms.push(`${entry.title} ${entry.artist_credit || ''}`.trim());
+  for (const rg of entry.release_groups || []) terms.push(`${entry.title} ${rg} ${entry.primary_artist || ''}`.trim());
+  return unique(terms).filter((t) => t.length > 1).slice(0, 5);
+}
+
+async function resolveApple(entry) {
+  const queries = buildAppleQueries(entry);
+  const all = [];
+
+  for (const term of queries) {
+    const url = `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&entity=song&limit=15&country=US`;
+    if (verbose) console.log(`    Apple query: ${term}`);
+    const data = await fetchJsonWithRetry(url, {attempts: 2});
+    for (const result of data.results || []) {
+      if (result.wrapperType !== 'track' || !result.artworkUrl100) continue;
+      const scored = scoreAppleResult(entry, result);
+      all.push({query: term, result, score: scored.score, reasons: scored.reasons});
+    }
+    await sleep(250);
+  }
+
+  const ranked = all.sort((a, b) => b.score - a.score);
+  const best = ranked[0];
+
+  if (!best || best.score < 6) {
+    return {
+      provider: 'apple_itunes_search',
+      status: 'no_confident_match',
+      best_candidate: best
+        ? {
+            score: best.score,
+            reasons: best.reasons,
+            trackName: best.result.trackName,
+            artistName: best.result.artistName,
+            collectionName: best.result.collectionName,
+            artworkUrl100: best.result.artworkUrl100,
+            query: best.query,
+          }
+        : null,
+    };
+  }
+
+  const confidence = best.score >= 10 ? 'high' : best.score >= 7 ? 'medium' : 'low';
+  return {
+    provider: 'apple_itunes_search',
+    status: confidence === 'high' ? 'verified' : 'probable_match_verify_manually',
+    confidence,
+    match_score: best.score,
+    match_reasons: best.reasons,
+    query_used: best.query,
+    artwork: appleArtworkSizes(best.result.artworkUrl100),
+    evidence: {
+      trackName: best.result.trackName || null,
+      artistName: best.result.artistName || null,
+      collectionName: best.result.collectionName || null,
+      trackViewUrl: best.result.trackViewUrl || null,
+      collectionViewUrl: best.result.collectionViewUrl || null,
+      releaseDate: best.result.releaseDate || null,
+      primaryGenreName: best.result.primaryGenreName || null,
+    },
+  };
+}
+
+function caaImagePayload(caa, evidenceBase) {
+  const images = caa.images || [];
+  const front = images.find((img) => img.front) || images.find((img) => (img.types || []).includes('Front')) || images[0];
+  if (!front) return null;
+  return {
+    provider: 'musicbrainz_cover_art_archive',
+    status: 'verified',
+    confidence: 'high',
+    artwork: {
+      original: front.image || null,
+      thumb_250: front.thumbnails?.['250'] || front.thumbnails?.small || null,
+      thumb_500: front.thumbnails?.['500'] || front.thumbnails?.large || null,
+      thumb_1200: front.thumbnails?.['1200'] || null,
+    },
+    evidence: {
+      ...evidenceBase,
+      cover_art_id: front.id || null,
+      front: Boolean(front.front),
+      types: front.types || [],
+      source_release_url: caa.release || null,
+    },
+  };
+}
+
+async function tryCoverArtArchiveRelease(releaseId, evidenceBase = {}) {
+  if (!releaseId) return null;
+  const url = `https://coverartarchive.org/release/${releaseId}`;
+  try {
+    const caa = await fetchJsonWithRetry(url, {attempts: 2});
+    return caaImagePayload(caa, {musicbrainz_release_id: releaseId, cover_art_archive_url: url, ...evidenceBase});
+  } catch (err) {
+    if (verbose) console.log(`    CAA release miss ${releaseId}: ${err.message}`);
+    return null;
+  }
+}
+
+async function tryCoverArtArchiveReleaseGroup(releaseGroupId, evidenceBase = {}) {
+  if (!releaseGroupId) return null;
+  const url = `https://coverartarchive.org/release-group/${releaseGroupId}`;
+  try {
+    const caa = await fetchJsonWithRetry(url, {attempts: 2});
+    return caaImagePayload(caa, {musicbrainz_release_group_id: releaseGroupId, cover_art_archive_url: url, ...evidenceBase});
+  } catch (err) {
+    if (verbose) console.log(`    CAA release-group miss ${releaseGroupId}: ${err.message}`);
+    return null;
+  }
+}
+
+function scoreMusicBrainzReleaseGroup(entry, rg) {
+  let score = 0;
+  const reasons = [];
+  if (includesLoose(rg.title, entry.release_groups?.[0] || entry.title)) {
+    score += 5;
+    reasons.push('release-group title matched');
+  }
+  const artistCredit = (rg['artist-credit'] || []).map((a) => a.name || a.artist?.name || '').join(' ');
+  if (entry.primary_artist && includesLoose(artistCredit, entry.primary_artist)) {
+    score += 4;
+    reasons.push('release-group artist matched');
+  }
+  return {score, reasons, artistCredit};
+}
+
+async function resolveMusicBrainzReleaseGroup(entry) {
+  const titleCandidates = unique([...(entry.release_groups || []), entry.title]);
+  const candidates = [];
+
+  for (const title of titleCandidates.slice(0, 4)) {
+    const query = entry.primary_artist
+      ? `releasegroup:"${title}" AND artist:"${entry.primary_artist}"`
+      : `releasegroup:"${title}"`;
+    const url = `https://musicbrainz.org/ws/2/release-group/?query=${encodeURIComponent(query)}&fmt=json&limit=8`;
+    if (verbose) console.log(`    MB release-group query: ${query}`);
+    const data = await fetchJsonWithRetry(url, {attempts: 2});
+    for (const rg of data['release-groups'] || []) {
+      const scored = scoreMusicBrainzReleaseGroup(entry, rg);
+      candidates.push({rg, score: scored.score, reasons: scored.reasons, artistCredit: scored.artistCredit, query});
+    }
+    await sleep(1100);
+  }
+
+  const ranked = candidates.sort((a, b) => b.score - a.score);
+  for (const candidate of ranked) {
+    if (candidate.score < 5) continue;
+    const caa = await tryCoverArtArchiveReleaseGroup(candidate.rg.id, {
+      match_type: 'release_group_search',
+      release_group_title: candidate.rg.title || null,
+      release_group_artist_credit: candidate.artistCredit || null,
+      match_score: candidate.score,
+      match_reasons: candidate.reasons,
+      query_used: candidate.query,
+    });
+    if (caa) return caa;
+    await sleep(500);
+  }
+  return null;
+}
+
+async function resolveMusicBrainzRecordingReleases(entry) {
+  const queries = [];
+  if (entry.primary_artist) queries.push(`recording:"${entry.title}" AND artist:"${entry.primary_artist}"`);
+  queries.push(`recording:"${entry.title}" AND artist:"Eric Bellinger"`);
+  queries.push(`${entry.title} ${entry.artist_credit || ''}`.trim());
+
+  const checkedReleaseIds = new Set();
+
+  for (const query of unique(queries).slice(0, 4)) {
+    const url = `https://musicbrainz.org/ws/2/recording/?query=${encodeURIComponent(query)}&fmt=json&limit=8&inc=releases+release-groups+isrcs+artist-credits`;
+    if (verbose) console.log(`    MB recording query: ${query}`);
+    const data = await fetchJsonWithRetry(url, {attempts: 2});
+    const recordings = data.recordings || [];
+
+    for (const rec of recordings) {
+      if (!includesLoose(rec.title, entry.title)) continue;
+      const recArtistCredit = (rec['artist-credit'] || []).map((a) => a.name || a.artist?.name || '').join(' ');
+      const artistOk = entry.primary_artist ? includesLoose(recArtistCredit, entry.primary_artist) || includesLoose(recArtistCredit, 'Eric Bellinger') : true;
+      if (!artistOk) continue;
+
+      for (const rel of rec.releases || []) {
+        if (!rel.id || checkedReleaseIds.has(rel.id)) continue;
+        checkedReleaseIds.add(rel.id);
+        const caa = await tryCoverArtArchiveRelease(rel.id, {
+          match_type: 'recording_release_search',
+          musicbrainz_recording_id: rec.id || null,
+          recording_title: rec.title || null,
+          recording_artist_credit: recArtistCredit || null,
+          release_title: rel.title || null,
+          release_date: rel.date || null,
+          query_used: query,
+        });
+        if (caa) return caa;
+        await sleep(500);
+      }
+    }
+    await sleep(1100);
+  }
+
+  return null;
+}
+
+async function resolveMusicBrainz(entry) {
+  const rg = await resolveMusicBrainzReleaseGroup(entry);
+  if (rg) return rg;
+  return resolveMusicBrainzRecordingReleases(entry);
+}
+
+async function writeOutput(outputPath, output) {
+  await fs.mkdir(path.dirname(outputPath), {recursive: true});
+  await fs.writeFile(outputPath, JSON.stringify(output, null, 2));
+}
+
+async function main() {
+  console.log('Eric Bellinger cover-art resolver v2');
+  console.log(`Input:  ${inputPath}`);
+  console.log(`Output: ${outputPath}`);
+
+  try {
+    await fs.access(inputPath);
+  } catch (_err) {
+    console.error('\nInput file not found.');
+    console.error('Fix: pass the full path to your JSON file, for example:');
+    console.error('node resolve_featured_appearance_cover_art_v2.mjs /absolute/path/input.json /absolute/path/output.json');
+    process.exit(1);
+  }
+
+  const rawText = await fs.readFile(inputPath, 'utf8');
+  const raw = JSON.parse(rawText);
+  const rawEntries = Array.isArray(raw) ? raw : raw.entries || [];
+  if (!rawEntries.length) {
+    throw new Error('No entries found. Expected an array or an object with an entries array.');
+  }
+
+  const normalizedEntries = rawEntries.map(normalizeEntry);
+  const selected = normalizedEntries.slice(start, limit ? start + limit : undefined);
+  const resolved = [];
+  const runStartedAt = new Date().toISOString();
+
+  for (let localIndex = 0; localIndex < selected.length; localIndex += 1) {
+    const entry = selected[localIndex];
+    const absoluteIndex = start + localIndex;
+    console.log(`[${absoluteIndex + 1}/${normalizedEntries.length}] ${entry.title} — ${entry.artist_credit || entry.primary_artist || 'Unknown artist'}`);
+
+    const result = {
+      source_index: entry.source_index,
+      title: entry.title,
+      artist_credit: entry.artist_credit,
+      primary_artist: entry.primary_artist,
+      release_groups: entry.release_groups,
+      isrcs: entry.isrcs,
+      status: 'unresolved',
+      cover_art: null,
+      candidates: [],
+      notes: [],
+    };
+
+    if (!entry.title) {
+      result.notes.push('Missing title; skipped.');
+      resolved.push(result);
+      continue;
+    }
+
+    if (!mbOnly) {
+      try {
+        const apple = await resolveApple(entry);
+        result.candidates.push(apple);
+        if (apple?.status === 'verified' || apple?.status === 'probable_match_verify_manually') {
+          result.cover_art = apple;
+          result.status = apple.status;
+        }
+      } catch (err) {
+        result.notes.push(`Apple lookup failed: ${err.message}`);
+      }
+      await sleep(delayMs);
+    }
+
+    if (!appleOnly) {
+      try {
+        const mb = await resolveMusicBrainz(entry);
+        if (mb) {
+          result.candidates.push(mb);
+          if (!result.cover_art || mb.confidence === 'high') {
+            result.cover_art = mb;
+            result.status = 'verified';
+          }
+        }
+      } catch (err) {
+        result.notes.push(`MusicBrainz/CAA lookup failed: ${err.message}`);
+      }
+      await sleep(delayMs);
+    }
+
+    resolved.push(result);
+
+    if ((localIndex + 1) % checkpointEvery === 0) {
+      const checkpointPath = outputPath.replace(/\.json$/i, `.checkpoint.${absoluteIndex + 1}.json`);
+      await writeOutput(checkpointPath, {
+        meta: {
+          dataset: 'Eric Bellinger featured appearances cover art resolver checkpoint',
+          generated_at: new Date().toISOString(),
+          run_started_at: runStartedAt,
+          input_file: inputPath,
+          start,
+          limit,
+        },
+        entries: resolved,
+      });
+      console.log(`  checkpoint wrote: ${checkpointPath}`);
+    }
+  }
+
+  const output = {
+    meta: {
+      dataset: 'Eric Bellinger featured appearances cover art verified output',
+      generated_at: new Date().toISOString(),
+      run_started_at: runStartedAt,
+      input_file: inputPath,
+      resolver_version: '2.0.0',
+      source_range: {
+        start,
+        processed: selected.length,
+        total_in_input: normalizedEntries.length,
+      },
+      note: 'High-confidence Cover Art Archive results are verified from MusicBrainz/CAA. Apple/iTunes high-confidence results are metadata-matched direct artwork URLs; medium results should be manually reviewed before production use.',
+    },
+    counts: {
+      total_processed: resolved.length,
+      verified: resolved.filter((r) => r.status === 'verified').length,
+      probable: resolved.filter((r) => r.status === 'probable_match_verify_manually').length,
+      unresolved: resolved.filter((r) => r.status === 'unresolved').length,
+    },
+    entries: resolved,
+  };
+
+  await writeOutput(outputPath, output);
+  console.log('\nDone.');
+  console.log(`Verified:   ${output.counts.verified}`);
+  console.log(`Probable:   ${output.counts.probable}`);
+  console.log(`Unresolved: ${output.counts.unresolved}`);
+  console.log(`Wrote:      ${outputPath}`);
+}
+
+main().catch((err) => {
+  console.error('\nFatal resolver error:');
+  console.error(err?.stack || err?.message || err);
+  process.exit(1);
+});

@@ -1,0 +1,3926 @@
+export const songwritingCredits347Snapshot = {
+  "meta": {
+    "project": "Eric Bellinger website",
+    "dataset": "songwriting_credits_347_snapshot_plus_public_verified_rows",
+    "generatedAt": "2026-04-26",
+    "purpose": "Website-ready songwriting credits data and notable-credit highlights for the Credits/Pen section.",
+    "truthPolicy": "Do not invent credits. Spotify's public songwriter page reports 347 songs written, but the publicly crawled page exposes only a visible subset. This file includes all verified public credits available in the working dataset and reserves the remaining Spotify-reported count as NEEDS_RESEARCH slots.",
+    "intendedWebsiteUse": [
+      "Display a stat card: 347 songs written on Spotify songwriter page.",
+      "Display a selected notable credits carousel/grid.",
+      "Display verified public credits table from catalog entries where status is not NEEDS_RESEARCH.",
+      "Do not display unresolved slots in the public table."
+    ]
+  },
+  "summary": {
+    "spotifyReportedSongsWritten": 347,
+    "spotifySnapshotDate": "2026-04-26",
+    "verifiedPublicCreditsInThisFile": 121,
+    "needsResearchCreditSlots": 226,
+    "notableHighlightsCount": 13,
+    "publicSiteDisplayRecommendation": "Use the 347 count as a Spotify-sourced headline metric, but show the verified/notable rows rather than pretending all 347 titles are enumerated."
+  },
+  "sectionCopy": {
+    "heading": "The Pen: Songwriting Credits",
+    "subheading": "347 songs written on Spotify songwriter pages · selected verified credits and career-defining records",
+    "lede": "Before the solo catalog, Eric Bellinger built a résumé across R&B and pop: Chris Brown, Usher, Justin Bieber, Brandy, Wale, Teyana Taylor, Rvssian, and more. This archive highlights the verified public credits first and keeps unresolved publisher data out of the fan-facing table.",
+    "notableHeading": "Notable Credits",
+    "tableHeading": "Verified Public Credit Archive",
+    "unresolvedNote": "Additional Spotify-reported credits are pending publisher/API verification."
+  },
+  "spotifyTopVisibleSongs": [
+    {
+      "rank": 1,
+      "title": "Nostálgico",
+      "artist": "Rvssian, Rauw Alejandro, Chris Brown",
+      "spotifyStreamsSnapshot": 624683123,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": "Highest visible Spotify songwriter-page stream count in current public snapshot."
+    },
+    {
+      "rank": 2,
+      "title": "Right Here",
+      "artist": "Justin Bieber, Drake",
+      "spotifyStreamsSnapshot": 233738062,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": "Major Justin Bieber credit featuring Drake; second-highest visible Spotify snapshot count."
+    },
+    {
+      "rank": 3,
+      "title": "Drive By",
+      "artist": "Eric Bellinger",
+      "spotifyStreamsSnapshot": 189125522,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": "Highest visible Eric-led solo-catalog songwriting entry in current public snapshot."
+    },
+    {
+      "rank": 4,
+      "title": "Love More (feat. Nicki Minaj)",
+      "artist": "Chris Brown, Nicki Minaj",
+      "spotifyStreamsSnapshot": 163748950,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": "Major Chris Brown/Nicki Minaj single from the X era."
+    },
+    {
+      "rank": 5,
+      "title": "Valet (feat. Fetty Wap and 2 Chainz)",
+      "artist": "Eric Bellinger, Fetty Wap, 2 Chainz",
+      "spotifyStreamsSnapshot": 154147115,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": "Major Eric-led collaboration and one of his highest visible streaming songwriting credits."
+    },
+    {
+      "rank": 6,
+      "title": "Fine China",
+      "artist": "Chris Brown",
+      "spotifyStreamsSnapshot": 147388010,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": "Chris Brown lead single; public sources list Eric as a writer and note platinum/RIAA chart impact."
+    },
+    {
+      "rank": 7,
+      "title": "Can't Let You Go (feat. Mike Shorey & Lil' Mo)",
+      "artist": "Fabolous, Lil' Mo, Mike Shorey",
+      "spotifyStreamsSnapshot": 143021196,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": ""
+    },
+    {
+      "rank": 8,
+      "title": "Indigo",
+      "artist": "Chris Brown",
+      "spotifyStreamsSnapshot": 108845197,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": "Visible top Chris Brown catalog credit on Spotify songwriter page."
+    },
+    {
+      "rank": 9,
+      "title": "How You Want It? (feat. King Combs)",
+      "artist": "Teyana Taylor, King Combs",
+      "spotifyStreamsSnapshot": 90639793,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": "Visible top Teyana Taylor credit on Spotify songwriter page."
+    },
+    {
+      "rank": 10,
+      "title": "Psychic",
+      "artist": "Chris Brown, Jack Harlow",
+      "spotifyStreamsSnapshot": 74047469,
+      "source": "spotify_songwriter_public_snapshot",
+      "notabilityReason": "Visible top Chris Brown/Jack Harlow credit on Spotify songwriter page."
+    }
+  ],
+  "notableSongs": [
+    {
+      "title": "Nostálgico",
+      "artist": "Rvssian, Rauw Alejandro, Chris Brown",
+      "year": 2021,
+      "role": "Writer",
+      "highlightType": [
+        "spotify_top_visible",
+        "cross_market_collaboration"
+      ],
+      "whyItMatters": "The highest visible stream-count record on Eric Bellinger's current Spotify songwriter page snapshot.",
+      "publicMetric": {
+        "spotifyStreamsSnapshot": 624683123
+      },
+      "sourceKeys": [
+        "spotify_songwriter_public_snapshot"
+      ]
+    },
+    {
+      "title": "Right Here",
+      "artist": "Justin Bieber feat. Drake",
+      "year": 2012,
+      "role": "Co-writer",
+      "highlightType": [
+        "major_pop_credit",
+        "spotify_top_visible"
+      ],
+      "whyItMatters": "A major Justin Bieber/Drake credit from the Believe era and one of the highest visible streaming entries on Spotify's songwriter page.",
+      "publicMetric": {
+        "spotifyStreamsSnapshot": 233738062
+      },
+      "sourceKeys": [
+        "spotify_songwriter_public_snapshot",
+        "wikipedia_eric_bellinger_songwriting_table"
+      ]
+    },
+    {
+      "title": "Drive By",
+      "artist": "Eric Bellinger",
+      "year": 2016,
+      "role": "Writer / Performer",
+      "highlightType": [
+        "artist_catalog_anchor",
+        "spotify_top_visible"
+      ],
+      "whyItMatters": "The highest visible Eric-led catalog record on the current Spotify songwriter snapshot.",
+      "publicMetric": {
+        "spotifyStreamsSnapshot": 189125522
+      },
+      "sourceKeys": [
+        "spotify_songwriter_public_snapshot"
+      ]
+    },
+    {
+      "title": "Love More",
+      "artist": "Chris Brown feat. Nicki Minaj",
+      "year": 2014,
+      "role": "Co-writer",
+      "highlightType": [
+        "major_chris_brown_credit",
+        "spotify_top_visible"
+      ],
+      "whyItMatters": "A high-visibility Chris Brown/Nicki Minaj single from the X album era.",
+      "publicMetric": {
+        "spotifyStreamsSnapshot": 163748950
+      },
+      "sourceKeys": [
+        "spotify_songwriter_public_snapshot",
+        "wikipedia_eric_bellinger_songwriting_table"
+      ]
+    },
+    {
+      "title": "Valet",
+      "artist": "Eric Bellinger feat. Fetty Wap and 2 Chainz",
+      "year": 2015,
+      "role": "Writer / Performer",
+      "highlightType": [
+        "artist_catalog_anchor",
+        "spotify_top_visible"
+      ],
+      "whyItMatters": "One of Eric's biggest visible artist-led streaming records and a key collaboration-era anchor.",
+      "publicMetric": {
+        "spotifyStreamsSnapshot": 154147115
+      },
+      "sourceKeys": [
+        "spotify_songwriter_public_snapshot"
+      ]
+    },
+    {
+      "title": "Fine China",
+      "artist": "Chris Brown",
+      "year": 2013,
+      "role": "Co-writer",
+      "highlightType": [
+        "major_chris_brown_credit",
+        "riaa_certified",
+        "career_story_anchor"
+      ],
+      "whyItMatters": "Public sources list Eric as a writer; the song became a platinum-certified Chris Brown single and is regularly cited as one of Eric's standout songwriting credits.",
+      "publicMetric": {
+        "spotifyStreamsSnapshot": 147388010,
+        "riaaCertification": "Platinum"
+      },
+      "sourceKeys": [
+        "spotify_songwriter_public_snapshot",
+        "wikipedia_fine_china",
+        "blackamericaweb_best_songs_written"
+      ]
+    },
+    {
+      "title": "New Flame",
+      "artist": "Chris Brown feat. Usher and Rick Ross",
+      "year": 2014,
+      "role": "Co-writer",
+      "highlightType": [
+        "major_chris_brown_credit",
+        "riaa_certified",
+        "charting_single"
+      ],
+      "whyItMatters": "A major single from Chris Brown's X era; public sources note a Billboard Hot 100 peak of No. 27 and RIAA double-platinum certification.",
+      "publicMetric": {
+        "billboardHot100Peak": 27,
+        "riaaCertification": "Double Platinum"
+      },
+      "sourceKeys": [
+        "wikipedia_new_flame",
+        "wikipedia_eric_bellinger_songwriting_table"
+      ]
+    },
+    {
+      "title": "On Chill",
+      "artist": "Wale feat. Jeremih",
+      "year": 2019,
+      "role": "Co-writer",
+      "highlightType": [
+        "modern_rnb_rap_staple",
+        "riaa_certified",
+        "charting_single"
+      ],
+      "whyItMatters": "A modern R&B/rap radio staple; public sources list Eric as a co-writer and note a No. 22 Hot 100 peak plus RIAA double-platinum certification.",
+      "publicMetric": {
+        "billboardHot100Peak": 22,
+        "riaaCertification": "Double Platinum"
+      },
+      "sourceKeys": [
+        "wikipedia_on_chill",
+        "blackamericaweb_best_songs_written"
+      ]
+    },
+    {
+      "title": "Lemme See",
+      "artist": "Usher feat. Rick Ross",
+      "year": 2012,
+      "role": "Co-writer",
+      "highlightType": [
+        "usher_credit",
+        "press_notable"
+      ],
+      "whyItMatters": "A major Usher credit repeatedly cited in Eric's public songwriting résumé.",
+      "publicMetric": {},
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "blackamericaweb_best_songs_written"
+      ]
+    },
+    {
+      "title": "Think Like A Man",
+      "artist": "Jennifer Hudson, Ne-Yo & Rick Ross",
+      "year": 2012,
+      "role": "Co-writer",
+      "highlightType": [
+        "soundtrack_credit",
+        "press_notable"
+      ],
+      "whyItMatters": "A prominent soundtrack-era songwriting credit tied to a major film property.",
+      "publicMetric": {},
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "blackamericaweb_best_songs_written"
+      ]
+    },
+    {
+      "title": "Without You",
+      "artist": "Brandy",
+      "year": 2012,
+      "role": "Co-writer",
+      "highlightType": [
+        "rnb_deep_cut",
+        "press_notable"
+      ],
+      "whyItMatters": "An important R&B vocalist credit that shows Eric's pen outside the Chris Brown/Usher universe.",
+      "publicMetric": {},
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "blackamericaweb_best_songs_written"
+      ]
+    },
+    {
+      "title": "Music Sounds Better With U",
+      "artist": "Big Time Rush feat. Mann",
+      "year": 2011,
+      "role": "Co-writer",
+      "highlightType": [
+        "pop_credit",
+        "public_bio_credit"
+      ],
+      "whyItMatters": "A cross-over pop credit listed in public summaries of Eric's songwriting work.",
+      "publicMetric": {},
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "wikipedia_eric_bellinger_bio"
+      ]
+    },
+    {
+      "title": "Say It With Me",
+      "artist": "Chris Brown",
+      "year": 2011,
+      "role": "Co-writer",
+      "highlightType": [
+        "grammy_project_credit"
+      ],
+      "whyItMatters": "Part of Chris Brown's F.A.M.E. era; public artist bios connect Eric's F.A.M.E. contributions to his first GRAMMY-associated project win.",
+      "publicMetric": {
+        "albumContext": "F.A.M.E. won Best R&B Album at the 54th GRAMMY Awards"
+      },
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_bio",
+        "grammy_artist_page"
+      ]
+    }
+  ],
+  "verifiedPublicCredits": [
+    {
+      "id": "sw-001",
+      "status": "verified_public",
+      "title": "Can't Let You Go",
+      "artist": "Fabolous feat. Mike Shorey, Lil' Mo",
+      "primaryArtist": "Fabolous",
+      "featuredArtists": [
+        "Mike Shorey",
+        "Lil' Mo"
+      ],
+      "year": 2003,
+      "role": "Songwriter",
+      "parentProject": "Street Dreams (2003)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page",
+        "apple_music_and_shazam_public_credits"
+      ],
+      "confidence": "medium",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Can%27t+Let+You+Go+Fabolous+feat.+Mike+Shorey%2C+Lil%27+Mo",
+        "apple_music_search": "https://music.apple.com/us/search?term=Can%27t+Let+You+Go+Fabolous+feat.+Mike+Shorey%2C+Lil%27+Mo",
+        "tidal_search": "https://tidal.com/search?q=Can%27t+Let+You+Go+Fabolous+feat.+Mike+Shorey%2C+Lil%27+Mo",
+        "youtube_music_search": "https://music.youtube.com/search?q=Can%27t+Let+You+Go+Fabolous+feat.+Mike+Shorey%2C+Lil%27+Mo",
+        "deezer_search": "https://www.deezer.com/search/Can%27t+Let+You+Go+Fabolous+feat.+Mike+Shorey%2C+Lil%27+Mo"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-002",
+      "status": "verified_public",
+      "title": "Intuition",
+      "artist": "Selena Gomez & The Scene feat. Eric Bellinger",
+      "primaryArtist": "Selena Gomez & The Scene",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2010,
+      "role": "Co-writer",
+      "parentProject": "A Year Without Rain (2010)",
+      "knownCoWriters": [
+        "Toby Gad",
+        "Lindy Robbins",
+        "Eric Bellinger"
+      ],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Intuition+Selena+Gomez+%26+The+Scene+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Intuition+Selena+Gomez+%26+The+Scene+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Intuition+Selena+Gomez+%26+The+Scene+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Intuition+Selena+Gomez+%26+The+Scene+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Intuition+Selena+Gomez+%26+The+Scene+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-003",
+      "status": "verified_public",
+      "title": "Waiting Outside The Lines",
+      "artist": "Greyson Chance",
+      "primaryArtist": "Greyson Chance",
+      "featuredArtists": [],
+      "year": 2010,
+      "role": "Writer",
+      "parentProject": "Waiting Outside the Lines / Hold On 'til the Night era (2010)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Waiting+Outside+The+Lines+Greyson+Chance",
+        "apple_music_search": "https://music.apple.com/us/search?term=Waiting+Outside+The+Lines+Greyson+Chance",
+        "tidal_search": "https://tidal.com/search?q=Waiting+Outside+The+Lines+Greyson+Chance",
+        "youtube_music_search": "https://music.youtube.com/search?q=Waiting+Outside+The+Lines+Greyson+Chance",
+        "deezer_search": "https://www.deezer.com/search/Waiting+Outside+The+Lines+Greyson+Chance"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-004",
+      "status": "verified_public",
+      "title": "Can't Live Without My Music",
+      "artist": "Cali Swag District feat. Ashley A.",
+      "primaryArtist": "Cali Swag District",
+      "featuredArtists": [
+        "Ashley A."
+      ],
+      "year": 2011,
+      "role": "Writer",
+      "parentProject": "The Kickback / soundtrack-era credit",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships"
+      ],
+      "confidence": "medium",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Can%27t+Live+Without+My+Music+Cali+Swag+District+feat.+Ashley+A.",
+        "apple_music_search": "https://music.apple.com/us/search?term=Can%27t+Live+Without+My+Music+Cali+Swag+District+feat.+Ashley+A.",
+        "tidal_search": "https://tidal.com/search?q=Can%27t+Live+Without+My+Music+Cali+Swag+District+feat.+Ashley+A.",
+        "youtube_music_search": "https://music.youtube.com/search?q=Can%27t+Live+Without+My+Music+Cali+Swag+District+feat.+Ashley+A.",
+        "deezer_search": "https://www.deezer.com/search/Can%27t+Live+Without+My+Music+Cali+Swag+District+feat.+Ashley+A."
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-005",
+      "status": "verified_public",
+      "title": "Champion",
+      "artist": "Chipmunk feat. Chris Brown",
+      "primaryArtist": "Chipmunk",
+      "featuredArtists": [
+        "Chris Brown"
+      ],
+      "year": 2011,
+      "role": "Writer",
+      "parentProject": "Transition (2011)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Champion+Chipmunk+feat.+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Champion+Chipmunk+feat.+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Champion+Chipmunk+feat.+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Champion+Chipmunk+feat.+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Champion+Chipmunk+feat.+Chris+Brown"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-006",
+      "status": "verified_public",
+      "title": "Music Sounds Better With U",
+      "artist": "Big Time Rush feat. Mann",
+      "primaryArtist": "Big Time Rush",
+      "featuredArtists": [
+        "Mann"
+      ],
+      "year": 2011,
+      "role": "Co-writer",
+      "parentProject": "Elevate (2011)",
+      "knownCoWriters": [
+        "Eric Bellinger",
+        "Mike Caren",
+        "Logan Henderson",
+        "Brent Kutzle",
+        "James Maslow",
+        "Carlos Pena Jr.",
+        "Kendall Schmidt",
+        "Ryan Tedder",
+        "Noel Zancanella"
+      ],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Music+Sounds+Better+With+U+Big+Time+Rush+feat.+Mann",
+        "apple_music_search": "https://music.apple.com/us/search?term=Music+Sounds+Better+With+U+Big+Time+Rush+feat.+Mann",
+        "tidal_search": "https://tidal.com/search?q=Music+Sounds+Better+With+U+Big+Time+Rush+feat.+Mann",
+        "youtube_music_search": "https://music.youtube.com/search?q=Music+Sounds+Better+With+U+Big+Time+Rush+feat.+Mann",
+        "deezer_search": "https://www.deezer.com/search/Music+Sounds+Better+With+U+Big+Time+Rush+feat.+Mann"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-007",
+      "status": "verified_public",
+      "title": "Nothing On Me",
+      "artist": "Jacob Latimore",
+      "primaryArtist": "Jacob Latimore",
+      "featuredArtists": [],
+      "year": 2011,
+      "role": "Co-writer",
+      "parentProject": "Nothing On Me (2011)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Nothing+On+Me+Jacob+Latimore",
+        "apple_music_search": "https://music.apple.com/us/search?term=Nothing+On+Me+Jacob+Latimore",
+        "tidal_search": "https://tidal.com/search?q=Nothing+On+Me+Jacob+Latimore",
+        "youtube_music_search": "https://music.youtube.com/search?q=Nothing+On+Me+Jacob+Latimore",
+        "deezer_search": "https://www.deezer.com/search/Nothing+On+Me+Jacob+Latimore"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-008",
+      "status": "verified_public",
+      "title": "Oh My Love",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2011,
+      "role": "Co-writer",
+      "parentProject": "F.A.M.E. (2011)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "F.A.M.E. won Grammy Award for Best R&B Album; Bellinger credited as songwriter on the album",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Oh+My+Love+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Oh+My+Love+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Oh+My+Love+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Oh+My+Love+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Oh+My+Love+Chris+Brown"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-009",
+      "status": "verified_public",
+      "title": "Say It With Me",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2011,
+      "role": "Co-writer",
+      "parentProject": "F.A.M.E. (2011)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "F.A.M.E. won Grammy Award for Best R&B Album; Bellinger credited as songwriter on the album",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Say+It+With+Me+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Say+It+With+Me+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Say+It+With+Me+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Say+It+With+Me+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Say+It+With+Me+Chris+Brown"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-010",
+      "status": "verified_public",
+      "title": "The Woman You Love",
+      "artist": "Ashanti",
+      "primaryArtist": "Ashanti",
+      "featuredArtists": [],
+      "year": 2011,
+      "role": "Co-writer",
+      "parentProject": "The Woman You Love (single, 2011)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/The+Woman+You+Love+Ashanti",
+        "apple_music_search": "https://music.apple.com/us/search?term=The+Woman+You+Love+Ashanti",
+        "tidal_search": "https://tidal.com/search?q=The+Woman+You+Love+Ashanti",
+        "youtube_music_search": "https://music.youtube.com/search?q=The+Woman+You+Love+Ashanti",
+        "deezer_search": "https://www.deezer.com/search/The+Woman+You+Love+Ashanti"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-011",
+      "status": "verified_public",
+      "title": "Hold Me Down",
+      "artist": "JLS",
+      "primaryArtist": "JLS",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Writer",
+      "parentProject": "Evolution / single-era credit",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "medium",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Hold+Me+Down+JLS",
+        "apple_music_search": "https://music.apple.com/us/search?term=Hold+Me+Down+JLS",
+        "tidal_search": "https://tidal.com/search?q=Hold+Me+Down+JLS",
+        "youtube_music_search": "https://music.youtube.com/search?q=Hold+Me+Down+JLS",
+        "deezer_search": "https://www.deezer.com/search/Hold+Me+Down+JLS"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-012",
+      "status": "verified_public",
+      "title": "I Care For U",
+      "artist": "Usher",
+      "primaryArtist": "Usher",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Looking 4 Myself (2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/I+Care+For+U+Usher",
+        "apple_music_search": "https://music.apple.com/us/search?term=I+Care+For+U+Usher",
+        "tidal_search": "https://tidal.com/search?q=I+Care+For+U+Usher",
+        "youtube_music_search": "https://music.youtube.com/search?q=I+Care+For+U+Usher",
+        "deezer_search": "https://www.deezer.com/search/I+Care+For+U+Usher"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-013",
+      "status": "verified_public",
+      "title": "If 6 Were 9",
+      "artist": "Keke Palmer",
+      "primaryArtist": "Keke Palmer",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Keke Palmer (2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/If+6+Were+9+Keke+Palmer",
+        "apple_music_search": "https://music.apple.com/us/search?term=If+6+Were+9+Keke+Palmer",
+        "tidal_search": "https://tidal.com/search?q=If+6+Were+9+Keke+Palmer",
+        "youtube_music_search": "https://music.youtube.com/search?q=If+6+Were+9+Keke+Palmer",
+        "deezer_search": "https://www.deezer.com/search/If+6+Were+9+Keke+Palmer"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-014",
+      "status": "verified_public",
+      "title": "Leggo",
+      "artist": "B. Smyth feat. 2 Chainz",
+      "primaryArtist": "B. Smyth",
+      "featuredArtists": [
+        "2 Chainz"
+      ],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Leggo (single, 2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "blackamericaweb_best_songs_written"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Leggo+B.+Smyth+feat.+2+Chainz",
+        "apple_music_search": "https://music.apple.com/us/search?term=Leggo+B.+Smyth+feat.+2+Chainz",
+        "tidal_search": "https://tidal.com/search?q=Leggo+B.+Smyth+feat.+2+Chainz",
+        "youtube_music_search": "https://music.youtube.com/search?q=Leggo+B.+Smyth+feat.+2+Chainz",
+        "deezer_search": "https://www.deezer.com/search/Leggo+B.+Smyth+feat.+2+Chainz"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-015",
+      "status": "verified_public",
+      "title": "Lemme See",
+      "artist": "Usher feat. Rick Ross",
+      "primaryArtist": "Usher",
+      "featuredArtists": [
+        "Rick Ross"
+      ],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Looking 4 Myself (2012)",
+      "knownCoWriters": [
+        "Usher Raymond IV",
+        "William Roberts",
+        "James Scheffer",
+        "Eric Bellinger",
+        "Danny Morris",
+        "Nickolas Marzouca",
+        "Lundon Knighten"
+      ],
+      "certifications": [
+        {
+          "org": "RIAA",
+          "level": "certified single; level not text-exposed in RIAA search result",
+          "date": "2024-02-09",
+          "source": "riaa_search"
+        }
+      ],
+      "notableAchievement": "ASCAP Award-winning R&B/Hip-Hop Song",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "wikipedia_songs_written_category",
+        "blackamericaweb_best_songs_written",
+        "riaa_search"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Lemme+See+Usher+feat.+Rick+Ross",
+        "apple_music_search": "https://music.apple.com/us/search?term=Lemme+See+Usher+feat.+Rick+Ross",
+        "tidal_search": "https://tidal.com/search?q=Lemme+See+Usher+feat.+Rick+Ross",
+        "youtube_music_search": "https://music.youtube.com/search?q=Lemme+See+Usher+feat.+Rick+Ross",
+        "deezer_search": "https://www.deezer.com/search/Lemme+See+Usher+feat.+Rick+Ross"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-016",
+      "status": "verified_public",
+      "title": "Mirage",
+      "artist": "Chris Brown feat. Nas",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [
+        "Nas"
+      ],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Fortune (2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Mirage+Chris+Brown+feat.+Nas",
+        "apple_music_search": "https://music.apple.com/us/search?term=Mirage+Chris+Brown+feat.+Nas",
+        "tidal_search": "https://tidal.com/search?q=Mirage+Chris+Brown+feat.+Nas",
+        "youtube_music_search": "https://music.youtube.com/search?q=Mirage+Chris+Brown+feat.+Nas",
+        "deezer_search": "https://www.deezer.com/search/Mirage+Chris+Brown+feat.+Nas"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-017",
+      "status": "verified_public",
+      "title": "Nowhere",
+      "artist": "MKTO",
+      "primaryArtist": "MKTO",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "MKTO (2012/2014 release cycle)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Nowhere+MKTO",
+        "apple_music_search": "https://music.apple.com/us/search?term=Nowhere+MKTO",
+        "tidal_search": "https://tidal.com/search?q=Nowhere+MKTO",
+        "youtube_music_search": "https://music.youtube.com/search?q=Nowhere+MKTO",
+        "deezer_search": "https://www.deezer.com/search/Nowhere+MKTO"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-018",
+      "status": "verified_public",
+      "title": "Right Here",
+      "artist": "Justin Bieber feat. Drake",
+      "primaryArtist": "Justin Bieber",
+      "featuredArtists": [
+        "Drake"
+      ],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Believe (2012)",
+      "knownCoWriters": [
+        "Justin Bieber",
+        "Aubrey Graham",
+        "Chauncey Hollis",
+        "Eric Bellinger"
+      ],
+      "certifications": [],
+      "notableAchievement": "Spotify songwriter page lists it among Bellinger's highest-streaming songwriter credits",
+      "sourceKeys": [
+        "spotify_songwriter_page",
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Right+Here+Justin+Bieber+feat.+Drake",
+        "apple_music_search": "https://music.apple.com/us/search?term=Right+Here+Justin+Bieber+feat.+Drake",
+        "tidal_search": "https://tidal.com/search?q=Right+Here+Justin+Bieber+feat.+Drake",
+        "youtube_music_search": "https://music.youtube.com/search?q=Right+Here+Justin+Bieber+feat.+Drake",
+        "deezer_search": "https://www.deezer.com/search/Right+Here+Justin+Bieber+feat.+Drake"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-019",
+      "status": "verified_public",
+      "title": "So Many Girls",
+      "artist": "JLS",
+      "primaryArtist": "JLS",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Writer",
+      "parentProject": "Evolution (2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships"
+      ],
+      "confidence": "medium",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/So+Many+Girls+JLS",
+        "apple_music_search": "https://music.apple.com/us/search?term=So+Many+Girls+JLS",
+        "tidal_search": "https://tidal.com/search?q=So+Many+Girls+JLS",
+        "youtube_music_search": "https://music.youtube.com/search?q=So+Many+Girls+JLS",
+        "deezer_search": "https://www.deezer.com/search/So+Many+Girls+JLS"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-020",
+      "status": "verified_public",
+      "title": "Think Like A Man",
+      "artist": "Jennifer Hudson, Ne-Yo & Rick Ross",
+      "primaryArtist": "Jennifer Hudson, Ne-Yo & Rick Ross",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Think Like a Man soundtrack (2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "wikipedia_songs_written_category",
+        "blackamericaweb_best_songs_written"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Think+Like+A+Man+Jennifer+Hudson%2C+Ne-Yo+%26+Rick+Ross",
+        "apple_music_search": "https://music.apple.com/us/search?term=Think+Like+A+Man+Jennifer+Hudson%2C+Ne-Yo+%26+Rick+Ross",
+        "tidal_search": "https://tidal.com/search?q=Think+Like+A+Man+Jennifer+Hudson%2C+Ne-Yo+%26+Rick+Ross",
+        "youtube_music_search": "https://music.youtube.com/search?q=Think+Like+A+Man+Jennifer+Hudson%2C+Ne-Yo+%26+Rick+Ross",
+        "deezer_search": "https://www.deezer.com/search/Think+Like+A+Man+Jennifer+Hudson%2C+Ne-Yo+%26+Rick+Ross"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-021",
+      "status": "verified_public",
+      "title": "Thought Of You",
+      "artist": "Justin Bieber",
+      "primaryArtist": "Justin Bieber",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Believe (2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "wikipedia_songs_written_category",
+        "blackamericaweb_best_songs_written"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Thought+Of+You+Justin+Bieber",
+        "apple_music_search": "https://music.apple.com/us/search?term=Thought+Of+You+Justin+Bieber",
+        "tidal_search": "https://tidal.com/search?q=Thought+Of+You+Justin+Bieber",
+        "youtube_music_search": "https://music.youtube.com/search?q=Thought+Of+You+Justin+Bieber",
+        "deezer_search": "https://www.deezer.com/search/Thought+Of+You+Justin+Bieber"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-022",
+      "status": "verified_public",
+      "title": "Wait For You",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Fortune (2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Wait+For+You+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Wait+For+You+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Wait+For+You+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Wait+For+You+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Wait+For+You+Chris+Brown"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-023",
+      "status": "verified_public",
+      "title": "What Happened To U",
+      "artist": "Usher",
+      "primaryArtist": "Usher",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Looking 4 Myself (2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/What+Happened+To+U+Usher",
+        "apple_music_search": "https://music.apple.com/us/search?term=What+Happened+To+U+Usher",
+        "tidal_search": "https://tidal.com/search?q=What+Happened+To+U+Usher",
+        "youtube_music_search": "https://music.youtube.com/search?q=What+Happened+To+U+Usher",
+        "deezer_search": "https://www.deezer.com/search/What+Happened+To+U+Usher"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-024",
+      "status": "verified_public",
+      "title": "Without You",
+      "artist": "Brandy",
+      "primaryArtist": "Brandy",
+      "featuredArtists": [],
+      "year": 2012,
+      "role": "Co-writer",
+      "parentProject": "Two Eleven (2012)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "blackamericaweb_best_songs_written"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Without+You+Brandy",
+        "apple_music_search": "https://music.apple.com/us/search?term=Without+You+Brandy",
+        "tidal_search": "https://tidal.com/search?q=Without+You+Brandy",
+        "youtube_music_search": "https://music.youtube.com/search?q=Without+You+Brandy",
+        "deezer_search": "https://www.deezer.com/search/Without+You+Brandy"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-025",
+      "status": "verified_public",
+      "title": "B.A.N.S.",
+      "artist": "Sevyn Streeter",
+      "primaryArtist": "Sevyn Streeter",
+      "featuredArtists": [],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "Call Me Crazy, But... (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/B.A.N.S.+Sevyn+Streeter",
+        "apple_music_search": "https://music.apple.com/us/search?term=B.A.N.S.+Sevyn+Streeter",
+        "tidal_search": "https://tidal.com/search?q=B.A.N.S.+Sevyn+Streeter",
+        "youtube_music_search": "https://music.youtube.com/search?q=B.A.N.S.+Sevyn+Streeter",
+        "deezer_search": "https://www.deezer.com/search/B.A.N.S.+Sevyn+Streeter"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-026",
+      "status": "verified_public",
+      "title": "Heartbreaker",
+      "artist": "Justin Bieber",
+      "primaryArtist": "Justin Bieber",
+      "featuredArtists": [],
+      "year": 2013,
+      "role": "Writer",
+      "parentProject": "Journals (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Heartbreaker+Justin+Bieber",
+        "apple_music_search": "https://music.apple.com/us/search?term=Heartbreaker+Justin+Bieber",
+        "tidal_search": "https://tidal.com/search?q=Heartbreaker+Justin+Bieber",
+        "youtube_music_search": "https://music.youtube.com/search?q=Heartbreaker+Justin+Bieber",
+        "deezer_search": "https://www.deezer.com/search/Heartbreaker+Justin+Bieber"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-027",
+      "status": "verified_public",
+      "title": "Hit The Snooze!",
+      "artist": "Don Benjamin feat. Eric Bellinger",
+      "primaryArtist": "Don Benjamin",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "Hit The Snooze! (single, 2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Hit+The+Snooze%21+Don+Benjamin+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Hit+The+Snooze%21+Don+Benjamin+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Hit+The+Snooze%21+Don+Benjamin+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Hit+The+Snooze%21+Don+Benjamin+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Hit+The+Snooze%21+Don+Benjamin+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-028",
+      "status": "verified_public",
+      "title": "Hold That",
+      "artist": "Sean Kingston feat. Yo Gotti",
+      "primaryArtist": "Sean Kingston",
+      "featuredArtists": [
+        "Yo Gotti"
+      ],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "Back 2 Life (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Hold+That+Sean+Kingston+feat.+Yo+Gotti",
+        "apple_music_search": "https://music.apple.com/us/search?term=Hold+That+Sean+Kingston+feat.+Yo+Gotti",
+        "tidal_search": "https://tidal.com/search?q=Hold+That+Sean+Kingston+feat.+Yo+Gotti",
+        "youtube_music_search": "https://music.youtube.com/search?q=Hold+That+Sean+Kingston+feat.+Yo+Gotti",
+        "deezer_search": "https://www.deezer.com/search/Hold+That+Sean+Kingston+feat.+Yo+Gotti"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-029",
+      "status": "verified_public",
+      "title": "In & Out",
+      "artist": "Marcus Canty feat. Wale",
+      "primaryArtist": "Marcus Canty",
+      "featuredArtists": [
+        "Wale"
+      ],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "THIS... Is Marcus Canty (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/In+%26+Out+Marcus+Canty+feat.+Wale",
+        "apple_music_search": "https://music.apple.com/us/search?term=In+%26+Out+Marcus+Canty+feat.+Wale",
+        "tidal_search": "https://tidal.com/search?q=In+%26+Out+Marcus+Canty+feat.+Wale",
+        "youtube_music_search": "https://music.youtube.com/search?q=In+%26+Out+Marcus+Canty+feat.+Wale",
+        "deezer_search": "https://www.deezer.com/search/In+%26+Out+Marcus+Canty+feat.+Wale"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-030",
+      "status": "verified_public",
+      "title": "Kiss It",
+      "artist": "Dev feat. Sage the Gemini",
+      "primaryArtist": "Dev",
+      "featuredArtists": [
+        "Sage the Gemini"
+      ],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "Kiss It (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Kiss+It+Dev+feat.+Sage+the+Gemini",
+        "apple_music_search": "https://music.apple.com/us/search?term=Kiss+It+Dev+feat.+Sage+the+Gemini",
+        "tidal_search": "https://tidal.com/search?q=Kiss+It+Dev+feat.+Sage+the+Gemini",
+        "youtube_music_search": "https://music.youtube.com/search?q=Kiss+It+Dev+feat.+Sage+the+Gemini",
+        "deezer_search": "https://www.deezer.com/search/Kiss+It+Dev+feat.+Sage+the+Gemini"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-031",
+      "status": "verified_public",
+      "title": "New Thang",
+      "artist": "Trevor Jackson",
+      "primaryArtist": "Trevor Jackson",
+      "featuredArtists": [],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "#NewThang (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/New+Thang+Trevor+Jackson",
+        "apple_music_search": "https://music.apple.com/us/search?term=New+Thang+Trevor+Jackson",
+        "tidal_search": "https://tidal.com/search?q=New+Thang+Trevor+Jackson",
+        "youtube_music_search": "https://music.youtube.com/search?q=New+Thang+Trevor+Jackson",
+        "deezer_search": "https://www.deezer.com/search/New+Thang+Trevor+Jackson"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-032",
+      "status": "verified_public",
+      "title": "No Fun",
+      "artist": "TGT",
+      "primaryArtist": "TGT",
+      "featuredArtists": [],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "Three Kings (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "blackamericaweb_best_songs_written"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/No+Fun+TGT",
+        "apple_music_search": "https://music.apple.com/us/search?term=No+Fun+TGT",
+        "tidal_search": "https://tidal.com/search?q=No+Fun+TGT",
+        "youtube_music_search": "https://music.youtube.com/search?q=No+Fun+TGT",
+        "deezer_search": "https://www.deezer.com/search/No+Fun+TGT"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-033",
+      "status": "verified_public",
+      "title": "S#1T Happens",
+      "artist": "Bridget Kelly",
+      "primaryArtist": "Bridget Kelly",
+      "featuredArtists": [],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "Cut To... Bridget Kelly (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/S%231T+Happens+Bridget+Kelly",
+        "apple_music_search": "https://music.apple.com/us/search?term=S%231T+Happens+Bridget+Kelly",
+        "tidal_search": "https://tidal.com/search?q=S%231T+Happens+Bridget+Kelly",
+        "youtube_music_search": "https://music.youtube.com/search?q=S%231T+Happens+Bridget+Kelly",
+        "deezer_search": "https://www.deezer.com/search/S%231T+Happens+Bridget+Kelly"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-034",
+      "status": "verified_public",
+      "title": "Sex On The Ceiling",
+      "artist": "Sevyn Streeter",
+      "primaryArtist": "Sevyn Streeter",
+      "featuredArtists": [],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "Call Me Crazy, But... (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Sex+On+The+Ceiling+Sevyn+Streeter",
+        "apple_music_search": "https://music.apple.com/us/search?term=Sex+On+The+Ceiling+Sevyn+Streeter",
+        "tidal_search": "https://tidal.com/search?q=Sex+On+The+Ceiling+Sevyn+Streeter",
+        "youtube_music_search": "https://music.youtube.com/search?q=Sex+On+The+Ceiling+Sevyn+Streeter",
+        "deezer_search": "https://www.deezer.com/search/Sex+On+The+Ceiling+Sevyn+Streeter"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-035",
+      "status": "verified_public",
+      "title": "So Much To Prove",
+      "artist": "Fantasia",
+      "primaryArtist": "Fantasia",
+      "featuredArtists": [],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "Side Effects of You (2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/So+Much+To+Prove+Fantasia",
+        "apple_music_search": "https://music.apple.com/us/search?term=So+Much+To+Prove+Fantasia",
+        "tidal_search": "https://tidal.com/search?q=So+Much+To+Prove+Fantasia",
+        "youtube_music_search": "https://music.youtube.com/search?q=So+Much+To+Prove+Fantasia",
+        "deezer_search": "https://www.deezer.com/search/So+Much+To+Prove+Fantasia"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-036",
+      "status": "verified_public",
+      "title": "What It Is",
+      "artist": "League of Starz feat. Freddie Gibbs, Iamsu!, Eric Bellinger",
+      "primaryArtist": "League of Starz",
+      "featuredArtists": [
+        "Freddie Gibbs",
+        "Iamsu!",
+        "Eric Bellinger"
+      ],
+      "year": 2013,
+      "role": "Co-writer",
+      "parentProject": "What It Is (single, 2013)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/What+It+Is+League+of+Starz+feat.+Freddie+Gibbs%2C+Iamsu%21%2C+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=What+It+Is+League+of+Starz+feat.+Freddie+Gibbs%2C+Iamsu%21%2C+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=What+It+Is+League+of+Starz+feat.+Freddie+Gibbs%2C+Iamsu%21%2C+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=What+It+Is+League+of+Starz+feat.+Freddie+Gibbs%2C+Iamsu%21%2C+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/What+It+Is+League+of+Starz+feat.+Freddie+Gibbs%2C+Iamsu%21%2C+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-037",
+      "status": "verified_public",
+      "title": "4 Digits",
+      "artist": "DJ Mustard feat. Fabolous, Eric Bellinger",
+      "primaryArtist": "DJ Mustard",
+      "featuredArtists": [
+        "Fabolous",
+        "Eric Bellinger"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "10 Summers (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/4+Digits+DJ+Mustard+feat.+Fabolous%2C+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=4+Digits+DJ+Mustard+feat.+Fabolous%2C+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=4+Digits+DJ+Mustard+feat.+Fabolous%2C+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=4+Digits+DJ+Mustard+feat.+Fabolous%2C+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/4+Digits+DJ+Mustard+feat.+Fabolous%2C+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-038",
+      "status": "verified_public",
+      "title": "Add Me In",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "X (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Add+Me+In+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Add+Me+In+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Add+Me+In+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Add+Me+In+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Add+Me+In+Chris+Brown"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-039",
+      "status": "verified_public",
+      "title": "Anyway",
+      "artist": "DJ Carisma feat. Tory Lanez, Sage the Gemini, Eric Bellinger, Mishon",
+      "primaryArtist": "DJ Carisma",
+      "featuredArtists": [
+        "Tory Lanez",
+        "Sage the Gemini",
+        "Eric Bellinger",
+        "Mishon"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Anyway (single, 2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Anyway+DJ+Carisma+feat.+Tory+Lanez%2C+Sage+the+Gemini%2C+Eric+Bellinger%2C+Mishon",
+        "apple_music_search": "https://music.apple.com/us/search?term=Anyway+DJ+Carisma+feat.+Tory+Lanez%2C+Sage+the+Gemini%2C+Eric+Bellinger%2C+Mishon",
+        "tidal_search": "https://tidal.com/search?q=Anyway+DJ+Carisma+feat.+Tory+Lanez%2C+Sage+the+Gemini%2C+Eric+Bellinger%2C+Mishon",
+        "youtube_music_search": "https://music.youtube.com/search?q=Anyway+DJ+Carisma+feat.+Tory+Lanez%2C+Sage+the+Gemini%2C+Eric+Bellinger%2C+Mishon",
+        "deezer_search": "https://www.deezer.com/search/Anyway+DJ+Carisma+feat.+Tory+Lanez%2C+Sage+the+Gemini%2C+Eric+Bellinger%2C+Mishon"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-040",
+      "status": "verified_public",
+      "title": "Best Head Ever",
+      "artist": "The Game feat. Tyga, Eric Bellinger",
+      "primaryArtist": "The Game",
+      "featuredArtists": [
+        "Tyga",
+        "Eric Bellinger"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Year of the Wolf (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Best+Head+Ever+The+Game+feat.+Tyga%2C+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Best+Head+Ever+The+Game+feat.+Tyga%2C+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Best+Head+Ever+The+Game+feat.+Tyga%2C+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Best+Head+Ever+The+Game+feat.+Tyga%2C+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Best+Head+Ever+The+Game+feat.+Tyga%2C+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-041",
+      "status": "verified_public",
+      "title": "Broken Hearted Girl",
+      "artist": "Teyana Taylor",
+      "primaryArtist": "Teyana Taylor",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "VII (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Broken+Hearted+Girl+Teyana+Taylor",
+        "apple_music_search": "https://music.apple.com/us/search?term=Broken+Hearted+Girl+Teyana+Taylor",
+        "tidal_search": "https://tidal.com/search?q=Broken+Hearted+Girl+Teyana+Taylor",
+        "youtube_music_search": "https://music.youtube.com/search?q=Broken+Hearted+Girl+Teyana+Taylor",
+        "deezer_search": "https://www.deezer.com/search/Broken+Hearted+Girl+Teyana+Taylor"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-042",
+      "status": "verified_public",
+      "title": "Disrespectful",
+      "artist": "Trey Songz feat. Mila J",
+      "primaryArtist": "Trey Songz",
+      "featuredArtists": [
+        "Mila J"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Trigga (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Disrespectful+Trey+Songz+feat.+Mila+J",
+        "apple_music_search": "https://music.apple.com/us/search?term=Disrespectful+Trey+Songz+feat.+Mila+J",
+        "tidal_search": "https://tidal.com/search?q=Disrespectful+Trey+Songz+feat.+Mila+J",
+        "youtube_music_search": "https://music.youtube.com/search?q=Disrespectful+Trey+Songz+feat.+Mila+J",
+        "deezer_search": "https://www.deezer.com/search/Disrespectful+Trey+Songz+feat.+Mila+J"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-043",
+      "status": "verified_public",
+      "title": "Fine China",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "X (2014)",
+      "knownCoWriters": [
+        "Chris Brown",
+        "Eric Bellinger",
+        "Sevyn Streeter",
+        "Leon 'Roccstar' Youngblood"
+      ],
+      "certifications": [
+        {
+          "org": "RIAA",
+          "level": "Platinum",
+          "date": "2017-11-10",
+          "source": "wikipedia_song_page_and_riaa_search"
+        }
+      ],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page",
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "wikipedia_songs_written_category",
+        "blackamericaweb_best_songs_written",
+        "riaa_search"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Fine+China+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Fine+China+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Fine+China+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Fine+China+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Fine+China+Chris+Brown"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-044",
+      "status": "verified_public",
+      "title": "Freakin (Remix)",
+      "artist": "Lyrica Anderson feat. Wiz Khalifa, Eric Bellinger",
+      "primaryArtist": "Lyrica Anderson",
+      "featuredArtists": [
+        "Wiz Khalifa",
+        "Eric Bellinger"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Freakin (Remix) (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Freakin+%28Remix%29+Lyrica+Anderson+feat.+Wiz+Khalifa%2C+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Freakin+%28Remix%29+Lyrica+Anderson+feat.+Wiz+Khalifa%2C+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Freakin+%28Remix%29+Lyrica+Anderson+feat.+Wiz+Khalifa%2C+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Freakin+%28Remix%29+Lyrica+Anderson+feat.+Wiz+Khalifa%2C+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Freakin+%28Remix%29+Lyrica+Anderson+feat.+Wiz+Khalifa%2C+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-045",
+      "status": "verified_public",
+      "title": "Jealous",
+      "artist": "Don Benjamin feat. Eric Bellinger",
+      "primaryArtist": "Don Benjamin",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Jealous (single, 2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Jealous+Don+Benjamin+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Jealous+Don+Benjamin+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Jealous+Don+Benjamin+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Jealous+Don+Benjamin+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Jealous+Don+Benjamin+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-046",
+      "status": "verified_public",
+      "title": "Love Around The World",
+      "artist": "Trey Songz",
+      "primaryArtist": "Trey Songz",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Trigga (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Love+Around+The+World+Trey+Songz",
+        "apple_music_search": "https://music.apple.com/us/search?term=Love+Around+The+World+Trey+Songz",
+        "tidal_search": "https://tidal.com/search?q=Love+Around+The+World+Trey+Songz",
+        "youtube_music_search": "https://music.youtube.com/search?q=Love+Around+The+World+Trey+Songz",
+        "deezer_search": "https://www.deezer.com/search/Love+Around+The+World+Trey+Songz"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-047",
+      "status": "verified_public",
+      "title": "Love More",
+      "artist": "Chris Brown feat. Nicki Minaj",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [
+        "Nicki Minaj"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "X (2014)",
+      "knownCoWriters": [
+        "Chris Brown",
+        "Onika Maraj",
+        "Darrell Eversley",
+        "Howard Eversley",
+        "Shaun Spearman",
+        "Verse Simmonds",
+        "Eric Bellinger"
+      ],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page",
+        "wikipedia_eric_bellinger_songwriting_table",
+        "wikipedia_songs_written_category",
+        "blackamericaweb_best_songs_written"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Love+More+Chris+Brown+feat.+Nicki+Minaj",
+        "apple_music_search": "https://music.apple.com/us/search?term=Love+More+Chris+Brown+feat.+Nicki+Minaj",
+        "tidal_search": "https://tidal.com/search?q=Love+More+Chris+Brown+feat.+Nicki+Minaj",
+        "youtube_music_search": "https://music.youtube.com/search?q=Love+More+Chris+Brown+feat.+Nicki+Minaj",
+        "deezer_search": "https://www.deezer.com/search/Love+More+Chris+Brown+feat.+Nicki+Minaj"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-048",
+      "status": "verified_public",
+      "title": "My Yang",
+      "artist": "Rayven Justice feat. Eric Bellinger",
+      "primaryArtist": "Rayven Justice",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "I Have a Dream (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/My+Yang+Rayven+Justice+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=My+Yang+Rayven+Justice+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=My+Yang+Rayven+Justice+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=My+Yang+Rayven+Justice+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/My+Yang+Rayven+Justice+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-049",
+      "status": "verified_public",
+      "title": "New Flame",
+      "artist": "Chris Brown feat. Usher, Rick Ross",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [
+        "Usher",
+        "Rick Ross"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "X (2014)",
+      "knownCoWriters": [
+        "Chris Brown",
+        "Justin Booth Johnson",
+        "Keith Thomas",
+        "Mark Pitts",
+        "Eric Bellinger",
+        "William Roberts",
+        "Malissa Hunter",
+        "James Chambers",
+        "Maurice 'Verse' Simmonds"
+      ],
+      "certifications": [
+        {
+          "org": "RIAA",
+          "level": "2x Platinum per public song article; RIAA search currently shows a later certification record dated 2025-06-06 but the award level is not exposed in text",
+          "date": "2017-11-10 / 2025-06-06",
+          "source": "wikipedia_song_page_and_riaa_search"
+        }
+      ],
+      "notableAchievement": "57th Grammy Awards nominee: Best R&B Song (as songwriter credit on the work); Spotify songwriter page lists it as a major Bellinger credit",
+      "sourceKeys": [
+        "spotify_songwriter_page",
+        "wikipedia_eric_bellinger_songwriting_table",
+        "wikipedia_songs_written_category",
+        "blackamericaweb_best_songs_written",
+        "riaa_search"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/New+Flame+Chris+Brown+feat.+Usher%2C+Rick+Ross",
+        "apple_music_search": "https://music.apple.com/us/search?term=New+Flame+Chris+Brown+feat.+Usher%2C+Rick+Ross",
+        "tidal_search": "https://tidal.com/search?q=New+Flame+Chris+Brown+feat.+Usher%2C+Rick+Ross",
+        "youtube_music_search": "https://music.youtube.com/search?q=New+Flame+Chris+Brown+feat.+Usher%2C+Rick+Ross",
+        "deezer_search": "https://www.deezer.com/search/New+Flame+Chris+Brown+feat.+Usher%2C+Rick+Ross"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-050",
+      "status": "verified_public",
+      "title": "No Lights",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "X (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/No+Lights+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=No+Lights+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=No+Lights+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=No+Lights+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/No+Lights+Chris+Brown"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-051",
+      "status": "verified_public",
+      "title": "Nothing",
+      "artist": "Ma$e feat. Eric Bellinger",
+      "primaryArtist": "Ma$e",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Nothing (single, 2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Nothing+Ma%24e+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Nothing+Ma%24e+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Nothing+Ma%24e+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Nothing+Ma%24e+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Nothing+Ma%24e+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-052",
+      "status": "verified_public",
+      "title": "On One",
+      "artist": "The Game feat. Ty Dolla $ign, King Marie",
+      "primaryArtist": "The Game",
+      "featuredArtists": [
+        "Ty Dolla $ign",
+        "King Marie"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Year of the Wolf (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/On+One+The+Game+feat.+Ty+Dolla+%24ign%2C+King+Marie",
+        "apple_music_search": "https://music.apple.com/us/search?term=On+One+The+Game+feat.+Ty+Dolla+%24ign%2C+King+Marie",
+        "tidal_search": "https://tidal.com/search?q=On+One+The+Game+feat.+Ty+Dolla+%24ign%2C+King+Marie",
+        "youtube_music_search": "https://music.youtube.com/search?q=On+One+The+Game+feat.+Ty+Dolla+%24ign%2C+King+Marie",
+        "deezer_search": "https://www.deezer.com/search/On+One+The+Game+feat.+Ty+Dolla+%24ign%2C+King+Marie"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-053",
+      "status": "verified_public",
+      "title": "On The Low",
+      "artist": "Angel feat. Eric Bellinger, Wretch 32",
+      "primaryArtist": "Angel",
+      "featuredArtists": [
+        "Eric Bellinger",
+        "Wretch 32"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Possession With Intent (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/On+The+Low+Angel+feat.+Eric+Bellinger%2C+Wretch+32",
+        "apple_music_search": "https://music.apple.com/us/search?term=On+The+Low+Angel+feat.+Eric+Bellinger%2C+Wretch+32",
+        "tidal_search": "https://tidal.com/search?q=On+The+Low+Angel+feat.+Eric+Bellinger%2C+Wretch+32",
+        "youtube_music_search": "https://music.youtube.com/search?q=On+The+Low+Angel+feat.+Eric+Bellinger%2C+Wretch+32",
+        "deezer_search": "https://www.deezer.com/search/On+The+Low+Angel+feat.+Eric+Bellinger%2C+Wretch+32"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-054",
+      "status": "verified_public",
+      "title": "Or Nah",
+      "artist": "The Game feat. Too $hort, Problem, AV, Eric Bellinger",
+      "primaryArtist": "The Game",
+      "featuredArtists": [
+        "Too $hort",
+        "Problem",
+        "AV",
+        "Eric Bellinger"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Year of the Wolf (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_relationships"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Or+Nah+The+Game+feat.+Too+%24hort%2C+Problem%2C+AV%2C+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Or+Nah+The+Game+feat.+Too+%24hort%2C+Problem%2C+AV%2C+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Or+Nah+The+Game+feat.+Too+%24hort%2C+Problem%2C+AV%2C+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Or+Nah+The+Game+feat.+Too+%24hort%2C+Problem%2C+AV%2C+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Or+Nah+The+Game+feat.+Too+%24hort%2C+Problem%2C+AV%2C+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-055",
+      "status": "verified_public",
+      "title": "Out With The Old",
+      "artist": "Jinsu feat. Eric Bellinger",
+      "primaryArtist": "Jinsu",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Built To Last (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Out+With+The+Old+Jinsu+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Out+With+The+Old+Jinsu+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Out+With+The+Old+Jinsu+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Out+With+The+Old+Jinsu+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Out+With+The+Old+Jinsu+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-056",
+      "status": "verified_public",
+      "title": "Outta My League",
+      "artist": "Teyana Taylor",
+      "primaryArtist": "Teyana Taylor",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "VII (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Outta+My+League+Teyana+Taylor",
+        "apple_music_search": "https://music.apple.com/us/search?term=Outta+My+League+Teyana+Taylor",
+        "tidal_search": "https://tidal.com/search?q=Outta+My+League+Teyana+Taylor",
+        "youtube_music_search": "https://music.youtube.com/search?q=Outta+My+League+Teyana+Taylor",
+        "deezer_search": "https://www.deezer.com/search/Outta+My+League+Teyana+Taylor"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-057",
+      "status": "verified_public",
+      "title": "Rollin'",
+      "artist": "Kid Ink",
+      "primaryArtist": "Kid Ink",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "My Own Lane (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Rollin%27+Kid+Ink",
+        "apple_music_search": "https://music.apple.com/us/search?term=Rollin%27+Kid+Ink",
+        "tidal_search": "https://tidal.com/search?q=Rollin%27+Kid+Ink",
+        "youtube_music_search": "https://music.youtube.com/search?q=Rollin%27+Kid+Ink",
+        "deezer_search": "https://www.deezer.com/search/Rollin%27+Kid+Ink"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-058",
+      "status": "verified_public",
+      "title": "Second Hand Smoke",
+      "artist": "Sage the Gemini feat. Eric Bellinger",
+      "primaryArtist": "Sage the Gemini",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Remember Me (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Second+Hand+Smoke+Sage+the+Gemini+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Second+Hand+Smoke+Sage+the+Gemini+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Second+Hand+Smoke+Sage+the+Gemini+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Second+Hand+Smoke+Sage+the+Gemini+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Second+Hand+Smoke+Sage+the+Gemini+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-059",
+      "status": "verified_public",
+      "title": "Serial",
+      "artist": "Trey Songz",
+      "primaryArtist": "Trey Songz",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "Trigga (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Serial+Trey+Songz",
+        "apple_music_search": "https://music.apple.com/us/search?term=Serial+Trey+Songz",
+        "tidal_search": "https://tidal.com/search?q=Serial+Trey+Songz",
+        "youtube_music_search": "https://music.youtube.com/search?q=Serial+Trey+Songz",
+        "deezer_search": "https://www.deezer.com/search/Serial+Trey+Songz"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-060",
+      "status": "verified_public",
+      "title": "Stereotype",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "X (2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Stereotype+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Stereotype+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Stereotype+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Stereotype+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Stereotype+Chris+Brown"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-061",
+      "status": "verified_public",
+      "title": "You Like It",
+      "artist": "Omarion",
+      "primaryArtist": "Omarion",
+      "featuredArtists": [],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "You Like It (single, 2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/You+Like+It+Omarion",
+        "apple_music_search": "https://music.apple.com/us/search?term=You+Like+It+Omarion",
+        "tidal_search": "https://tidal.com/search?q=You+Like+It+Omarion",
+        "youtube_music_search": "https://music.youtube.com/search?q=You+Like+It+Omarion",
+        "deezer_search": "https://www.deezer.com/search/You+Like+It+Omarion"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-062",
+      "status": "verified_public",
+      "title": "You Playin' (This Could Be Us)",
+      "artist": "Jae Murphy feat. The Game, Eric Bellinger, Problem",
+      "primaryArtist": "Jae Murphy",
+      "featuredArtists": [
+        "The Game",
+        "Eric Bellinger",
+        "Problem"
+      ],
+      "year": 2014,
+      "role": "Co-writer",
+      "parentProject": "You Playin' (This Could Be Us) (single, 2014)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/You+Playin%27+%28This+Could+Be+Us%29+Jae+Murphy+feat.+The+Game%2C+Eric+Bellinger%2C+Problem",
+        "apple_music_search": "https://music.apple.com/us/search?term=You+Playin%27+%28This+Could+Be+Us%29+Jae+Murphy+feat.+The+Game%2C+Eric+Bellinger%2C+Problem",
+        "tidal_search": "https://tidal.com/search?q=You+Playin%27+%28This+Could+Be+Us%29+Jae+Murphy+feat.+The+Game%2C+Eric+Bellinger%2C+Problem",
+        "youtube_music_search": "https://music.youtube.com/search?q=You+Playin%27+%28This+Could+Be+Us%29+Jae+Murphy+feat.+The+Game%2C+Eric+Bellinger%2C+Problem",
+        "deezer_search": "https://www.deezer.com/search/You+Playin%27+%28This+Could+Be+Us%29+Jae+Murphy+feat.+The+Game%2C+Eric+Bellinger%2C+Problem"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-063",
+      "status": "verified_public",
+      "title": "#YAK (You Already Know)",
+      "artist": "Da Brat feat. Sage the Gemini, Eric Bellinger",
+      "primaryArtist": "Da Brat",
+      "featuredArtists": [
+        "Sage the Gemini",
+        "Eric Bellinger"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "#YAK (You Already Know) (single, 2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini%2C+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini%2C+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini%2C+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini%2C+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini%2C+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-064",
+      "status": "verified_public",
+      "title": "Armageddon",
+      "artist": "Elijah Blake",
+      "primaryArtist": "Elijah Blake",
+      "featuredArtists": [],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Shadows & Diamonds (2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Armageddon+Elijah+Blake",
+        "apple_music_search": "https://music.apple.com/us/search?term=Armageddon+Elijah+Blake",
+        "tidal_search": "https://tidal.com/search?q=Armageddon+Elijah+Blake",
+        "youtube_music_search": "https://music.youtube.com/search?q=Armageddon+Elijah+Blake",
+        "deezer_search": "https://www.deezer.com/search/Armageddon+Elijah+Blake"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-065",
+      "status": "verified_public",
+      "title": "Boomerang",
+      "artist": "Sevyn Streeter feat. Hit-Boy",
+      "primaryArtist": "Sevyn Streeter",
+      "featuredArtists": [
+        "Hit-Boy"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Shoulda Been There, Pt. 1 (2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Boomerang+Sevyn+Streeter+feat.+Hit-Boy",
+        "apple_music_search": "https://music.apple.com/us/search?term=Boomerang+Sevyn+Streeter+feat.+Hit-Boy",
+        "tidal_search": "https://tidal.com/search?q=Boomerang+Sevyn+Streeter+feat.+Hit-Boy",
+        "youtube_music_search": "https://music.youtube.com/search?q=Boomerang+Sevyn+Streeter+feat.+Hit-Boy",
+        "deezer_search": "https://www.deezer.com/search/Boomerang+Sevyn+Streeter+feat.+Hit-Boy"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-066",
+      "status": "verified_public",
+      "title": "Circles",
+      "artist": "The Game feat. Q-Tip, Eric Bellinger, Sha Sha",
+      "primaryArtist": "The Game",
+      "featuredArtists": [
+        "Q-Tip",
+        "Eric Bellinger",
+        "Sha Sha"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "The Documentary 2 (2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Circles+The+Game+feat.+Q-Tip%2C+Eric+Bellinger%2C+Sha+Sha",
+        "apple_music_search": "https://music.apple.com/us/search?term=Circles+The+Game+feat.+Q-Tip%2C+Eric+Bellinger%2C+Sha+Sha",
+        "tidal_search": "https://tidal.com/search?q=Circles+The+Game+feat.+Q-Tip%2C+Eric+Bellinger%2C+Sha+Sha",
+        "youtube_music_search": "https://music.youtube.com/search?q=Circles+The+Game+feat.+Q-Tip%2C+Eric+Bellinger%2C+Sha+Sha",
+        "deezer_search": "https://www.deezer.com/search/Circles+The+Game+feat.+Q-Tip%2C+Eric+Bellinger%2C+Sha+Sha"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-067",
+      "status": "verified_public",
+      "title": "Curfew Overtime",
+      "artist": "Kalin and Myles",
+      "primaryArtist": "Kalin and Myles",
+      "featuredArtists": [],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Kalin and Myles (2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Curfew+Overtime+Kalin+and+Myles",
+        "apple_music_search": "https://music.apple.com/us/search?term=Curfew+Overtime+Kalin+and+Myles",
+        "tidal_search": "https://tidal.com/search?q=Curfew+Overtime+Kalin+and+Myles",
+        "youtube_music_search": "https://music.youtube.com/search?q=Curfew+Overtime+Kalin+and+Myles",
+        "deezer_search": "https://www.deezer.com/search/Curfew+Overtime+Kalin+and+Myles"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-068",
+      "status": "verified_public",
+      "title": "Do Ya",
+      "artist": "DaBoyDame feat. Ty Dolla $ign, Adrian Marcel, Eric Bellinger",
+      "primaryArtist": "DaBoyDame",
+      "featuredArtists": [
+        "Ty Dolla $ign",
+        "Adrian Marcel",
+        "Eric Bellinger"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Do Ya (single, 2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Do+Ya+DaBoyDame+feat.+Ty+Dolla+%24ign%2C+Adrian+Marcel%2C+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Do+Ya+DaBoyDame+feat.+Ty+Dolla+%24ign%2C+Adrian+Marcel%2C+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Do+Ya+DaBoyDame+feat.+Ty+Dolla+%24ign%2C+Adrian+Marcel%2C+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Do+Ya+DaBoyDame+feat.+Ty+Dolla+%24ign%2C+Adrian+Marcel%2C+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Do+Ya+DaBoyDame+feat.+Ty+Dolla+%24ign%2C+Adrian+Marcel%2C+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-069",
+      "status": "verified_public",
+      "title": "Dumb Shit",
+      "artist": "Tyrese feat. Snoop Dogg",
+      "primaryArtist": "Tyrese",
+      "featuredArtists": [
+        "Snoop Dogg"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Black Rose (2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Dumb+Shit+Tyrese+feat.+Snoop+Dogg",
+        "apple_music_search": "https://music.apple.com/us/search?term=Dumb+Shit+Tyrese+feat.+Snoop+Dogg",
+        "tidal_search": "https://tidal.com/search?q=Dumb+Shit+Tyrese+feat.+Snoop+Dogg",
+        "youtube_music_search": "https://music.youtube.com/search?q=Dumb+Shit+Tyrese+feat.+Snoop+Dogg",
+        "deezer_search": "https://www.deezer.com/search/Dumb+Shit+Tyrese+feat.+Snoop+Dogg"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-070",
+      "status": "verified_public",
+      "title": "Freak",
+      "artist": "Mally Mall feat. Eric Bellinger, Chinx, Too $hort",
+      "primaryArtist": "Mally Mall",
+      "featuredArtists": [
+        "Eric Bellinger",
+        "Chinx",
+        "Too $hort"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "EMPIRE Presents: Triple X-Mas (2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Freak+Mally+Mall+feat.+Eric+Bellinger%2C+Chinx%2C+Too+%24hort",
+        "apple_music_search": "https://music.apple.com/us/search?term=Freak+Mally+Mall+feat.+Eric+Bellinger%2C+Chinx%2C+Too+%24hort",
+        "tidal_search": "https://tidal.com/search?q=Freak+Mally+Mall+feat.+Eric+Bellinger%2C+Chinx%2C+Too+%24hort",
+        "youtube_music_search": "https://music.youtube.com/search?q=Freak+Mally+Mall+feat.+Eric+Bellinger%2C+Chinx%2C+Too+%24hort",
+        "deezer_search": "https://www.deezer.com/search/Freak+Mally+Mall+feat.+Eric+Bellinger%2C+Chinx%2C+Too+%24hort"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-071",
+      "status": "verified_public",
+      "title": "Hands All Over You",
+      "artist": "Kalin and Myles",
+      "primaryArtist": "Kalin and Myles",
+      "featuredArtists": [],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Kalin and Myles (2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Hands+All+Over+You+Kalin+and+Myles",
+        "apple_music_search": "https://music.apple.com/us/search?term=Hands+All+Over+You+Kalin+and+Myles",
+        "tidal_search": "https://tidal.com/search?q=Hands+All+Over+You+Kalin+and+Myles",
+        "youtube_music_search": "https://music.youtube.com/search?q=Hands+All+Over+You+Kalin+and+Myles",
+        "deezer_search": "https://www.deezer.com/search/Hands+All+Over+You+Kalin+and+Myles"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-072",
+      "status": "verified_public",
+      "title": "I Go In",
+      "artist": "AD feat. Eric Bellinger",
+      "primaryArtist": "AD",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Blue 89 (2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/I+Go+In+AD+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=I+Go+In+AD+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=I+Go+In+AD+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=I+Go+In+AD+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/I+Go+In+AD+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-073",
+      "status": "verified_public",
+      "title": "I Still Do",
+      "artist": "Tyrese",
+      "primaryArtist": "Tyrese",
+      "featuredArtists": [],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Black Rose (2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/I+Still+Do+Tyrese",
+        "apple_music_search": "https://music.apple.com/us/search?term=I+Still+Do+Tyrese",
+        "tidal_search": "https://tidal.com/search?q=I+Still+Do+Tyrese",
+        "youtube_music_search": "https://music.youtube.com/search?q=I+Still+Do+Tyrese",
+        "deezer_search": "https://www.deezer.com/search/I+Still+Do+Tyrese"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-074",
+      "status": "verified_public",
+      "title": "I'm Not Sorry",
+      "artist": "DEAN feat. Eric Bellinger",
+      "primaryArtist": "DEAN",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "I'm Not Sorry (single, 2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/I%27m+Not+Sorry+DEAN+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=I%27m+Not+Sorry+DEAN+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=I%27m+Not+Sorry+DEAN+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=I%27m+Not+Sorry+DEAN+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/I%27m+Not+Sorry+DEAN+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-075",
+      "status": "verified_public",
+      "title": "Round Here",
+      "artist": "DJ Nemo feat. Joe Moses, Eric Bellinger",
+      "primaryArtist": "DJ Nemo",
+      "featuredArtists": [
+        "Joe Moses",
+        "Eric Bellinger"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Round Here (single, 2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Round+Here+DJ+Nemo+feat.+Joe+Moses%2C+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Round+Here+DJ+Nemo+feat.+Joe+Moses%2C+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Round+Here+DJ+Nemo+feat.+Joe+Moses%2C+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Round+Here+DJ+Nemo+feat.+Joe+Moses%2C+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Round+Here+DJ+Nemo+feat.+Joe+Moses%2C+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-076",
+      "status": "verified_public",
+      "title": "Something Real",
+      "artist": "Atla feat. Eric Bellinger",
+      "primaryArtist": "Atla",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2015,
+      "role": "Co-writer",
+      "parentProject": "Something Real (single, 2015)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Something+Real+Atla+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Something+Real+Atla+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Something+Real+Atla+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Something+Real+Atla+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Something+Real+Atla+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-077",
+      "status": "verified_public",
+      "title": "Valet",
+      "artist": "Eric Bellinger feat. Fetty Wap, 2 Chainz",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [
+        "Fetty Wap",
+        "2 Chainz"
+      ],
+      "year": 2015,
+      "role": "Songwriter",
+      "parentProject": "Cuffing Season / Cuffing Season, Pt. 2 era",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page",
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "medium",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Valet+Eric+Bellinger+feat.+Fetty+Wap%2C+2+Chainz",
+        "apple_music_search": "https://music.apple.com/us/search?term=Valet+Eric+Bellinger+feat.+Fetty+Wap%2C+2+Chainz",
+        "tidal_search": "https://tidal.com/search?q=Valet+Eric+Bellinger+feat.+Fetty+Wap%2C+2+Chainz",
+        "youtube_music_search": "https://music.youtube.com/search?q=Valet+Eric+Bellinger+feat.+Fetty+Wap%2C+2+Chainz",
+        "deezer_search": "https://www.deezer.com/search/Valet+Eric+Bellinger+feat.+Fetty+Wap%2C+2+Chainz"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-078",
+      "status": "verified_public",
+      "title": "Drive By",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": 2016,
+      "role": "Songwriter",
+      "parentProject": "Eric B for President: Term 1 / single era",
+      "knownCoWriters": [],
+      "certifications": [
+        {
+          "org": "RIAA",
+          "level": "Gold",
+          "date": "not specified in public snippet",
+          "source": "eric_bellinger_bio_and_hype_mag_snippet"
+        }
+      ],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page",
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "medium",
+      "notes": "Spotify songwriter page lists it; public bio snippets reference RIAA Gold certification for Drive By.",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Drive+By+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Drive+By+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Drive+By+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Drive+By+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Drive+By+Eric+Bellinger"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-079",
+      "status": "verified_public",
+      "title": "Epic & Ting",
+      "artist": "Bulby York",
+      "primaryArtist": "Bulby York",
+      "featuredArtists": [],
+      "year": 2016,
+      "role": "Composer",
+      "parentProject": "Epic & Ting (2016)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Epic+%26+Ting+Bulby+York",
+        "apple_music_search": "https://music.apple.com/us/search?term=Epic+%26+Ting+Bulby+York",
+        "tidal_search": "https://tidal.com/search?q=Epic+%26+Ting+Bulby+York",
+        "youtube_music_search": "https://music.youtube.com/search?q=Epic+%26+Ting+Bulby+York",
+        "deezer_search": "https://www.deezer.com/search/Epic+%26+Ting+Bulby+York"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-080",
+      "status": "verified_public",
+      "title": "G.O.A.T.",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": 2016,
+      "role": "Songwriter",
+      "parentProject": "Eric B for President: Term 1 (2016)",
+      "knownCoWriters": [],
+      "certifications": [
+        {
+          "org": "RIAA",
+          "level": "Gold",
+          "date": "not specified in public snippet",
+          "source": "eric_bellinger_bio_and_hype_mag_snippet"
+        }
+      ],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "medium",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/G.O.A.T.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=G.O.A.T.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=G.O.A.T.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=G.O.A.T.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/G.O.A.T.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-081",
+      "status": "verified_public",
+      "title": "You Don't Know",
+      "artist": "Tank",
+      "primaryArtist": "Tank",
+      "featuredArtists": [],
+      "year": 2016,
+      "role": "Co-writer",
+      "parentProject": "Sex Love & Pain II (2016)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "blackamericaweb_best_songs_written"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/You+Don%27t+Know+Tank",
+        "apple_music_search": "https://music.apple.com/us/search?term=You+Don%27t+Know+Tank",
+        "tidal_search": "https://tidal.com/search?q=You+Don%27t+Know+Tank",
+        "youtube_music_search": "https://music.youtube.com/search?q=You+Don%27t+Know+Tank",
+        "deezer_search": "https://www.deezer.com/search/You+Don%27t+Know+Tank"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-082",
+      "status": "verified_public",
+      "title": "Emerald / Burgundy",
+      "artist": "Chris Brown feat. Juvenile, Juicy J",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [
+        "Juvenile",
+        "Juicy J"
+      ],
+      "year": 2017,
+      "role": "Writer",
+      "parentProject": "Heartbreak on a Full Moon era",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "medium",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Emerald+%2F+Burgundy+Chris+Brown+feat.+Juvenile%2C+Juicy+J",
+        "apple_music_search": "https://music.apple.com/us/search?term=Emerald+%2F+Burgundy+Chris+Brown+feat.+Juvenile%2C+Juicy+J",
+        "tidal_search": "https://tidal.com/search?q=Emerald+%2F+Burgundy+Chris+Brown+feat.+Juvenile%2C+Juicy+J",
+        "youtube_music_search": "https://music.youtube.com/search?q=Emerald+%2F+Burgundy+Chris+Brown+feat.+Juvenile%2C+Juicy+J",
+        "deezer_search": "https://www.deezer.com/search/Emerald+%2F+Burgundy+Chris+Brown+feat.+Juvenile%2C+Juicy+J"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-083",
+      "status": "verified_public",
+      "title": "Order of Operations",
+      "artist": "Big Boi",
+      "primaryArtist": "Big Boi",
+      "featuredArtists": [],
+      "year": 2017,
+      "role": "Writer",
+      "parentProject": "Boomiverse (2017)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Order+of+Operations+Big+Boi",
+        "apple_music_search": "https://music.apple.com/us/search?term=Order+of+Operations+Big+Boi",
+        "tidal_search": "https://tidal.com/search?q=Order+of+Operations+Big+Boi",
+        "youtube_music_search": "https://music.youtube.com/search?q=Order+of+Operations+Big+Boi",
+        "deezer_search": "https://www.deezer.com/search/Order+of+Operations+Big+Boi"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-084",
+      "status": "verified_public",
+      "title": "Overthunk",
+      "artist": "Big Boi feat. Eric Bellinger",
+      "primaryArtist": "Big Boi",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2017,
+      "role": "Writer",
+      "parentProject": "Boomiverse (2017)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Overthunk+Big+Boi+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Overthunk+Big+Boi+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Overthunk+Big+Boi+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Overthunk+Big+Boi+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Overthunk+Big+Boi+feat.+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-085",
+      "status": "verified_public",
+      "title": "Peace Sign",
+      "artist": "Sevyn Streeter feat. Dave East",
+      "primaryArtist": "Sevyn Streeter",
+      "featuredArtists": [
+        "Dave East"
+      ],
+      "year": 2017,
+      "role": "Co-writer",
+      "parentProject": "Girl Disrupted (2017)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Peace+Sign+Sevyn+Streeter+feat.+Dave+East",
+        "apple_music_search": "https://music.apple.com/us/search?term=Peace+Sign+Sevyn+Streeter+feat.+Dave+East",
+        "tidal_search": "https://tidal.com/search?q=Peace+Sign+Sevyn+Streeter+feat.+Dave+East",
+        "youtube_music_search": "https://music.youtube.com/search?q=Peace+Sign+Sevyn+Streeter+feat.+Dave+East",
+        "deezer_search": "https://www.deezer.com/search/Peace+Sign+Sevyn+Streeter+feat.+Dave+East"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-086",
+      "status": "verified_public",
+      "title": "Welcome To My City",
+      "artist": "AI feat. Eric Bellinger, Junior Reid",
+      "primaryArtist": "AI",
+      "featuredArtists": [
+        "Eric Bellinger",
+        "Junior Reid"
+      ],
+      "year": 2017,
+      "role": "Co-writer",
+      "parentProject": "Wa to Yo (2017)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "musicbrainz_relationships"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Welcome+To+My+City+AI+feat.+Eric+Bellinger%2C+Junior+Reid",
+        "apple_music_search": "https://music.apple.com/us/search?term=Welcome+To+My+City+AI+feat.+Eric+Bellinger%2C+Junior+Reid",
+        "tidal_search": "https://tidal.com/search?q=Welcome+To+My+City+AI+feat.+Eric+Bellinger%2C+Junior+Reid",
+        "youtube_music_search": "https://music.youtube.com/search?q=Welcome+To+My+City+AI+feat.+Eric+Bellinger%2C+Junior+Reid",
+        "deezer_search": "https://www.deezer.com/search/Welcome+To+My+City+AI+feat.+Eric+Bellinger%2C+Junior+Reid"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-087",
+      "status": "verified_public",
+      "title": "3Way",
+      "artist": "Teyana Taylor",
+      "primaryArtist": "Teyana Taylor",
+      "featuredArtists": [],
+      "year": 2018,
+      "role": "Co-writer",
+      "parentProject": "K.T.S.E. (2018)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "musicbrainz_works",
+        "musicbrainz_relationships",
+        "wikipedia_songs_written_category",
+        "blackamericaweb_best_songs_written"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/3Way+Teyana+Taylor",
+        "apple_music_search": "https://music.apple.com/us/search?term=3Way+Teyana+Taylor",
+        "tidal_search": "https://tidal.com/search?q=3Way+Teyana+Taylor",
+        "youtube_music_search": "https://music.youtube.com/search?q=3Way+Teyana+Taylor",
+        "deezer_search": "https://www.deezer.com/search/3Way+Teyana+Taylor"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-088",
+      "status": "verified_public",
+      "title": "69",
+      "artist": "Teyana Taylor",
+      "primaryArtist": "Teyana Taylor",
+      "featuredArtists": [],
+      "year": 2019,
+      "role": "Co-writer",
+      "parentProject": "The Album (2020)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/69+Teyana+Taylor",
+        "apple_music_search": "https://music.apple.com/us/search?term=69+Teyana+Taylor",
+        "tidal_search": "https://tidal.com/search?q=69+Teyana+Taylor",
+        "youtube_music_search": "https://music.youtube.com/search?q=69+Teyana+Taylor",
+        "deezer_search": "https://www.deezer.com/search/69+Teyana+Taylor"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-089",
+      "status": "verified_public",
+      "title": "Early 2K",
+      "artist": "Chris Brown feat. Tank",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [
+        "Tank"
+      ],
+      "year": 2019,
+      "role": "Writer",
+      "parentProject": "Indigo (2019)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Early+2K+Chris+Brown+feat.+Tank",
+        "apple_music_search": "https://music.apple.com/us/search?term=Early+2K+Chris+Brown+feat.+Tank",
+        "tidal_search": "https://tidal.com/search?q=Early+2K+Chris+Brown+feat.+Tank",
+        "youtube_music_search": "https://music.youtube.com/search?q=Early+2K+Chris+Brown+feat.+Tank",
+        "deezer_search": "https://www.deezer.com/search/Early+2K+Chris+Brown+feat.+Tank"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-090",
+      "status": "verified_public",
+      "title": "How You Want It?",
+      "artist": "Teyana Taylor feat. King Combs",
+      "primaryArtist": "Teyana Taylor",
+      "featuredArtists": [
+        "King Combs"
+      ],
+      "year": 2019,
+      "role": "Co-writer",
+      "parentProject": "The Album (2020 release; single issued 2019)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page",
+        "wikipedia_eric_bellinger_songwriting_table",
+        "tidal_credit_page",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/How+You+Want+It%3F+Teyana+Taylor+feat.+King+Combs",
+        "apple_music_search": "https://music.apple.com/us/search?term=How+You+Want+It%3F+Teyana+Taylor+feat.+King+Combs",
+        "tidal_search": "https://tidal.com/search?q=How+You+Want+It%3F+Teyana+Taylor+feat.+King+Combs",
+        "youtube_music_search": "https://music.youtube.com/search?q=How+You+Want+It%3F+Teyana+Taylor+feat.+King+Combs",
+        "deezer_search": "https://www.deezer.com/search/How+You+Want+It%3F+Teyana+Taylor+feat.+King+Combs"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-091",
+      "status": "verified_public",
+      "title": "Indigo",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2019,
+      "role": "Writer",
+      "parentProject": "Indigo (2019)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page",
+        "musicbrainz_works",
+        "musicbrainz_relationships",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Indigo+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Indigo+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Indigo+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Indigo+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Indigo+Chris+Brown"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-092",
+      "status": "verified_public",
+      "title": "Temporary Lover",
+      "artist": "Chris Brown feat. Lil Jon",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [
+        "Lil Jon"
+      ],
+      "year": 2019,
+      "role": "Writer",
+      "parentProject": "Indigo / Indigo extended era",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships",
+        "wikipedia_songs_written_category"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Temporary+Lover+Chris+Brown+feat.+Lil+Jon",
+        "apple_music_search": "https://music.apple.com/us/search?term=Temporary+Lover+Chris+Brown+feat.+Lil+Jon",
+        "tidal_search": "https://tidal.com/search?q=Temporary+Lover+Chris+Brown+feat.+Lil+Jon",
+        "youtube_music_search": "https://music.youtube.com/search?q=Temporary+Lover+Chris+Brown+feat.+Lil+Jon",
+        "deezer_search": "https://www.deezer.com/search/Temporary+Lover+Chris+Brown+feat.+Lil+Jon"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-093",
+      "status": "verified_public",
+      "title": "Can't Let You Go",
+      "artist": "Mozzy feat. Eric Bellinger",
+      "primaryArtist": "Mozzy",
+      "featuredArtists": [
+        "Eric Bellinger"
+      ],
+      "year": 2020,
+      "role": "Songwriter",
+      "parentProject": "Beyond Bulletproof (2020)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "apple_music_and_shazam_public_credits"
+      ],
+      "confidence": "high",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Can%27t+Let+You+Go+Mozzy+feat.+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Can%27t+Let+You+Go+Mozzy+feat.+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Can%27t+Let+You+Go+Mozzy+feat.+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Can%27t+Let+You+Go+Mozzy+feat.+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Can%27t+Let+You+Go+Mozzy+feat.+Eric+Bellinger"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-094",
+      "status": "verified_public",
+      "title": "Bet",
+      "artist": "Kristinia DeBarge",
+      "primaryArtist": "Kristinia DeBarge",
+      "featuredArtists": [],
+      "year": 2021,
+      "role": "Co-writer",
+      "parentProject": "Bet (single, 2021)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Bet+Kristinia+DeBarge",
+        "apple_music_search": "https://music.apple.com/us/search?term=Bet+Kristinia+DeBarge",
+        "tidal_search": "https://tidal.com/search?q=Bet+Kristinia+DeBarge",
+        "youtube_music_search": "https://music.youtube.com/search?q=Bet+Kristinia+DeBarge",
+        "deezer_search": "https://www.deezer.com/search/Bet+Kristinia+DeBarge"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-095",
+      "status": "verified_public",
+      "title": "Energy",
+      "artist": "VEDO",
+      "primaryArtist": "VEDO",
+      "featuredArtists": [],
+      "year": 2021,
+      "role": "Co-writer",
+      "parentProject": "1320 (2021)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Energy+VEDO",
+        "apple_music_search": "https://music.apple.com/us/search?term=Energy+VEDO",
+        "tidal_search": "https://tidal.com/search?q=Energy+VEDO",
+        "youtube_music_search": "https://music.youtube.com/search?q=Energy+VEDO",
+        "deezer_search": "https://www.deezer.com/search/Energy+VEDO"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-096",
+      "status": "verified_public",
+      "title": "Nostálgico",
+      "artist": "Rvssian, Rauw Alejandro & Chris Brown",
+      "primaryArtist": "Rvssian, Rauw Alejandro & Chris Brown",
+      "featuredArtists": [],
+      "year": 2021,
+      "role": "Songwriter",
+      "parentProject": "Nostálgico (single, 2021)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Nost%C3%A1lgico+Rvssian%2C+Rauw+Alejandro+%26+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Nost%C3%A1lgico+Rvssian%2C+Rauw+Alejandro+%26+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Nost%C3%A1lgico+Rvssian%2C+Rauw+Alejandro+%26+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Nost%C3%A1lgico+Rvssian%2C+Rauw+Alejandro+%26+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Nost%C3%A1lgico+Rvssian%2C+Rauw+Alejandro+%26+Chris+Brown"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-097",
+      "status": "verified_public",
+      "title": "Opposite",
+      "artist": "Kelvin Truitt",
+      "primaryArtist": "Kelvin Truitt",
+      "featuredArtists": [],
+      "year": 2021,
+      "role": "Co-writer",
+      "parentProject": "Opposite (single, 2021)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Opposite+Kelvin+Truitt",
+        "apple_music_search": "https://music.apple.com/us/search?term=Opposite+Kelvin+Truitt",
+        "tidal_search": "https://tidal.com/search?q=Opposite+Kelvin+Truitt",
+        "youtube_music_search": "https://music.youtube.com/search?q=Opposite+Kelvin+Truitt",
+        "deezer_search": "https://www.deezer.com/search/Opposite+Kelvin+Truitt"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-098",
+      "status": "verified_public",
+      "title": "C.A.B. (Catch A Body)",
+      "artist": "Chris Brown feat. Fivio Foreign",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [
+        "Fivio Foreign"
+      ],
+      "year": 2022,
+      "role": "Writer",
+      "parentProject": "Breezy (2022)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "medium",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/C.A.B.+%28Catch+A+Body%29+Chris+Brown+feat.+Fivio+Foreign",
+        "apple_music_search": "https://music.apple.com/us/search?term=C.A.B.+%28Catch+A+Body%29+Chris+Brown+feat.+Fivio+Foreign",
+        "tidal_search": "https://tidal.com/search?q=C.A.B.+%28Catch+A+Body%29+Chris+Brown+feat.+Fivio+Foreign",
+        "youtube_music_search": "https://music.youtube.com/search?q=C.A.B.+%28Catch+A+Body%29+Chris+Brown+feat.+Fivio+Foreign",
+        "deezer_search": "https://www.deezer.com/search/C.A.B.+%28Catch+A+Body%29+Chris+Brown+feat.+Fivio+Foreign"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-099",
+      "status": "verified_public",
+      "title": "Iffy",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2022,
+      "role": "Co-writer",
+      "parentProject": "Iffy / Breezy era (2022)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "wikipedia_songs_written_category",
+        "dork_credit_index"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Iffy+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=Iffy+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=Iffy+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=Iffy+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/Iffy+Chris+Brown"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-100",
+      "status": "verified_public",
+      "title": "No One Else",
+      "artist": "Chris Brown",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [],
+      "year": 2022,
+      "role": "Writer",
+      "parentProject": "Breezy (2022)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "medium",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/No+One+Else+Chris+Brown",
+        "apple_music_search": "https://music.apple.com/us/search?term=No+One+Else+Chris+Brown",
+        "tidal_search": "https://tidal.com/search?q=No+One+Else+Chris+Brown",
+        "youtube_music_search": "https://music.youtube.com/search?q=No+One+Else+Chris+Brown",
+        "deezer_search": "https://www.deezer.com/search/No+One+Else+Chris+Brown"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-101",
+      "status": "verified_public",
+      "title": "Psychic",
+      "artist": "Chris Brown feat. Jack Harlow",
+      "primaryArtist": "Chris Brown",
+      "featuredArtists": [
+        "Jack Harlow"
+      ],
+      "year": 2022,
+      "role": "Songwriter",
+      "parentProject": "Breezy (2022)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Psychic+Chris+Brown+feat.+Jack+Harlow",
+        "apple_music_search": "https://music.apple.com/us/search?term=Psychic+Chris+Brown+feat.+Jack+Harlow",
+        "tidal_search": "https://tidal.com/search?q=Psychic+Chris+Brown+feat.+Jack+Harlow",
+        "youtube_music_search": "https://music.youtube.com/search?q=Psychic+Chris+Brown+feat.+Jack+Harlow",
+        "deezer_search": "https://www.deezer.com/search/Psychic+Chris+Brown+feat.+Jack+Harlow"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-102",
+      "status": "verified_public",
+      "title": "Curious",
+      "artist": "Eric Bellinger, Fabolous & Cordae",
+      "primaryArtist": "Eric Bellinger, Fabolous & Cordae",
+      "featuredArtists": [],
+      "year": 2023,
+      "role": "Writer",
+      "parentProject": "Curious (single, 2023)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "medium",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Curious+Eric+Bellinger%2C+Fabolous+%26+Cordae",
+        "apple_music_search": "https://music.apple.com/us/search?term=Curious+Eric+Bellinger%2C+Fabolous+%26+Cordae",
+        "tidal_search": "https://tidal.com/search?q=Curious+Eric+Bellinger%2C+Fabolous+%26+Cordae",
+        "youtube_music_search": "https://music.youtube.com/search?q=Curious+Eric+Bellinger%2C+Fabolous+%26+Cordae",
+        "deezer_search": "https://www.deezer.com/search/Curious+Eric+Bellinger%2C+Fabolous+%26+Cordae"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-103",
+      "status": "verified_public",
+      "title": "Goin' Dutch",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": 2023,
+      "role": "Co-writer",
+      "parentProject": "New Light / associated sessions",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "society_of_wolves_new_light_credit"
+      ],
+      "confidence": "medium",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Goin%27+Dutch+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Goin%27+Dutch+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Goin%27+Dutch+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Goin%27+Dutch+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Goin%27+Dutch+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-104",
+      "status": "verified_public",
+      "title": "Stay Long",
+      "artist": "Diddy feat. Summer Walker",
+      "primaryArtist": "Diddy",
+      "featuredArtists": [
+        "Summer Walker"
+      ],
+      "year": 2023,
+      "role": "Writer",
+      "parentProject": "The Love Album: Off the Grid (2023)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "musicbrainz_works",
+        "musicbrainz_relationships"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Stay+Long+Diddy+feat.+Summer+Walker",
+        "apple_music_search": "https://music.apple.com/us/search?term=Stay+Long+Diddy+feat.+Summer+Walker",
+        "tidal_search": "https://tidal.com/search?q=Stay+Long+Diddy+feat.+Summer+Walker",
+        "youtube_music_search": "https://music.youtube.com/search?q=Stay+Long+Diddy+feat.+Summer+Walker",
+        "deezer_search": "https://www.deezer.com/search/Stay+Long+Diddy+feat.+Summer+Walker"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-105",
+      "status": "verified_public",
+      "title": "Everybody Clap",
+      "artist": "P1Harmony",
+      "primaryArtist": "P1Harmony",
+      "featuredArtists": [],
+      "year": 2024,
+      "role": "Composer",
+      "parentProject": "Killin' It (2024)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "wikipedia_eric_bellinger_songwriting_table",
+        "dork_credit_index"
+      ],
+      "confidence": "high",
+      "notes": null,
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Everybody+Clap+P1Harmony",
+        "apple_music_search": "https://music.apple.com/us/search?term=Everybody+Clap+P1Harmony",
+        "tidal_search": "https://tidal.com/search?q=Everybody+Clap+P1Harmony",
+        "youtube_music_search": "https://music.youtube.com/search?q=Everybody+Clap+P1Harmony",
+        "deezer_search": "https://www.deezer.com/search/Everybody+Clap+P1Harmony"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-106",
+      "status": "verified_public",
+      "title": "Cry In Front Of You",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": 2026,
+      "role": "Songwriter",
+      "parentProject": "Cry In Front Of You (single, 2026)",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "spotify_songwriter_page"
+      ],
+      "confidence": "medium",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Cry+In+Front+Of+You+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Cry+In+Front+Of+You+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Cry+In+Front+Of+You+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Cry+In+Front+Of+You+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Cry+In+Front+Of+You+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-107",
+      "status": "needs_publisher_verification",
+      "title": "2 Bad",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer / Lyricist",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/2+Bad+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=2+Bad+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=2+Bad+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=2+Bad+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/2+Bad+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-108",
+      "status": "needs_publisher_verification",
+      "title": "All For Me",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Credited",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/All+For+Me+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=All+For+Me+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=All+For+Me+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=All+For+Me+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/All+For+Me+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-109",
+      "status": "needs_publisher_verification",
+      "title": "Alla Dat",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Credited",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Alla+Dat+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Alla+Dat+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Alla+Dat+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Alla+Dat+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Alla+Dat+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-110",
+      "status": "needs_publisher_verification",
+      "title": "Backstage",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Credited",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Backstage+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Backstage+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Backstage+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Backstage+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Backstage+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-111",
+      "status": "needs_publisher_verification",
+      "title": "Backtrack",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Backtrack+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Backtrack+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Backtrack+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Backtrack+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Backtrack+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-112",
+      "status": "needs_publisher_verification",
+      "title": "BNB",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer / Lyricist",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/BNB+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=BNB+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=BNB+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=BNB+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/BNB+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-113",
+      "status": "needs_publisher_verification",
+      "title": "Godly",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Godly+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Godly+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Godly+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Godly+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Godly+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-114",
+      "status": "needs_publisher_verification",
+      "title": "Gravity",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Gravity+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Gravity+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Gravity+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Gravity+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Gravity+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-115",
+      "status": "needs_publisher_verification",
+      "title": "Irrelevant / Company",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Irrelevant+%2F+Company+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Irrelevant+%2F+Company+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Irrelevant+%2F+Company+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Irrelevant+%2F+Company+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Irrelevant+%2F+Company+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-116",
+      "status": "needs_publisher_verification",
+      "title": "Lonely",
+      "artist": "Wale",
+      "primaryArtist": "Wale",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer / additional vocals",
+      "parentProject": "Unknown / Wale catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Lonely+Wale",
+        "apple_music_search": "https://music.apple.com/us/search?term=Lonely+Wale",
+        "tidal_search": "https://tidal.com/search?q=Lonely+Wale",
+        "youtube_music_search": "https://music.youtube.com/search?q=Lonely+Wale",
+        "deezer_search": "https://www.deezer.com/search/Lonely+Wale"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-117",
+      "status": "needs_publisher_verification",
+      "title": "Mistress",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Mistress+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Mistress+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Mistress+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Mistress+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Mistress+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-118",
+      "status": "needs_publisher_verification",
+      "title": "Right Here",
+      "artist": "Wale",
+      "primaryArtist": "Wale",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer / additional vocals",
+      "parentProject": "Unknown / Wale catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": " ",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Right+Here+Wale",
+        "apple_music_search": "https://music.apple.com/us/search?term=Right+Here+Wale",
+        "tidal_search": "https://tidal.com/search?q=Right+Here+Wale",
+        "youtube_music_search": "https://music.youtube.com/search?q=Right+Here+Wale",
+        "deezer_search": "https://www.deezer.com/search/Right+Here+Wale"
+      },
+      "isNotable": true
+    },
+    {
+      "id": "sw-119",
+      "status": "needs_publisher_verification",
+      "title": "Spice",
+      "artist": "Eric Bellinger",
+      "primaryArtist": "Eric Bellinger",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer",
+      "parentProject": "Unknown / Eric Bellinger catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Spice+Eric+Bellinger",
+        "apple_music_search": "https://music.apple.com/us/search?term=Spice+Eric+Bellinger",
+        "tidal_search": "https://tidal.com/search?q=Spice+Eric+Bellinger",
+        "youtube_music_search": "https://music.youtube.com/search?q=Spice+Eric+Bellinger",
+        "deezer_search": "https://www.deezer.com/search/Spice+Eric+Bellinger"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-120",
+      "status": "needs_publisher_verification",
+      "title": "Survive",
+      "artist": "Wale",
+      "primaryArtist": "Wale",
+      "featuredArtists": [],
+      "year": null,
+      "role": "Writer / additional vocals",
+      "parentProject": "Unknown / Wale catalog",
+      "knownCoWriters": [],
+      "certifications": [],
+      "notableAchievement": "",
+      "sourceKeys": [
+        "dork_credit_index"
+      ],
+      "confidence": "low",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/Survive+Wale",
+        "apple_music_search": "https://music.apple.com/us/search?term=Survive+Wale",
+        "tidal_search": "https://tidal.com/search?q=Survive+Wale",
+        "youtube_music_search": "https://music.youtube.com/search?q=Survive+Wale",
+        "deezer_search": "https://www.deezer.com/search/Survive+Wale"
+      },
+      "isNotable": false
+    },
+    {
+      "id": "sw-121",
+      "status": "verified_public",
+      "title": "On Chill",
+      "artist": "Wale feat. Jeremih",
+      "primaryArtist": "Wale",
+      "featuredArtists": [
+        "Jeremih"
+      ],
+      "year": 2019,
+      "role": "Co-writer",
+      "parentProject": "Wow... That's Crazy (2019)",
+      "knownCoWriters": [
+        "Wale",
+        "Jeremih",
+        "Eric Bellinger"
+      ],
+      "certifications": [
+        {
+          "body": "RIAA",
+          "level": "Double Platinum",
+          "region": "US",
+          "status": "public_source_verified"
+        }
+      ],
+      "notableAchievement": "Peaked at No. 22 on the Billboard Hot 100 according to public chart summaries.; BlackAmericaWeb included it among standout Eric Bellinger songwriting credits.",
+      "sourceKeys": [
+        "wikipedia_on_chill",
+        "blackamericaweb_best_songs_written"
+      ],
+      "confidence": "high",
+      "notes": "",
+      "platformSearchLinksUnverified": {
+        "spotify_search": "https://open.spotify.com/search/On%20Chill%20Wale%20Jeremih",
+        "apple_music_search": "https://music.apple.com/us/search?term=On%20Chill%20Wale%20Jeremih",
+        "tidal_search": "https://tidal.com/search?q=On%20Chill%20Wale%20Jeremih",
+        "youtube_music_search": "https://music.youtube.com/search?q=On%20Chill%20Wale%20Jeremih",
+        "deezer_search": "https://www.deezer.com/search/On%20Chill%20Wale%20Jeremih"
+      },
+      "isNotable": true
+    }
+  ]
+} as const;
+
+export default songwritingCredits347Snapshot;

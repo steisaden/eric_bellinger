@@ -1,0 +1,166 @@
+Hermes — build a pitch-ready Remotion motion-cover package for Eric Bellinger using the original supplied album covers only.
+
+Before doing any implementation, ingest and follow these two files in full:
+1. /mnt/data/eric_bellinger_motion_cover_hermes_instructions.json
+2. /mnt/data/eric_bellinger_motion_cover_remotion_pack.json
+
+Use them together as follows:
+- File 1 = master creative brief, rules, album-specific motion requirements, deliverables, acceptance criteria.
+- File 2 = Remotion implementation blueprint, project structure, effect-layer architecture, album configs, animation recipes, render specs, QA checks, render commands.
+
+Do not ignore either file.
+
+Your objective is to create subtle, premium, seamless loop motion covers for these projects:
+- Cuffing Season
+- Cuffing Season Pt. 2
+- Cuffing Season 3
+- It'll All Make Sense Later
+- It'll All Make Sense Later (Deluxe)
+- It All Makes Sense
+- It All Makes Sense (Deluxe)
+
+Core rules:
+- Preserve the original album artwork.
+- Do not redesign the covers.
+- Keep typography static and readable.
+- Keep all motion subtle, restrained, cinematic, and believable.
+- The final result should feel like ambient life in the artwork, not a flashy music visualizer.
+- Every final deliverable must be a seamless loop.
+- If any source art is missing, stop and report exactly what is missing.
+
+Required output spec:
+- 1080x1080
+- 24 fps
+- 8 seconds
+- seamless loop
+- H.264 MP4
+- no audio
+
+Also export for each album:
+- 1 preview MP4
+- 1 final MP4
+- 1 poster frame PNG
+- 1 short handoff notes file
+
+Execution order:
+
+PHASE 1 — PRE-FLIGHT
+1. Read both JSON files.
+2. Confirm all source cover files exist.
+3. If anything is missing, stop and list missing files.
+4. Produce a short preflight report per album listing:
+   - motion targets
+   - masking plan
+   - effect layers to use
+   - likely technical risks
+   - export filenames
+
+PHASE 2 — REMOTION PROJECT SETUP
+1. Create or open the Remotion project.
+2. Use the Remotion starter scaffold if available.
+3. Build the project structure described in the Remotion JSON pack.
+4. Create reusable effect-layer components for:
+   - water
+   - smoke
+   - foliage
+   - particles
+   - stars
+   - snow
+   - glow
+5. Register one Remotion composition per album.
+
+PHASE 3 — SOURCE PREP / MASKING
+1. Place all source cover files into the source-covers folder.
+2. Create mask files for all requested motion targets.
+3. Store derived masks under album-specific folders.
+4. Keep mask edges clean and avoid visible cutout artifacts.
+
+PHASE 4 — IMPLEMENT THE MOTION COVERS
+Implement the motion exactly as follows:
+
+Cuffing Season:
+- animate cloud/smoke movement
+- animate flowers and trees inside the head outlines so they sway in the wind
+- add subtle sun twinkling
+- animate water ebbing and flowing
+
+Cuffing Season Pt. 2:
+- top-right square: smoke and subtle falling particles
+- bottom-right square: stars twinkling
+- top-left square: gentle blowing snow
+- bottom-left square: clouds moving
+
+Cuffing Season 3:
+- animate flowers, palm tree limbs, and leaves with subtle wind movement
+- animate the water in the background of the middle image with a gentle ebb-and-flow effect
+
+It'll All Make Sense Later:
+- animate the water
+- animate the flora
+- animate the smoke
+
+It'll All Make Sense Later (Deluxe):
+- add a restrained green glow behind Eric Bellinger
+
+It All Makes Sense:
+- add only a tasteful flowing-water effect
+
+It All Makes Sense (Deluxe):
+- add only a subtle glow to the spotlight
+
+PHASE 5 — QA / CREATIVE REFINEMENT
+For every album:
+- preview in Remotion
+- reduce intensity if motion feels excessive
+- verify the loop seam is invisible
+- verify typography remains clean and static
+- verify no mask edge artifacts
+- verify the motion feels premium and official-adjacent
+
+PHASE 6 — RENDER
+Render all required outputs:
+- preview MP4
+- final MP4
+- poster frame PNG
+
+Use clear filenames based on the album slug.
+
+PHASE 7 — HANDOFF
+Deliver:
+- the full Remotion source project
+- all source covers used
+- all generated masks
+- all preview renders
+- all final renders
+- all poster frames
+- a summary report
+
+For each album, the summary report must include:
+- album title
+- source cover path
+- animated elements
+- mask files created
+- effect layers used
+- output paths
+- technical notes
+- creative notes
+
+Quality bar:
+- premium
+- subtle
+- restrained
+- cinematic
+- believable
+- pitch-ready
+
+Avoid:
+- flashy motion graphics
+- aggressive warping
+- heavy particles or snow
+- bright neon glows
+- distracting motion
+- changes to the original composition
+
+If something is ambiguous, preserve the original art first, choose the subtler option, and document the assumption in the handoff notes.
+
+If a Remotion starter scaffold exists, use it as the implementation base and extend it according to the JSON packs. Build the project end-to-end and return a structured handoff.

@@ -1,0 +1,2679 @@
+{
+  "artist": "Eric Bellinger",
+  "file_title": "Eric Bellinger music videos with YouTube links — best-effort public-source JSON",
+  "generated_at": "2026-04-26",
+  "scope": {
+    "included": [
+      "Eric Bellinger primary/lead official music videos where a YouTube URL was found",
+      "official collaboration/co-lead videos",
+      "official videos by other artists where Eric Bellinger is featured",
+      "official 360 VR experience videos as their own video_type"
+    ],
+    "excluded_by_default": [
+      "audio-only uploads",
+      "lyric videos",
+      "visualizers without a music-video/official-video label",
+      "shorts, trailers, interviews, behind-the-scenes clips, tour recaps, and live fan uploads",
+      "duplicate uploads when a primary official URL could be identified"
+    ]
+  },
+  "methodology": [
+    "Searched public YouTube result pages and official Eric Bellinger/VEVO-style results for exact title matches.",
+    "Cross-checked selected entries against public music-video databases and music-news/video-premiere pages where available.",
+    "Marked entries as medium or low confidence when the URL or official status was not fully confirmed from the captured public result."
+  ],
+  "limitations": [
+    "YouTube search results can change, videos can be deleted, made private, region-locked, or re-uploaded.",
+    "Some early mixtape-era videos and third-party features may be missing if not indexed clearly as official videos.",
+    "Director/producer credits are included only where a reliable public source was found quickly; most entries do not expose full video production credits in search snippets.",
+    "This is not a label-delivered videography export."
+  ],
+  "record_count": 104,
+  "records": [
+    {
+      "title": "What You Waiting For",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2011,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=6EtWBHU056o",
+      "youtube_video_id": "6EtWBHU056o",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "medium",
+      "notes": "Search title says official version; included as early official video content.",
+      "sources": [
+        {
+          "title": "Eric Bellinger - What You Waiting For OFFICIAL VERSION",
+          "url": "https://www.youtube.com/watch?v=6EtWBHU056o",
+          "web_ref": "turn709670search26"
+        }
+      ]
+    },
+    {
+      "title": "WRONG",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2011,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=lK1HSMvKy2A",
+      "youtube_video_id": "lK1HSMvKy2A",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "ERIC BELLINGER - WRONG",
+          "url": "https://www.youtube.com/watch?v=lK1HSMvKy2A",
+          "web_ref": "turn970297search4"
+        }
+      ]
+    },
+    {
+      "title": "Green Eggs & Ham",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2012,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=E64WIcmYZfI",
+      "youtube_video_id": "E64WIcmYZfI",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Green Eggs & Ham (Official Video)",
+          "url": "https://www.youtube.com/watch?v=E64WIcmYZfI",
+          "web_ref": "turn970297search9"
+        }
+      ]
+    },
+    {
+      "title": "Love & Lust",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2012,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=syLp3QgJXlc",
+      "youtube_video_id": "syLp3QgJXlc",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger \"Love & Lust\" Official Video",
+          "url": "https://www.youtube.com/watch?v=syLp3QgJXlc",
+          "web_ref": "turn970297search14"
+        }
+      ]
+    },
+    {
+      "title": "NUDE",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2013,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=0vLnA8Fx6R8",
+      "youtube_video_id": "0vLnA8Fx6R8",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger \"NUDE\" Official Video",
+          "url": "https://www.youtube.com/watch?v=0vLnA8Fx6R8",
+          "web_ref": "turn970297search2"
+        }
+      ]
+    },
+    {
+      "title": "Take It Off",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2013,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=q84z3MQQKmg",
+      "youtube_video_id": "q84z3MQQKmg",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger \"Take It Off\" Official Video",
+          "url": "https://www.youtube.com/watch?v=q84z3MQQKmg",
+          "web_ref": "turn970297search1"
+        }
+      ]
+    },
+    {
+      "title": "This That Song",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2013,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=J8x5Br5TrWU",
+      "youtube_video_id": "J8x5Br5TrWU",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "YouTube title says exclusive studio performance; included as official video content.",
+      "sources": [
+        {
+          "title": "Eric Bellinger - This That Song",
+          "url": "https://www.youtube.com/watch?v=J8x5Br5TrWU",
+          "web_ref": "turn170754search6"
+        }
+      ]
+    },
+    {
+      "title": "ASAP",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2014,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=AQiN3hP9WvQ",
+      "youtube_video_id": "AQiN3hP9WvQ",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "ERIC BELLINGER - ASAP (Official Video)",
+          "url": "https://www.youtube.com/watch?v=AQiN3hP9WvQ",
+          "web_ref": "turn970297search0"
+        }
+      ]
+    },
+    {
+      "title": "I Don't Want Her",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Problem"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2014,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=0nOGLWst8Ok",
+      "youtube_video_id": "0nOGLWst8Ok",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - I Don’t Want Her feat. Problem",
+          "url": "https://www.youtube.com/watch?v=0nOGLWst8Ok",
+          "web_ref": "turn726181search7"
+        }
+      ]
+    },
+    {
+      "title": "Kiss Goodnight",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Kid Ink"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2014,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=UWxFDRRLkFo",
+      "youtube_video_id": "UWxFDRRLkFo",
+      "alternate_youtube_urls": [
+        "https://www.youtube.com/watch?v=T0LeJve1rGc"
+      ],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": "Mike Ho",
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger Kiss Goodnight feat. Kid Ink Official Video",
+          "url": "https://www.youtube.com/watch?v=UWxFDRRLkFo",
+          "web_ref": "turn709670search35"
+        },
+        {
+          "title": "IMVDb Kiss Goodnight page",
+          "url": "https://imvdb.com/video/eric-bellinger/kiss-goodnight",
+          "web_ref": "turn170754search0"
+        }
+      ]
+    },
+    {
+      "title": "Nothing",
+      "artist_credit": "Mase feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2014,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=CA7JmogXreU",
+      "youtube_video_id": "CA7JmogXreU",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "MA$E",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Mase - Nothing ft. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=CA7JmogXreU",
+          "web_ref": "turn709670search25"
+        }
+      ]
+    },
+    {
+      "title": "Or Nah",
+      "artist_credit": "The Game feat. Too $hort, Eric Bellinger, Problem, King Marie & Compton AV",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2014,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=tWDLAfDXmRE",
+      "youtube_video_id": "tWDLAfDXmRE",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "The Game",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "The Game - Or Nah ft. Too $hort, Eric Bellinger, Problem, King Marie and Compton AV",
+          "url": "https://www.youtube.com/watch?v=tWDLAfDXmRE",
+          "web_ref": "turn726181search16"
+        },
+        {
+          "title": "Or Nah Wikipedia page",
+          "url": "https://en.wikipedia.org/wiki/Or_Nah_(The_Game_song)",
+          "web_ref": "turn595662search28"
+        }
+      ]
+    },
+    {
+      "title": "SnapChat",
+      "artist_credit": "Yonni feat. Leon Thomas, Eric Bellinger, Aroc & Rayven Justice",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2014,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=5_qi11Yukxg",
+      "youtube_video_id": "5_qi11Yukxg",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "YonniVEVO",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Yonni - SnapChat ft. Leon Thomas, Eric Bellinger, Aroc, Rayven Justice",
+          "url": "https://www.youtube.com/watch?v=5_qi11Yukxg",
+          "web_ref": "turn188729search2"
+        }
+      ]
+    },
+    {
+      "title": "The 1st Lady",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Joe Budden"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2014,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=6aio9cydb7g",
+      "youtube_video_id": "6aio9cydb7g",
+      "alternate_youtube_urls": [
+        "https://www.youtube.com/watch?v=OuLftsSQepU"
+      ],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - The 1st Lady feat. Joe Budden",
+          "url": "https://www.youtube.com/watch?v=6aio9cydb7g",
+          "web_ref": "turn831556search3"
+        }
+      ]
+    },
+    {
+      "title": "You Playin (This Could Be Us)",
+      "artist_credit": "Jae Murphy feat. The Game, Eric Bellinger & Problem",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2014,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=JPBTDqHUNYA",
+      "youtube_video_id": "JPBTDqHUNYA",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Jae Murphy",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Jae Murphy You Playin official music video",
+          "url": "https://www.youtube.com/watch?v=JPBTDqHUNYA",
+          "web_ref": "turn188729search0"
+        }
+      ]
+    },
+    {
+      "title": "Back To The Future",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Audio Push"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2015,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=vC_u48hWw8o",
+      "youtube_video_id": "vC_u48hWw8o",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Back To The Future feat Audio Push",
+          "url": "https://www.youtube.com/watch?v=vC_u48hWw8o",
+          "web_ref": "turn537519search18"
+        }
+      ]
+    },
+    {
+      "title": "Dabbin On Christmas",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2015,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=dB8wqNY5Sro",
+      "youtube_video_id": "dB8wqNY5Sro",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Dabbin On Christmas (Official Video)",
+          "url": "https://www.youtube.com/watch?v=dB8wqNY5Sro",
+          "web_ref": "turn726181search18"
+        }
+      ]
+    },
+    {
+      "title": "Do 4 Love",
+      "artist_credit": "The MIDI Mafia feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2015,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=b7z-7sL99MM",
+      "youtube_video_id": "b7z-7sL99MM",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "The MIDI Mafia",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "The MIDI Mafia - Do 4 Love feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=b7z-7sL99MM",
+          "web_ref": "turn709670search17"
+        }
+      ]
+    },
+    {
+      "title": "Focused On You",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "2 Chainz",
+        "Mýa"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2015,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=GNAMm-RW_u4",
+      "youtube_video_id": "GNAMm-RW_u4",
+      "alternate_youtube_urls": [
+        "https://www.youtube.com/watch?v=4BXSVCNJ9oI"
+      ],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": "Daniel CZ",
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger x Focused On You x 2 Chainz x Mya",
+          "url": "https://www.youtube.com/watch?v=GNAMm-RW_u4",
+          "web_ref": "turn971470search25"
+        },
+        {
+          "title": "Mýa videography page",
+          "url": "https://en.wikipedia.org/wiki/M%C3%BDa_videography",
+          "web_ref": "turn170754search30"
+        }
+      ]
+    },
+    {
+      "title": "I'm Not Sorry",
+      "artist_credit": "DEAN feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video_or_official_upload",
+      "release_year": 2015,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=YhyafRwejwE",
+      "youtube_video_id": "YhyafRwejwE",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "DEAN / YouTube Music",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "medium",
+      "notes": "Search results show the DEANTRBL upload has 20M views, while the captured direct URL is an official YouTube Music/UMG upload. Kept as medium because the official video URL was not fully captured in the result page.",
+      "sources": [
+        {
+          "title": "DEAN - I'm Not Sorry ft. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=YhyafRwejwE",
+          "web_ref": "turn188729search1"
+        },
+        {
+          "title": "DEANTRBL result snippet",
+          "url": "https://www.youtube.com/results?search_query=DEAN+I%27m+Not+Sorry+Eric+Bellinger",
+          "web_ref": "turn188729search10"
+        }
+      ]
+    },
+    {
+      "title": "Right Away",
+      "artist_credit": "Audio Push feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2015,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=LXyW2xvhIkI",
+      "youtube_video_id": "LXyW2xvhIkI",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Audio Push",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Audio Push feat. Eric Bellinger - Right Away",
+          "url": "https://www.youtube.com/watch?v=LXyW2xvhIkI",
+          "web_ref": "turn261385search18"
+        }
+      ]
+    },
+    {
+      "title": "Work Party",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Mila J",
+        "Rayven Justice"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2015,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=OpLDBwl5TAE",
+      "youtube_video_id": "OpLDBwl5TAE",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "medium",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Work Party",
+          "url": "https://www.youtube.com/watch?v=OpLDBwl5TAE",
+          "web_ref": "turn259781search2"
+        }
+      ]
+    },
+    {
+      "title": "Black Beatles",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2016,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=FrrKiFeRR1g",
+      "youtube_video_id": "FrrKiFeRR1g",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Black Beatles (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=FrrKiFeRR1g",
+          "web_ref": "turn467122search7"
+        }
+      ]
+    },
+    {
+      "title": "Fake Love (Acoustic)",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_acoustic_video",
+      "release_year": 2016,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=DuhwDoE0uNg",
+      "youtube_video_id": "DuhwDoE0uNg",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Fake Love (Acoustic)",
+          "url": "https://www.youtube.com/watch?v=DuhwDoE0uNg",
+          "web_ref": "turn831556search20"
+        }
+      ]
+    },
+    {
+      "title": "Make You Mine",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2016,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=V4C2DvwEoDM",
+      "youtube_video_id": "V4C2DvwEoDM",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Make You Mine (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=V4C2DvwEoDM",
+          "web_ref": "turn467122search13"
+        }
+      ]
+    },
+    {
+      "title": "Overrated, Viral & Text Threads",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2016,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=cWOwFuUpdRM",
+      "youtube_video_id": "cWOwFuUpdRM",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "Medley-style official video combining multiple songs.",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Overrated, Viral & Text Threads - Official Video",
+          "url": "https://www.youtube.com/watch?v=cWOwFuUpdRM",
+          "web_ref": "turn709670search0"
+        }
+      ]
+    },
+    {
+      "title": "Status",
+      "artist_credit": "Audio Push feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2016,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=LU9wJ3qcDaE",
+      "youtube_video_id": "LU9wJ3qcDaE",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Audio Push",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Audio Push feat. Eric Bellinger - Status",
+          "url": "https://www.youtube.com/watch?v=LU9wJ3qcDaE",
+          "web_ref": "turn261385search8"
+        }
+      ]
+    },
+    {
+      "title": "Drive By / Reminder",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2017,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=q2aZ_Npj2RU",
+      "youtube_video_id": "q2aZ_Npj2RU",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Drive By / Reminder (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=q2aZ_Npj2RU",
+          "web_ref": "turn709670search15"
+        }
+      ]
+    },
+    {
+      "title": "Main Thang",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Dom Kennedy"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2017,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=ZewQB2xLqXI",
+      "youtube_video_id": "ZewQB2xLqXI",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Main Thang feat. Dom Kennedy",
+          "url": "https://www.youtube.com/watch?v=ZewQB2xLqXI",
+          "web_ref": "turn537519search2"
+        },
+        {
+          "title": "TheIndustryCosign Main Thang",
+          "url": "https://theindustrycosign.com/eric-bellinger-main-thang-feat-dom-kennedy-official-video/",
+          "web_ref": "turn470531search19"
+        }
+      ]
+    },
+    {
+      "title": "Me You & Her",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_comic_video",
+      "release_year": 2017,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=Osdh9JLjHB0",
+      "youtube_video_id": "Osdh9JLjHB0",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "Included as official comic video, not a conventional live-action music video.",
+      "sources": [
+        {
+          "title": "Eric Bellinger \"Me You & Her\" Official Comic Video",
+          "url": "https://www.youtube.com/watch?v=Osdh9JLjHB0",
+          "web_ref": "turn709670search18"
+        }
+      ]
+    },
+    {
+      "title": "Show And Tell",
+      "artist_credit": "Sammie feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2017,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=DZsy8dcrPAc",
+      "youtube_video_id": "DZsy8dcrPAc",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Sammie",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Sammie - Show And Tell ft. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=DZsy8dcrPAc",
+          "web_ref": "turn709670search6"
+        }
+      ]
+    },
+    {
+      "title": "Bet",
+      "artist_credit": "Kristinia DeBarge feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=FLXcZxDf6kM",
+      "youtube_video_id": "FLXcZxDf6kM",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Kristinia DeBarge",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Kristinia DeBarge - Bet ft. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=FLXcZxDf6kM",
+          "web_ref": "turn261385search6"
+        }
+      ]
+    },
+    {
+      "title": "Dirty Dancing",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Ne-Yo"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=ht5BvV5FgCA",
+      "youtube_video_id": "ht5BvV5FgCA",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Dirty Dancing feat. Ne-Yo",
+          "url": "https://www.youtube.com/watch?v=ht5BvV5FgCA",
+          "web_ref": "turn726181search3"
+        }
+      ]
+    },
+    {
+      "title": "G.O.A.T. 2.0",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Wale"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=pvDiPzJV9d0",
+      "youtube_video_id": "pvDiPzJV9d0",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": "Facet",
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - G.O.A.T. 2.0 feat. Wale (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=pvDiPzJV9d0",
+          "web_ref": "turn774433search1"
+        }
+      ]
+    },
+    {
+      "title": "Hit The Snooze",
+      "artist_credit": "Don Benjamin feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=a0E6AnRyCzs",
+      "youtube_video_id": "a0E6AnRyCzs",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Don Benjamin",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Don Benjamin - Hit The Snooze feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=a0E6AnRyCzs",
+          "web_ref": "turn261385search21"
+        }
+      ]
+    },
+    {
+      "title": "I Don't Wanna Fall In Love",
+      "artist_credit": "Lil Rob feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=k8FQLOIb088",
+      "youtube_video_id": "k8FQLOIb088",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Lil Rob",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Lil Rob - I Don't Wanna Fall In Love ft Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=k8FQLOIb088",
+          "web_ref": "turn254885search4"
+        }
+      ]
+    },
+    {
+      "title": "KING",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=9eXahDh0-Ag",
+      "youtube_video_id": "9eXahDh0-Ag",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - KING (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=9eXahDh0-Ag",
+          "web_ref": "turn709670search20"
+        }
+      ]
+    },
+    {
+      "title": "Nice to Meet You",
+      "artist_credit": "iAmCompton feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=_vozQ4bCJS0",
+      "youtube_video_id": "_vozQ4bCJS0",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "iAmCompton",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "iAmCompton - Nice to Meet You feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=_vozQ4bCJS0",
+          "web_ref": "turn709670search21"
+        }
+      ]
+    },
+    {
+      "title": "On My Way",
+      "artist_credit": "DJ Era feat. O.T. Genasis, Eric Bellinger & AD",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "",
+      "youtube_video_id": null,
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "DJ Era",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "low",
+      "notes": "Identified as an official video in YouTube related-result snippets, but an exact watch URL could not be confirmed in the captured results; kept without youtube_url pending manual verification.",
+      "sources": [
+        {
+          "title": "DJ Era ft. O.T. Genasis, Eric Bellinger, AD - On My Way related result snippet",
+          "url": "https://www.youtube.com/results?search_query=DJ+Era+On+My+Way+Eric+Bellinger",
+          "web_ref": "turn188729search7"
+        }
+      ]
+    },
+    {
+      "title": "Tapped In",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=tusqFaq1Be0",
+      "youtube_video_id": "tusqFaq1Be0",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Tapped In (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=tusqFaq1Be0",
+          "web_ref": "turn308824search0"
+        }
+      ]
+    },
+    {
+      "title": "Unfollow",
+      "artist_credit": "Victor Oladipo feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=0EtGZ86NVcw",
+      "youtube_video_id": "0EtGZ86NVcw",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Victor Oladipo",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Victor Oladipo - Unfollow feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=0EtGZ86NVcw",
+          "web_ref": "turn254885search5"
+        }
+      ]
+    },
+    {
+      "title": "Yikes",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2018,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=R6Pl6Eau1t0",
+      "youtube_video_id": "R6Pl6Eau1t0",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "medium",
+      "notes": "Search result titles it as official video; not verified from Eric's own channel in the captured result.",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Yikes (Tory Lanez Diss) [Official Music Video]",
+          "url": "https://www.youtube.com/watch?v=R6Pl6Eau1t0",
+          "web_ref": "turn317681search0"
+        }
+      ]
+    },
+    {
+      "title": "Ball",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=tmem5rPxK60",
+      "youtube_video_id": "tmem5rPxK60",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Ball (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=tmem5rPxK60",
+          "web_ref": "turn995866search1"
+        }
+      ]
+    },
+    {
+      "title": "CS3 Intro",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=c6dZXCEw-Hk",
+      "youtube_video_id": "c6dZXCEw-Hk",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - CS3 Intro (Official Video)",
+          "url": "https://www.youtube.com/watch?v=c6dZXCEw-Hk",
+          "web_ref": "turn259781search0"
+        }
+      ]
+    },
+    {
+      "title": "Day After Forever",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=Mi4Cqo6zNdc",
+      "youtube_video_id": "Mi4Cqo6zNdc",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Day After Forever (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=Mi4Cqo6zNdc",
+          "web_ref": "turn278247search20"
+        }
+      ]
+    },
+    {
+      "title": "Delicious AF",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=odUUluHPHW0",
+      "youtube_video_id": "odUUluHPHW0",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Delicious AF (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=odUUluHPHW0",
+          "web_ref": "turn277445search0"
+        }
+      ]
+    },
+    {
+      "title": "Drive By",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=RjF-47YxNIw",
+      "youtube_video_id": "RjF-47YxNIw",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Drive By (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=RjF-47YxNIw",
+          "web_ref": "turn278247search2"
+        }
+      ]
+    },
+    {
+      "title": "Eazy",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=dXdPAFI7nNs",
+      "youtube_video_id": "dXdPAFI7nNs",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Eazy (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=dXdPAFI7nNs",
+          "web_ref": "turn278247search21"
+        }
+      ]
+    },
+    {
+      "title": "KING",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=OtpMuy62aKE",
+      "youtube_video_id": "OtpMuy62aKE",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - KING (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=OtpMuy62aKE",
+          "web_ref": "turn278247search8"
+        }
+      ]
+    },
+    {
+      "title": "Lay Up",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=5oboOm2IJ50",
+      "youtube_video_id": "5oboOm2IJ50",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Lay Up (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=5oboOm2IJ50",
+          "web_ref": "turn278247search19"
+        }
+      ]
+    },
+    {
+      "title": "Make Up For It",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=-uV3apOQpQs",
+      "youtube_video_id": "-uV3apOQpQs",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Make Up For It (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=-uV3apOQpQs",
+          "web_ref": "turn278247search3"
+        }
+      ]
+    },
+    {
+      "title": "MooD",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=vdd7_ybwh9w",
+      "youtube_video_id": "vdd7_ybwh9w",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - MooD (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=vdd7_ybwh9w",
+          "web_ref": "turn278247search5"
+        }
+      ]
+    },
+    {
+      "title": "Privacy",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Problem"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=Zhpkx6dwzJU",
+      "youtube_video_id": "Zhpkx6dwzJU",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Privacy Feat. Problem (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=Zhpkx6dwzJU",
+          "web_ref": "turn278247search10"
+        }
+      ]
+    },
+    {
+      "title": "Today I Got Time",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=BLqERo9I1uU",
+      "youtube_video_id": "BLqERo9I1uU",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Today I Got Time (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=BLqERo9I1uU",
+          "web_ref": "turn278247search0"
+        }
+      ]
+    },
+    {
+      "title": "Truth Hurts",
+      "artist_credit": "Eric Bellinger & Hitmaka",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=2gNxRymJp5g",
+      "youtube_video_id": "2gNxRymJp5g",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger, Hitmaka - Truth Hurts (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=2gNxRymJp5g",
+          "web_ref": "turn407817search12"
+        }
+      ]
+    },
+    {
+      "title": "Type A Way",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Chris Brown",
+        "OG Parker"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_360_vr_experience",
+      "release_year": 2019,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=9bgap3QMwSo",
+      "youtube_video_id": "9bgap3QMwSo",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Type A Way feat. Chris Brown & OG Parker (VR Experience)",
+          "url": "https://www.youtube.com/watch?v=9bgap3QMwSo",
+          "web_ref": "turn278247search1"
+        }
+      ]
+    },
+    {
+      "title": "Big Body Benz",
+      "artist_credit": "Ye Ali feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=h_KDfdypDAo",
+      "youtube_video_id": "h_KDfdypDAo",
+      "alternate_youtube_urls": [
+        "https://www.youtube.com/watch?v=Pl3wuQzckrc"
+      ],
+      "youtube_channel_or_uploader": "Ye Ali",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Ye Ali - Big Body Benz ft. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=h_KDfdypDAo",
+          "web_ref": "turn254885search9"
+        }
+      ]
+    },
+    {
+      "title": "FLOTUS",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=hzDhHO3ZA48",
+      "youtube_video_id": "hzDhHO3ZA48",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - FLOTUS (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=hzDhHO3ZA48",
+          "web_ref": "turn660523search1"
+        }
+      ]
+    },
+    {
+      "title": "GODLY",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=8W-o__hrP5U",
+      "youtube_video_id": "8W-o__hrP5U",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - GODLY (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=8W-o__hrP5U",
+          "web_ref": "turn259781search6"
+        }
+      ]
+    },
+    {
+      "title": "Hit Eazy",
+      "artist_credit": "Eric Bellinger & Hitmaka",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=fA1zvTsQw28",
+      "youtube_video_id": "fA1zvTsQw28",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger, Hitmaka - Hit Eazy",
+          "url": "https://www.youtube.com/watch?v=fA1zvTsQw28",
+          "web_ref": "turn831556search15"
+        }
+      ]
+    },
+    {
+      "title": "Hype Beast",
+      "artist_credit": "Eric Bellinger & Hitmaka",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=coPAyD_WBqE",
+      "youtube_video_id": "coPAyD_WBqE",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger, Hitmaka - Hype Beast",
+          "url": "https://www.youtube.com/watch?v=coPAyD_WBqE",
+          "web_ref": "turn831556search11"
+        }
+      ]
+    },
+    {
+      "title": "ISOLATION",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=AySbiGfKevg",
+      "youtube_video_id": "AySbiGfKevg",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - ISOLATION (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=AySbiGfKevg",
+          "web_ref": "turn277445search1"
+        },
+        {
+          "title": "REVOLT Isolation video article",
+          "url": "https://www.revolt.tv/article/2020-05-29/74761/eric-bellinger-releases-isolation-video",
+          "web_ref": "turn277445search6"
+        }
+      ]
+    },
+    {
+      "title": "One Thing Missing",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=Nhu1BeLajfo",
+      "youtube_video_id": "Nhu1BeLajfo",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - One Thing Missing (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=Nhu1BeLajfo",
+          "web_ref": "turn660523search2"
+        }
+      ]
+    },
+    {
+      "title": "Only You",
+      "artist_credit": "Eric Bellinger & Hitmaka",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=D3tEDg3uqmg",
+      "youtube_video_id": "D3tEDg3uqmg",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger & Hitmaka - Only You",
+          "url": "https://www.youtube.com/watch?v=D3tEDg3uqmg",
+          "web_ref": "turn831556search10"
+        }
+      ]
+    },
+    {
+      "title": "Picture Perfect",
+      "artist_credit": "Dizzy Wright feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=erD0YVRMnw8",
+      "youtube_video_id": "erD0YVRMnw8",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Dizzy Wright",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Dizzy Wright - Picture Perfect feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=erD0YVRMnw8",
+          "web_ref": "turn261385search4"
+        }
+      ]
+    },
+    {
+      "title": "Serious",
+      "artist_credit": "Eric Bellinger & Hitmaka",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=svAk28GsFck",
+      "youtube_video_id": "svAk28GsFck",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger, Hitmaka - Serious",
+          "url": "https://www.youtube.com/watch?v=svAk28GsFck",
+          "web_ref": "turn831556search5"
+        }
+      ]
+    },
+    {
+      "title": "Slide",
+      "artist_credit": "MarMar Oso feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=fuoiLoa3vn4",
+      "youtube_video_id": "fuoiLoa3vn4",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "MarMar Oso",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "MarMar Oso - Slide feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=fuoiLoa3vn4",
+          "web_ref": "turn254885search0"
+        }
+      ]
+    },
+    {
+      "title": "SOLO’N",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=YLNzoK9grr4",
+      "youtube_video_id": "YLNzoK9grr4",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - SOLO’N [Official Music Video]",
+          "url": "https://www.youtube.com/watch?v=YLNzoK9grr4",
+          "web_ref": "turn660523search0"
+        }
+      ]
+    },
+    {
+      "title": "Star Projectors",
+      "artist_credit": "Eric Bellinger & Hitmaka",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=Wb2ObQcxZAg",
+      "youtube_video_id": "Wb2ObQcxZAg",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger, Hitmaka - Star Projectors (Official Video)",
+          "url": "https://www.youtube.com/watch?v=Wb2ObQcxZAg",
+          "web_ref": "turn604922search14"
+        }
+      ]
+    },
+    {
+      "title": "Stories",
+      "artist_credit": "Derek King feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2020,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=H1TADrDu9oo",
+      "youtube_video_id": "H1TADrDu9oo",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Derek King",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Derek King - Stories feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=H1TADrDu9oo",
+          "web_ref": "turn709670search9"
+        }
+      ]
+    },
+    {
+      "title": "BNB",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2021,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=fKoPzdnHYfU",
+      "youtube_video_id": "fKoPzdnHYfU",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - BNB (Official Video)",
+          "url": "https://www.youtube.com/watch?v=fKoPzdnHYfU",
+          "web_ref": "turn831556search7"
+        }
+      ]
+    },
+    {
+      "title": "Casamigos",
+      "artist_credit": "Bizkitbnb feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2021,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=L2wuWBJZ7AQ",
+      "youtube_video_id": "L2wuWBJZ7AQ",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Bizkitbnb",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Bizkitbnb feat. Eric Bellinger - Casamigos",
+          "url": "https://www.youtube.com/watch?v=L2wuWBJZ7AQ",
+          "web_ref": "turn709670search11"
+        }
+      ]
+    },
+    {
+      "title": "CONNECTED",
+      "artist_credit": "CHIP feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2021,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=ZlHGWpSO6TQ",
+      "youtube_video_id": "ZlHGWpSO6TQ",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "CHIP",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "CHIP - CONNECTED feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=ZlHGWpSO6TQ",
+          "web_ref": "turn261385search17"
+        }
+      ]
+    },
+    {
+      "title": "ENOUGH",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2021,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=7Xfbf_AzOCM",
+      "youtube_video_id": "7Xfbf_AzOCM",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - ENOUGH (Official Video)",
+          "url": "https://www.youtube.com/watch?v=7Xfbf_AzOCM",
+          "web_ref": "turn308824search9"
+        }
+      ]
+    },
+    {
+      "title": "FOCUS",
+      "artist_credit": "DaBoyDame feat. Eric Bellinger, Ty Dolla $ign & Blxst",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2021,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=EmB30t5r4R4",
+      "youtube_video_id": "EmB30t5r4R4",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "DaBoyDame",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "FOCUS ft. Eric Bellinger, Ty Dolla $ign, Blxst",
+          "url": "https://www.youtube.com/watch?v=EmB30t5r4R4",
+          "web_ref": "turn709670search7"
+        }
+      ]
+    },
+    {
+      "title": "Organic",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2021,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=EO1zVouUTf8",
+      "youtube_video_id": "EO1zVouUTf8",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": "Jack Guerra",
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Organic (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=EO1zVouUTf8",
+          "web_ref": "turn230864search0"
+        },
+        {
+          "title": "Rated R&B Organic article",
+          "url": "https://ratedrnb.com/2021/03/eric-bellinger-unveils-video-for-new-song-organic/",
+          "web_ref": "turn170754search10"
+        }
+      ]
+    },
+    {
+      "title": "Shine On The World",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2021,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=wPjV2p_sBCE",
+      "youtube_video_id": "wPjV2p_sBCE",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": "Loris Russier",
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Shine On The World",
+          "url": "https://www.youtube.com/watch?v=wPjV2p_sBCE",
+          "web_ref": "turn831556search8"
+        },
+        {
+          "title": "ResultsAndNoHype Shine On The World article",
+          "url": "https://resultsandnohype.com/eric-bellinger-shares-new-visual-for-shine-on-the-world/",
+          "web_ref": "turn308824search7"
+        }
+      ]
+    },
+    {
+      "title": "Weak All Week",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2021,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=-O7pEv9CObk",
+      "youtube_video_id": "-O7pEv9CObk",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Weak All Week (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=-O7pEv9CObk",
+          "web_ref": "turn537519search10"
+        },
+        {
+          "title": "REVOLT Weak All Week article",
+          "url": "https://www.revolt.tv/article/2021-03-26/56663/eric-bellinger-weak-all-week-video",
+          "web_ref": "turn407817search29"
+        }
+      ]
+    },
+    {
+      "title": "What About Us",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Sevyn"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2021,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=ujv_uRLp5tI",
+      "youtube_video_id": "ujv_uRLp5tI",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - What About Us (Official Video) ft. Sevyn",
+          "url": "https://www.youtube.com/watch?v=ujv_uRLp5tI",
+          "web_ref": "turn709670search34"
+        }
+      ]
+    },
+    {
+      "title": "Apple Berry Nana",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2022,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=weVluFFcwko",
+      "youtube_video_id": "weVluFFcwko",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Apple Berry Nana (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=weVluFFcwko",
+          "web_ref": "turn709670search24"
+        }
+      ]
+    },
+    {
+      "title": "Obsession",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2022,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=Gn5CgzSevdU",
+      "youtube_video_id": "Gn5CgzSevdU",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": "Keoni Mars",
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Obsession (Official Video)",
+          "url": "https://www.youtube.com/watch?v=Gn5CgzSevdU",
+          "web_ref": "turn382266search1"
+        },
+        {
+          "title": "REVOLT Obsession article",
+          "url": "https://www.revolt.tv/article/2022-01-14/147823/eric-bellinger-obsession-video",
+          "web_ref": "turn170754search3"
+        }
+      ]
+    },
+    {
+      "title": "Sum 2 See",
+      "artist_credit": "Eric Bellinger & Blxst",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2022,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=jrFV07PFoQE",
+      "youtube_video_id": "jrFV07PFoQE",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger & Blxst - Sum 2 See",
+          "url": "https://www.youtube.com/watch?v=jrFV07PFoQE",
+          "web_ref": "turn831556search17"
+        }
+      ]
+    },
+    {
+      "title": "All For Me",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=ixfDV7TmL-A",
+      "youtube_video_id": "ixfDV7TmL-A",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - All For Me (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=ixfDV7TmL-A",
+          "web_ref": "turn709670search27"
+        }
+      ]
+    },
+    {
+      "title": "Curious",
+      "artist_credit": "Eric Bellinger & Cordae",
+      "featured_artists": [
+        "Fabolous"
+      ],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=3zCb_VCpz74",
+      "youtube_video_id": "3zCb_VCpz74",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger, Cordae - Curious ft. Fabolous",
+          "url": "https://www.youtube.com/watch?v=3zCb_VCpz74",
+          "web_ref": "turn709670search12"
+        }
+      ]
+    },
+    {
+      "title": "Deep",
+      "artist_credit": "Steven G feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=kFXhfAdyXcg",
+      "youtube_video_id": "kFXhfAdyXcg",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Steven G",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Steven G. - Deep ft. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=kFXhfAdyXcg",
+          "web_ref": "turn709670search16"
+        }
+      ]
+    },
+    {
+      "title": "JADED",
+      "artist_credit": "Mozzy feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=P3NOqXE2fPo",
+      "youtube_video_id": "P3NOqXE2fPo",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Mozzy",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Mozzy - JADED ft. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=P3NOqXE2fPo",
+          "web_ref": "turn261385search3"
+        }
+      ]
+    },
+    {
+      "title": "JUVE",
+      "artist_credit": "Marcus Black aka Paypa feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=aMZBA8XQIXM",
+      "youtube_video_id": "aMZBA8XQIXM",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Marcus Black / Paypa",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Marcus Black aka Paypa - JUVE feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=aMZBA8XQIXM",
+          "web_ref": "turn254885search13"
+        }
+      ]
+    },
+    {
+      "title": "La Perla",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=hXjPf0Q9hNQ",
+      "youtube_video_id": "hXjPf0Q9hNQ",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - La Perla (Official Music Video)",
+          "url": "https://www.youtube.com/watch?v=hXjPf0Q9hNQ",
+          "web_ref": "turn709670search31"
+        }
+      ]
+    },
+    {
+      "title": "Never Be Lonely",
+      "artist_credit": "Eric Bellinger x Amber Riley",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=-RIv1UQRtMo",
+      "youtube_video_id": "-RIv1UQRtMo",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger x Amber Riley x Never Be Lonely",
+          "url": "https://www.youtube.com/watch?v=-RIv1UQRtMo",
+          "web_ref": "turn709670search4"
+        }
+      ]
+    },
+    {
+      "title": "Over The Moon",
+      "artist_credit": "Oso feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=jBbcr1lR_Xs",
+      "youtube_video_id": "jBbcr1lR_Xs",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Oso",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Oso - Over The Moon feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=jBbcr1lR_Xs",
+          "web_ref": "turn254885search15"
+        }
+      ]
+    },
+    {
+      "title": "Read Receipts",
+      "artist_credit": "Sy Ari Da Kid feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=WQ_L4OBOIxs",
+      "youtube_video_id": "WQ_L4OBOIxs",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "The Sy Ari Not Sorry Show / YouTube Music",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "medium",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Read Receipts feat. Eric Bellinger",
+          "url": "https://music.youtube.com/watch?v=WQ_L4OBOIxs",
+          "web_ref": "turn254885search17"
+        }
+      ]
+    },
+    {
+      "title": "Ready For It",
+      "artist_credit": "Kevin Ross feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=Vc266FDhAt0",
+      "youtube_video_id": "Vc266FDhAt0",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Kevin Ross",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Kevin Ross - Ready For It ft. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=Vc266FDhAt0",
+          "web_ref": "turn709670search3"
+        }
+      ]
+    },
+    {
+      "title": "Tipper/Valentine",
+      "artist_credit": "Eric Bellinger & Chase N. Cashe",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=tSTuTVSHJx4",
+      "youtube_video_id": "tSTuTVSHJx4",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger & Chase N. Cashe - Tipper/Valentine",
+          "url": "https://www.youtube.com/watch?v=tSTuTVSHJx4",
+          "web_ref": "turn726181search14"
+        }
+      ]
+    },
+    {
+      "title": "Undefeated",
+      "artist_credit": "Journey Montana feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=sBaIbdmCulk",
+      "youtube_video_id": "sBaIbdmCulk",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Journey Montana",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Journey Montana - Undefeated feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=sBaIbdmCulk",
+          "web_ref": "turn261385search1"
+        }
+      ]
+    },
+    {
+      "title": "Waiting 4 You",
+      "artist_credit": "Omarion & Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=4zmpEuK3Puw",
+      "youtube_video_id": "4zmpEuK3Puw",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Omarion x Eric Bellinger - Waiting 4 You",
+          "url": "https://www.youtube.com/watch?v=4zmpEuK3Puw",
+          "web_ref": "turn971470search14"
+        }
+      ]
+    },
+    {
+      "title": "Where Do We Go",
+      "artist_credit": "Joe Budden feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=bS7OnCqrC6Y",
+      "youtube_video_id": "bS7OnCqrC6Y",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Joe Budden",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Joe Budden - Where Do We Go feat. Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=bS7OnCqrC6Y",
+          "web_ref": "turn254885search24"
+        }
+      ]
+    },
+    {
+      "title": "Your Love Is Gold",
+      "artist_credit": "4Fargo feat. Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "featured artist",
+      "video_type": "official_music_video",
+      "release_year": 2023,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=krkhNOe8ix0",
+      "youtube_video_id": "krkhNOe8ix0",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "4Fargo",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "4Fargo - Your Love Is Gold ft Eric Bellinger",
+          "url": "https://www.youtube.com/watch?v=krkhNOe8ix0",
+          "web_ref": "turn254885search1"
+        }
+      ]
+    },
+    {
+      "title": "Backtrack",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [
+        "Taves"
+      ],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2024,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=XhQo8SVCVkQ",
+      "youtube_video_id": "XhQo8SVCVkQ",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Backtrack feat. Taves",
+          "url": "https://www.youtube.com/watch?v=XhQo8SVCVkQ",
+          "web_ref": "turn709670search5"
+        }
+      ]
+    },
+    {
+      "title": "Chase",
+      "artist_credit": "Eric Bellinger x Jastin Martin",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2024,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=VLWkPIEkbuQ",
+      "youtube_video_id": "VLWkPIEkbuQ",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger x Jastin Martin - Chase [Official Music Video]",
+          "url": "https://www.youtube.com/watch?v=VLWkPIEkbuQ",
+          "web_ref": "turn995866search0"
+        }
+      ]
+    },
+    {
+      "title": "Doin Too Much",
+      "artist_credit": "REASON & Eric Bellinger feat. Isaiah Jaay",
+      "featured_artists": [
+        "Isaiah Jaay"
+      ],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2024,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=JuvP3Nd1YIs",
+      "youtube_video_id": "JuvP3Nd1YIs",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "REASON",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "REASON & Eric Bellinger - Doin Too Much feat. Isaiah Jaay",
+          "url": "https://www.youtube.com/watch?v=JuvP3Nd1YIs",
+          "web_ref": "turn709670search8"
+        }
+      ]
+    },
+    {
+      "title": "Drop",
+      "artist_credit": "Eric Bellinger, Sevyn Streeter",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2024,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=aqSwQHs94-c",
+      "youtube_video_id": "aqSwQHs94-c",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": "Trinidad James",
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger, Sevyn Streeter - Drop (Official)",
+          "url": "https://www.youtube.com/watch?v=aqSwQHs94-c",
+          "web_ref": "turn709670search1"
+        },
+        {
+          "title": "Rated R&B Drop article",
+          "url": "https://ratedrnb.com/2024/04/eric-bellinger-sevyn-streeter-drop-video/",
+          "web_ref": "turn170754search7"
+        }
+      ]
+    },
+    {
+      "title": "Find Someone",
+      "artist_credit": "Eric Bellinger",
+      "featured_artists": [],
+      "eric_bellinger_role": "primary artist",
+      "video_type": "official_music_video",
+      "release_year": 2024,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=wLYgozMywyY",
+      "youtube_video_id": "wLYgozMywyY",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger - Find Someone [Official Music Video]",
+          "url": "https://www.youtube.com/watch?v=wLYgozMywyY",
+          "web_ref": "turn709670search2"
+        }
+      ]
+    },
+    {
+      "title": "Involved",
+      "artist_credit": "Ye Ali x Eric Bellinger x Zae France",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2024,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=aHhu0Z52x-w",
+      "youtube_video_id": "aHhu0Z52x-w",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Ye Ali",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Ye Ali x Eric Bellinger x Zae France - Involved",
+          "url": "https://www.youtube.com/watch?v=aHhu0Z52x-w",
+          "web_ref": "turn709670search14"
+        }
+      ]
+    },
+    {
+      "title": "Special",
+      "artist_credit": "Eric Bellinger x Konshens",
+      "featured_artists": [],
+      "eric_bellinger_role": "co-lead artist",
+      "video_type": "official_music_video",
+      "release_year": 2024,
+      "date_precision": "year_estimate_or_public_search_snippet",
+      "youtube_url": "https://www.youtube.com/watch?v=GaMJ_Yq4fCU",
+      "youtube_video_id": "GaMJ_Yq4fCU",
+      "alternate_youtube_urls": [],
+      "youtube_channel_or_uploader": "Eric Bellinger",
+      "official_status": "official",
+      "director_or_video_credit": null,
+      "confidence": "high",
+      "notes": "",
+      "sources": [
+        {
+          "title": "Eric Bellinger x Konshens - Special",
+          "url": "https://www.youtube.com/watch?v=GaMJ_Yq4fCU",
+          "web_ref": "turn971470search7"
+        }
+      ]
+    }
+  ],
+  "needs_manual_verification": [
+    {
+      "title": "Heaven Sent",
+      "artist_credit": "Eric Bellinger",
+      "issue": "Search results surfaced official/audio and playlist references but not a confirmed official music-video URL.",
+      "candidate_urls": [
+        "https://www.youtube.com/watch?v=BRwlJN3JSnA",
+        "https://www.youtube.com/watch?v=EJ7j7SpWx-8"
+      ],
+      "source_refs": [
+        "turn995866search2",
+        "turn995866search6"
+      ],
+      "recommendation": "Verify manually before treating as an official music video."
+    },
+    {
+      "title": "Text Threads",
+      "artist_credit": "Eric Bellinger",
+      "issue": "A standalone YouTube upload exists and a medley official video exists, but standalone official-music-video status was not verified.",
+      "candidate_urls": [
+        "https://www.youtube.com/watch?v=Zhnh3fYDd-4",
+        "https://www.youtube.com/watch?v=cWOwFuUpdRM"
+      ],
+      "source_refs": [
+        "turn995866search3",
+        "turn709670search0"
+      ],
+      "recommendation": "Use the medley entry as verified; verify standalone upload manually."
+    },
+    {
+      "title": "By Now",
+      "artist_credit": "Eric Bellinger",
+      "issue": "Search result identified official audio, not an official music video.",
+      "candidate_urls": [
+        "https://www.youtube.com/watch?v=pp3c2JgrrVU"
+      ],
+      "source_refs": [
+        "turn259781search1"
+      ],
+      "recommendation": "Exclude from official-music-video list unless a separate video is found."
+    },
+    {
+      "title": "On My Way",
+      "artist_credit": "DJ Era feat. O.T. Genasis, Eric Bellinger & AD",
+      "issue": "Official video identified in related-result snippets, but exact watch URL was not captured.",
+      "candidate_urls": [],
+      "source_refs": [
+        "turn188729search7",
+        "turn259781search7"
+      ],
+      "recommendation": "Manual YouTube verification needed."
+    }
+  ]
+}

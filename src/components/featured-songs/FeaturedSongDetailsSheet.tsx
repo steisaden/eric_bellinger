@@ -1,0 +1,103 @@
+import { motion } from "motion/react";
+import { Music2, X } from "lucide-react";
+
+import type { FeaturedSong } from "./useFeaturedSongs";
+
+type FeaturedSongDetailsSheetProps = {
+  song: FeaturedSong;
+  onClose: () => void;
+  reduceMotion: boolean;
+};
+
+function PlaceholderCover({ title, source }: { title: string; source: string }) {
+  return (
+    <div className="flex h-full min-h-[18rem] w-full flex-col items-center justify-center bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_42%),linear-gradient(135deg,rgba(124,58,237,0.25),rgba(17,24,39,0.95))] p-8 text-center">
+      <div className="mb-3 rounded-full border border-slate-200/70 bg-white/85 px-4 py-2 text-[10px] uppercase tracking-[0.35em] text-slate-600">
+        Cover art pending verification
+      </div>
+      <p className="max-w-[12rem] text-balance text-lg font-light text-slate-900/85">{title}</p>
+      <p className="mt-2 text-[10px] uppercase tracking-[0.3em] text-slate-500">{source}</p>
+    </div>
+  );
+}
+
+export function FeaturedSongDetailsSheet({ song, onClose, reduceMotion }: FeaturedSongDetailsSheetProps) {
+  const hasCover = Boolean(song.coverUrl);
+
+  return (
+    <motion.div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby={`featured-song-title-${song.id}`}
+      initial={reduceMotion ? false : { opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-white/70 p-3 backdrop-blur-md md:items-center md:p-6"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={reduceMotion ? false : { y: 48, scale: 0.98 }}
+        animate={{ y: 0, scale: 1 }}
+        exit={reduceMotion ? undefined : { y: 48, scale: 0.98 }}
+        transition={{ type: "spring", damping: 28, stiffness: 240 }}
+        className="flex w-full max-w-2xl max-h-[calc(100dvh-1.5rem)] flex-col overflow-hidden rounded-[28px] border border-slate-200 bg-[#fffdf8] shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="shrink-0 flex items-start justify-between gap-4 border-b border-slate-200 px-5 py-4 md:px-6">
+          <div>
+            <p className="text-[10px] font-mono uppercase tracking-widest text-eb-accent">Feature detail</p>
+            <h3 id={`featured-song-title-${song.id}`} className="mt-2 text-2xl font-display font-light md:text-3xl">
+              {song.title}
+            </h3>
+            <p className="mt-1 text-sm text-slate-600">{song.artist}</p>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-full border border-slate-200 bg-white/80 p-2 text-slate-700 transition-colors hover:bg-slate-100/80 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-eb-accent/70"
+            aria-label={`Close details for ${song.title}`}
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto px-5 py-5 md:px-6 md:py-6">
+          <div className="grid gap-6 md:grid-cols-[220px_minmax(0,1fr)]">
+            <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white/80">
+              {hasCover ? (
+                <img
+                  src={song.coverUrl ?? undefined}
+                  alt={song.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <PlaceholderCover title={song.title} source={song.source} />
+              )}
+            </div>
+
+            <div className="space-y-5">
+              <div>
+                <p className="text-[10px] font-mono uppercase tracking-widest text-slate-500">Feature context</p>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-700 md:text-base">
+                  This section now includes every feature-song record from the verified JSON file, including the five manual-review items.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-white/95 p-4">
+                <p className="text-[10px] font-mono uppercase tracking-widest text-slate-500">Artwork note</p>
+                <p className="mt-1 text-sm text-slate-900">{song.note}</p>
+              </div>
+
+              <div className="flex items-center gap-2 rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 text-[10px] uppercase tracking-widest text-slate-600">
+                <Music2 className="h-4 w-4 text-eb-accent" />
+                Source: {song.source}
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}

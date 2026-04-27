@@ -1,0 +1,429 @@
+{
+  "meta": {
+    "dataset_name": "Eric Bellinger featured / guest / co-billed appearances — best-effort public metadata export",
+    "artist": "Eric Bellinger",
+    "input_file": "eric_bellinger_featured_appearances_best_effort.json",
+    "generated_at": "2026-04-26T10:52:34.569Z",
+    "resolver": "resolve_featured_appearance_cover_art_v2.mjs",
+    "node_version": "v22.22.2",
+    "total_input_records": 113,
+    "processed_records": 5,
+    "options": {
+      "limit": 5,
+      "verbose": true,
+      "apple_only": false,
+      "mb_only": false
+    },
+    "summary": {
+      "total_records": 5,
+      "verified_apple_artwork": 3,
+      "verified_musicbrainz_caa_artwork": 4,
+      "manual_review": 0
+    }
+  },
+  "entries": [
+    {
+      "title": "#YAK (You Already Know)",
+      "variant_or_mix": null,
+      "artist_credit": "Da Brat feat. Sage the Gemini & Eric Bellinger",
+      "primary_artist": "Da Brat",
+      "eric_bellinger_role_in_credit": "featured_artist",
+      "featured_or_additional_artists": [
+        "Sage the Gemini",
+        "Eric Bellinger"
+      ],
+      "duration": "4:25",
+      "isrcs": [
+        "USUYG1088031"
+      ],
+      "release_groups": [
+        "#YAK (You Already Know)"
+      ],
+      "credits": {
+        "verified_from_musicbrainz_listing": {
+          "artist_credit": "Da Brat feat. Sage the Gemini & Eric Bellinger",
+          "duration": "4:25",
+          "isrcs": [
+            "USUYG1088031"
+          ],
+          "release_groups": [
+            "#YAK (You Already Know)"
+          ]
+        },
+        "personnel_writers_producers_engineers": [],
+        "personnel_credit_note": "Not fully available from the MusicBrainz recordings index used for this file. Verify with release liner notes, ASCAP/BMI, AllMusic, TIDAL credits, Spotify credits, Apple Music credits, or label metadata before publication."
+      },
+      "streaming_links": {
+        "exact_track_links_verified": {},
+        "platform_search_links_unverified": {
+          "spotify_search": "https://open.spotify.com/search/%23YAK%20%28You%20Already%20Know%29%20Da%20Brat%20feat.%20Sage%20the%20Gemini%20%26%20Eric%20Bellinger",
+          "apple_music_search": "https://music.apple.com/us/search?term=%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini+%26+Eric+Bellinger",
+          "youtube_music_search": "https://music.youtube.com/search?q=%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini+%26+Eric+Bellinger",
+          "youtube_search": "https://www.youtube.com/results?search_query=%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini+%26+Eric+Bellinger",
+          "deezer_search": "https://www.deezer.com/search/%23YAK%20%28You%20Already%20Know%29%20Da%20Brat%20feat.%20Sage%20the%20Gemini%20%26%20Eric%20Bellinger",
+          "tidal_search": "https://listen.tidal.com/search?q=%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini+%26+Eric+Bellinger",
+          "amazon_music_search": "https://music.amazon.com/search/%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini+%26+Eric+Bellinger",
+          "soundcloud_search": "https://soundcloud.com/search/sounds?q=%23YAK+%28You+Already+Know%29+Da+Brat+feat.+Sage+the+Gemini+%26+Eric+Bellinger"
+        },
+        "streaming_note": "Search links were generated from the song title and artist credit. They are not proof that the track exists on every listed platform. Exact platform URLs require platform catalog/API matching."
+      },
+      "source": {
+        "catalog": "MusicBrainz",
+        "artist_mbid": "07a8922d-680a-4637-a55e-88d7d1969a95",
+        "artist_recordings_page": "https://musicbrainz.org/artist/07a8922d-680a-4637-a55e-88d7d1969a95/recordings"
+      },
+      "notes": null,
+      "cover_art_resolution": {
+        "status": "verified",
+        "selected_source": "apple_music",
+        "selected_artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/75/d9/bd/75d9bd1f-e45f-8bb7-57b7-312dce4a3371/888915174531_cover.jpg/3000x3000bb.jpg",
+        "selected_page_url": "https://music.apple.com/us/album/yak-you-already-know-feat-sage-the-gemini-eric-bellinger/1064278596?i=1064279313&uo=4",
+        "verified_apple_artwork": {
+          "source": "apple_music",
+          "page_url": "https://music.apple.com/us/album/yak-you-already-know-feat-sage-the-gemini-eric-bellinger/1064278596?i=1064279313&uo=4",
+          "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/75/d9/bd/75d9bd1f-e45f-8bb7-57b7-312dce4a3371/888915174531_cover.jpg/3000x3000bb.jpg",
+          "match_score": 315,
+          "query": "#YAK (You Already Know) Da Brat feat. Sage the Gemini & Eric Bellinger",
+          "matched": {
+            "artistName": "Da Brat",
+            "collectionName": "#YAK (You Already Know) [feat. Sage the Gemini & Eric Bellinger] - Single",
+            "trackName": "#YAK (You Already Know) [feat. Sage the Gemini & Eric Bellinger]",
+            "collectionId": 1064278596,
+            "trackId": 1064279313
+          }
+        },
+        "verified_musicbrainz_caa_artwork": null,
+        "manual_review": false,
+        "notes": []
+      }
+    },
+    {
+      "title": "2 Piece",
+      "variant_or_mix": null,
+      "artist_credit": "Mally Mall feat. Migos, Eric Bellinger, Jeremih & Jazz Lazer",
+      "primary_artist": "Mally Mall",
+      "eric_bellinger_role_in_credit": "featured_artist",
+      "featured_or_additional_artists": [
+        "Migos",
+        "Eric Bellinger",
+        "Jeremih",
+        "Jazz Lazer"
+      ],
+      "duration": "4:21",
+      "isrcs": [
+        "USUYG1087260"
+      ],
+      "release_groups": [
+        "Triple X-Mas"
+      ],
+      "credits": {
+        "verified_from_musicbrainz_listing": {
+          "artist_credit": "Mally Mall feat. Migos, Eric Bellinger, Jeremih & Jazz Lazer",
+          "duration": "4:21",
+          "isrcs": [
+            "USUYG1087260"
+          ],
+          "release_groups": [
+            "Triple X-Mas"
+          ]
+        },
+        "personnel_writers_producers_engineers": [],
+        "personnel_credit_note": "Not fully available from the MusicBrainz recordings index used for this file. Verify with release liner notes, ASCAP/BMI, AllMusic, TIDAL credits, Spotify credits, Apple Music credits, or label metadata before publication."
+      },
+      "streaming_links": {
+        "exact_track_links_verified": {},
+        "platform_search_links_unverified": {
+          "spotify_search": "https://open.spotify.com/search/2%20Piece%20Mally%20Mall%20feat.%20Migos%2C%20Eric%20Bellinger%2C%20Jeremih%20%26%20Jazz%20Lazer",
+          "apple_music_search": "https://music.apple.com/us/search?term=2+Piece+Mally+Mall+feat.+Migos%2C+Eric+Bellinger%2C+Jeremih+%26+Jazz+Lazer",
+          "youtube_music_search": "https://music.youtube.com/search?q=2+Piece+Mally+Mall+feat.+Migos%2C+Eric+Bellinger%2C+Jeremih+%26+Jazz+Lazer",
+          "youtube_search": "https://www.youtube.com/results?search_query=2+Piece+Mally+Mall+feat.+Migos%2C+Eric+Bellinger%2C+Jeremih+%26+Jazz+Lazer",
+          "deezer_search": "https://www.deezer.com/search/2%20Piece%20Mally%20Mall%20feat.%20Migos%2C%20Eric%20Bellinger%2C%20Jeremih%20%26%20Jazz%20Lazer",
+          "tidal_search": "https://listen.tidal.com/search?q=2+Piece+Mally+Mall+feat.+Migos%2C+Eric+Bellinger%2C+Jeremih+%26+Jazz+Lazer",
+          "amazon_music_search": "https://music.amazon.com/search/2+Piece+Mally+Mall+feat.+Migos%2C+Eric+Bellinger%2C+Jeremih+%26+Jazz+Lazer",
+          "soundcloud_search": "https://soundcloud.com/search/sounds?q=2+Piece+Mally+Mall+feat.+Migos%2C+Eric+Bellinger%2C+Jeremih+%26+Jazz+Lazer"
+        },
+        "streaming_note": "Search links were generated from the song title and artist credit. They are not proof that the track exists on every listed platform. Exact platform URLs require platform catalog/API matching."
+      },
+      "source": {
+        "catalog": "MusicBrainz",
+        "artist_mbid": "07a8922d-680a-4637-a55e-88d7d1969a95",
+        "artist_recordings_page": "https://musicbrainz.org/artist/07a8922d-680a-4637-a55e-88d7d1969a95/recordings"
+      },
+      "notes": null,
+      "cover_art_resolution": {
+        "status": "verified",
+        "selected_source": "musicbrainz_caa",
+        "selected_artwork_url": "http://coverartarchive.org/release/4603a6f0-6884-47c0-b6d4-cdfce6dd1bb4/12299388818.jpg",
+        "selected_page_url": "https://musicbrainz.org/release/4603a6f0-6884-47c0-b6d4-cdfce6dd1bb4",
+        "verified_apple_artwork": null,
+        "verified_musicbrainz_caa_artwork": {
+          "source": "musicbrainz_caa",
+          "page_url": "https://musicbrainz.org/release/4603a6f0-6884-47c0-b6d4-cdfce6dd1bb4",
+          "artwork_url": "http://coverartarchive.org/release/4603a6f0-6884-47c0-b6d4-cdfce6dd1bb4/12299388818.jpg",
+          "release_mbid": "4603a6f0-6884-47c0-b6d4-cdfce6dd1bb4",
+          "release_title": "Triple X-Mas",
+          "release_score": 202,
+          "query": "recording:\"2 Piece\" AND artist:\"Mally Mall\"",
+          "matched": {
+            "recordingTitle": "2 Piece",
+            "recordingId": "2e5ba95d-ed7b-4ba1-b657-ac9263ed8262",
+            "releaseId": "4603a6f0-6884-47c0-b6d4-cdfce6dd1bb4",
+            "coverCount": 1
+          }
+        },
+        "manual_review": false,
+        "notes": []
+      }
+    },
+    {
+      "title": "4 Digits",
+      "variant_or_mix": null,
+      "artist_credit": "DJ Mustard feat. Fabolous & Eric Bellinger",
+      "primary_artist": "DJ Mustard",
+      "eric_bellinger_role_in_credit": "featured_artist",
+      "featured_or_additional_artists": [
+        "Fabolous",
+        "Eric Bellinger"
+      ],
+      "duration": "3:11",
+      "isrcs": [],
+      "release_groups": [
+        "10 Summers"
+      ],
+      "credits": {
+        "verified_from_musicbrainz_listing": {
+          "artist_credit": "DJ Mustard feat. Fabolous & Eric Bellinger",
+          "duration": "3:11",
+          "isrcs": [],
+          "release_groups": [
+            "10 Summers"
+          ]
+        },
+        "personnel_writers_producers_engineers": [],
+        "personnel_credit_note": "Not fully available from the MusicBrainz recordings index used for this file. Verify with release liner notes, ASCAP/BMI, AllMusic, TIDAL credits, Spotify credits, Apple Music credits, or label metadata before publication."
+      },
+      "streaming_links": {
+        "exact_track_links_verified": {},
+        "platform_search_links_unverified": {
+          "spotify_search": "https://open.spotify.com/search/4%20Digits%20DJ%20Mustard%20feat.%20Fabolous%20%26%20Eric%20Bellinger",
+          "apple_music_search": "https://music.apple.com/us/search?term=4+Digits+DJ+Mustard+feat.+Fabolous+%26+Eric+Bellinger",
+          "youtube_music_search": "https://music.youtube.com/search?q=4+Digits+DJ+Mustard+feat.+Fabolous+%26+Eric+Bellinger",
+          "youtube_search": "https://www.youtube.com/results?search_query=4+Digits+DJ+Mustard+feat.+Fabolous+%26+Eric+Bellinger",
+          "deezer_search": "https://www.deezer.com/search/4%20Digits%20DJ%20Mustard%20feat.%20Fabolous%20%26%20Eric%20Bellinger",
+          "tidal_search": "https://listen.tidal.com/search?q=4+Digits+DJ+Mustard+feat.+Fabolous+%26+Eric+Bellinger",
+          "amazon_music_search": "https://music.amazon.com/search/4+Digits+DJ+Mustard+feat.+Fabolous+%26+Eric+Bellinger",
+          "soundcloud_search": "https://soundcloud.com/search/sounds?q=4+Digits+DJ+Mustard+feat.+Fabolous+%26+Eric+Bellinger"
+        },
+        "streaming_note": "Search links were generated from the song title and artist credit. They are not proof that the track exists on every listed platform. Exact platform URLs require platform catalog/API matching."
+      },
+      "source": {
+        "catalog": "MusicBrainz",
+        "artist_mbid": "07a8922d-680a-4637-a55e-88d7d1969a95",
+        "artist_recordings_page": "https://musicbrainz.org/artist/07a8922d-680a-4637-a55e-88d7d1969a95/recordings"
+      },
+      "notes": null,
+      "cover_art_resolution": {
+        "status": "verified",
+        "selected_source": "musicbrainz_caa",
+        "selected_artwork_url": "http://coverartarchive.org/release/2af822c8-4bdf-4729-b611-d98f983067b0/8024716732.jpg",
+        "selected_page_url": "https://musicbrainz.org/release/2af822c8-4bdf-4729-b611-d98f983067b0",
+        "verified_apple_artwork": {
+          "source": "apple_music",
+          "page_url": "https://music.apple.com/us/album/4-digits-feat-fabolous-eric-bellinger/1440923130?i=1440923934&uo=4",
+          "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/84/99/36/849936ed-1a15-7091-3421-44dd155e92e6/00857018004625.rgb.jpg/3000x3000bb.jpg",
+          "match_score": 185,
+          "query": "4 Digits DJ Mustard feat. Fabolous & Eric Bellinger",
+          "matched": {
+            "artistName": "Mustard",
+            "collectionName": "10 Summers",
+            "trackName": "4 Digits (feat. Fabolous & Eric Bellinger)",
+            "collectionId": 1440923130,
+            "trackId": 1440923934
+          }
+        },
+        "verified_musicbrainz_caa_artwork": {
+          "source": "musicbrainz_caa",
+          "page_url": "https://musicbrainz.org/release/2af822c8-4bdf-4729-b611-d98f983067b0",
+          "artwork_url": "http://coverartarchive.org/release/2af822c8-4bdf-4729-b611-d98f983067b0/8024716732.jpg",
+          "release_mbid": "2af822c8-4bdf-4729-b611-d98f983067b0",
+          "release_title": "10 Summers",
+          "release_score": 202,
+          "query": "recording:\"4 Digits\" AND artist:\"DJ Mustard\"",
+          "matched": {
+            "recordingTitle": "4 Digits",
+            "recordingId": "ba059695-aca4-43ee-ad6c-97a8baff4ca6",
+            "releaseId": "2af822c8-4bdf-4729-b611-d98f983067b0",
+            "coverCount": 1
+          }
+        },
+        "manual_review": false,
+        "notes": []
+      }
+    },
+    {
+      "title": "4 Digits",
+      "variant_or_mix": null,
+      "artist_credit": "Mustard, Fabolous & Eric Bellinger",
+      "primary_artist": "Mustard",
+      "eric_bellinger_role_in_credit": "co_billed_artist",
+      "featured_or_additional_artists": [
+        "Fabolous",
+        "Eric Bellinger"
+      ],
+      "duration": "3:11",
+      "isrcs": [
+        "QMJMT1400119"
+      ],
+      "release_groups": [
+        "2010s RAP HITS : 2010 - 2014 Era"
+      ],
+      "credits": {
+        "verified_from_musicbrainz_listing": {
+          "artist_credit": "Mustard, Fabolous & Eric Bellinger",
+          "duration": "3:11",
+          "isrcs": [
+            "QMJMT1400119"
+          ],
+          "release_groups": [
+            "2010s RAP HITS : 2010 - 2014 Era"
+          ]
+        },
+        "personnel_writers_producers_engineers": [],
+        "personnel_credit_note": "Not fully available from the MusicBrainz recordings index used for this file. Verify with release liner notes, ASCAP/BMI, AllMusic, TIDAL credits, Spotify credits, Apple Music credits, or label metadata before publication."
+      },
+      "streaming_links": {
+        "exact_track_links_verified": {},
+        "platform_search_links_unverified": {
+          "spotify_search": "https://open.spotify.com/search/4%20Digits%20Mustard%2C%20Fabolous%20%26%20Eric%20Bellinger",
+          "apple_music_search": "https://music.apple.com/us/search?term=4+Digits+Mustard%2C+Fabolous+%26+Eric+Bellinger",
+          "youtube_music_search": "https://music.youtube.com/search?q=4+Digits+Mustard%2C+Fabolous+%26+Eric+Bellinger",
+          "youtube_search": "https://www.youtube.com/results?search_query=4+Digits+Mustard%2C+Fabolous+%26+Eric+Bellinger",
+          "deezer_search": "https://www.deezer.com/search/4%20Digits%20Mustard%2C%20Fabolous%20%26%20Eric%20Bellinger",
+          "tidal_search": "https://listen.tidal.com/search?q=4+Digits+Mustard%2C+Fabolous+%26+Eric+Bellinger",
+          "amazon_music_search": "https://music.amazon.com/search/4+Digits+Mustard%2C+Fabolous+%26+Eric+Bellinger",
+          "soundcloud_search": "https://soundcloud.com/search/sounds?q=4+Digits+Mustard%2C+Fabolous+%26+Eric+Bellinger"
+        },
+        "streaming_note": "Search links were generated from the song title and artist credit. They are not proof that the track exists on every listed platform. Exact platform URLs require platform catalog/API matching."
+      },
+      "source": {
+        "catalog": "MusicBrainz",
+        "artist_mbid": "07a8922d-680a-4637-a55e-88d7d1969a95",
+        "artist_recordings_page": "https://musicbrainz.org/artist/07a8922d-680a-4637-a55e-88d7d1969a95/recordings"
+      },
+      "notes": "Alternate artist-credit version of the DJ Mustard/Fabolous/Eric Bellinger recording.",
+      "cover_art_resolution": {
+        "status": "verified",
+        "selected_source": "musicbrainz_caa",
+        "selected_artwork_url": "https://coverartarchive.org/release/aff884fe-a393-4ed9-8d64-788d58dad28f/41333002559.jpg",
+        "selected_page_url": "https://musicbrainz.org/release/aff884fe-a393-4ed9-8d64-788d58dad28f",
+        "verified_apple_artwork": {
+          "source": "apple_music",
+          "page_url": "https://music.apple.com/us/album/4-digits-feat-fabolous-eric-bellinger/1440923130?i=1440923934&uo=4",
+          "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/84/99/36/849936ed-1a15-7091-3421-44dd155e92e6/00857018004625.rgb.jpg/3000x3000bb.jpg",
+          "match_score": 185,
+          "query": "4 Digits Mustard, Fabolous & Eric Bellinger",
+          "matched": {
+            "artistName": "Mustard",
+            "collectionName": "10 Summers",
+            "trackName": "4 Digits (feat. Fabolous & Eric Bellinger)",
+            "collectionId": 1440923130,
+            "trackId": 1440923934
+          }
+        },
+        "verified_musicbrainz_caa_artwork": {
+          "source": "musicbrainz_caa",
+          "page_url": "https://musicbrainz.org/release/aff884fe-a393-4ed9-8d64-788d58dad28f",
+          "artwork_url": "https://coverartarchive.org/release/aff884fe-a393-4ed9-8d64-788d58dad28f/41333002559.jpg",
+          "release_mbid": "aff884fe-a393-4ed9-8d64-788d58dad28f",
+          "release_title": "2010s RAP HITS : 2010 - 2014 Era",
+          "release_score": 202,
+          "query": "recording:\"4 Digits\" AND artist:\"Mustard\"",
+          "matched": {
+            "recordingTitle": "4 Digits",
+            "recordingId": "5728307e-05ed-43d9-8503-481d65c491fc",
+            "releaseId": "aff884fe-a393-4ed9-8d64-788d58dad28f",
+            "coverCount": 1
+          }
+        },
+        "manual_review": false,
+        "notes": []
+      }
+    },
+    {
+      "title": "Action",
+      "variant_or_mix": null,
+      "artist_credit": "Nef the Pharaoh feat. Ty Dolla $ign & Eric Bellinger",
+      "primary_artist": "Nef the Pharaoh",
+      "eric_bellinger_role_in_credit": "featured_artist",
+      "featured_or_additional_artists": [
+        "Ty Dolla $ign",
+        "Eric Bellinger"
+      ],
+      "duration": "4:06",
+      "isrcs": [
+        "USUYG1091796"
+      ],
+      "release_groups": [
+        "Neffy Got Wings"
+      ],
+      "credits": {
+        "verified_from_musicbrainz_listing": {
+          "artist_credit": "Nef the Pharaoh feat. Ty Dolla $ign & Eric Bellinger",
+          "duration": "4:06",
+          "isrcs": [
+            "USUYG1091796"
+          ],
+          "release_groups": [
+            "Neffy Got Wings"
+          ]
+        },
+        "personnel_writers_producers_engineers": [],
+        "personnel_credit_note": "Not fully available from the MusicBrainz recordings index used for this file. Verify with release liner notes, ASCAP/BMI, AllMusic, TIDAL credits, Spotify credits, Apple Music credits, or label metadata before publication."
+      },
+      "streaming_links": {
+        "exact_track_links_verified": {},
+        "platform_search_links_unverified": {
+          "spotify_search": "https://open.spotify.com/search/Action%20Nef%20the%20Pharaoh%20feat.%20Ty%20Dolla%20%24ign%20%26%20Eric%20Bellinger",
+          "apple_music_search": "https://music.apple.com/us/search?term=Action+Nef+the+Pharaoh+feat.+Ty+Dolla+%24ign+%26+Eric+Bellinger",
+          "youtube_music_search": "https://music.youtube.com/search?q=Action+Nef+the+Pharaoh+feat.+Ty+Dolla+%24ign+%26+Eric+Bellinger",
+          "youtube_search": "https://www.youtube.com/results?search_query=Action+Nef+the+Pharaoh+feat.+Ty+Dolla+%24ign+%26+Eric+Bellinger",
+          "deezer_search": "https://www.deezer.com/search/Action%20Nef%20the%20Pharaoh%20feat.%20Ty%20Dolla%20%24ign%20%26%20Eric%20Bellinger",
+          "tidal_search": "https://listen.tidal.com/search?q=Action+Nef+the+Pharaoh+feat.+Ty+Dolla+%24ign+%26+Eric+Bellinger",
+          "amazon_music_search": "https://music.amazon.com/search/Action+Nef+the+Pharaoh+feat.+Ty+Dolla+%24ign+%26+Eric+Bellinger",
+          "soundcloud_search": "https://soundcloud.com/search/sounds?q=Action+Nef+the+Pharaoh+feat.+Ty+Dolla+%24ign+%26+Eric+Bellinger"
+        },
+        "streaming_note": "Search links were generated from the song title and artist credit. They are not proof that the track exists on every listed platform. Exact platform URLs require platform catalog/API matching."
+      },
+      "source": {
+        "catalog": "MusicBrainz",
+        "artist_mbid": "07a8922d-680a-4637-a55e-88d7d1969a95",
+        "artist_recordings_page": "https://musicbrainz.org/artist/07a8922d-680a-4637-a55e-88d7d1969a95/recordings"
+      },
+      "notes": null,
+      "cover_art_resolution": {
+        "status": "verified",
+        "selected_source": "musicbrainz_caa",
+        "selected_artwork_url": "http://coverartarchive.org/release/f8fb7aa3-4409-4a19-a91d-d6b900954d58/28522827235.jpg",
+        "selected_page_url": "https://musicbrainz.org/release/f8fb7aa3-4409-4a19-a91d-d6b900954d58",
+        "verified_apple_artwork": null,
+        "verified_musicbrainz_caa_artwork": {
+          "source": "musicbrainz_caa",
+          "page_url": "https://musicbrainz.org/release/f8fb7aa3-4409-4a19-a91d-d6b900954d58",
+          "artwork_url": "http://coverartarchive.org/release/f8fb7aa3-4409-4a19-a91d-d6b900954d58/28522827235.jpg",
+          "release_mbid": "f8fb7aa3-4409-4a19-a91d-d6b900954d58",
+          "release_title": "Neffy Got Wings",
+          "release_score": 202,
+          "query": "recording:\"Action\" AND artist:\"Nef the Pharaoh\"",
+          "matched": {
+            "recordingTitle": "Action",
+            "recordingId": "d2459dbe-9c81-4a94-9de5-bef0bd1b3694",
+            "releaseId": "f8fb7aa3-4409-4a19-a91d-d6b900954d58",
+            "coverCount": 1
+          }
+        },
+        "manual_review": false,
+        "notes": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "project": "Eric Bellinger website",
+    "promptName": "Hermes implementation prompt - songwriting credits 347 snapshot",
+    "generatedAt": "2026-04-26",
+    "targetProjectDirectory": "/eric-bellinger"
+  },
+  "filesToUse": {
+    "newSongwritingManifest": "/eric-bellinger/eric_bellinger_songwriting_credits_347_snapshot_website.json",
+    "copyStructureReference": "/eric-bellinger/ERIC_BELLINGER_COPY_STRUCTURE.json",
+    "targetDataFilePreferred": "/eric-bellinger/src/data/credits.ts",
+    "targetIndexFile": "/eric-bellinger/src/data/index.ts",
+    "targetComponent": "/eric-bellinger/src/components/credits/CreditsSection.tsx"
+  },
+  "prompt": "Hermes, implement the updated Eric Bellinger songwriting credits dataset into the live website. Work in /eric-bellinger. Use /eric-bellinger/eric_bellinger_songwriting_credits_347_snapshot_website.json as the source of truth for the Credits/Pen section. Also read /eric-bellinger/ERIC_BELLINGER_COPY_STRUCTURE.json to preserve the existing section order, heading hierarchy, source file structure, and item template fields. Do not invent credits. Spotify's public songwriter page reports 347 songs written, but this manifest separates verified public credit rows from NEEDS_RESEARCH slots. Public UI must show the 347 stat as Spotify-sourced, the notableSongs carousel/grid, and the verifiedPublicCredits table. Do not render needsResearchSlots as public rows; only use them for an internal note or hidden QA count. Update src/data/credits.ts or the existing credits data module with typed exports for sectionCopy, spotifyTopVisibleSongs, notableSongs, verifiedPublicCredits, and summary. Update src/data/index.ts exports if needed. Update src/components/credits/CreditsSection.tsx so the section includes: 1) heading 'The Pen: Songwriting Credits'; 2) subheading with the Spotify 347 songs written claim; 3) stat cards for 347 Spotify-reported songs, verified public credits count, and notable highlights count; 4) a Notable Credits area highlighting records like Nostálgico, Right Here, Drive By, Love More, Valet, Fine China, New Flame, On Chill, Lemme See, Think Like A Man, Without You, Music Sounds Better With U, and Say It With Me; 5) a searchable/filterable verified credits table with Year, Song, Artist, Role, Parent Project, and Achievement/Notes; 6) a small honest note that additional Spotify-reported credits are pending publisher/API verification. Preserve the design system and current visual direction. Avoid runtime AI calls. Avoid placeholder '#' links. If an entry has platformSearchLinksUnverified, do not label those links as verified. Use sourceKeys/confidence to display small provenance tags where appropriate. After implementation, run the app build/test command available in the repo, fix any TypeScript errors, and create /eric-bellinger/songwriting_credits_implementation_report.md summarizing files changed, commands run, counts rendered, and unresolved items hidden.",
+  "implementationSteps": [
+    "cd /eric-bellinger",
+    "Confirm eric_bellinger_songwriting_credits_347_snapshot_website.json exists in the project root.",
+    "Read ERIC_BELLINGER_COPY_STRUCTURE.json and confirm CreditsSection.tsx plus src/data/credits.ts are the correct targets.",
+    "Create or update TypeScript types for SongwritingCredit, NotableSong, SpotifyTopVisibleSong, and CreditsSectionCopy.",
+    "Replace/merge current credits data with verifiedPublicCredits from the manifest.",
+    "Add sectionCopy, summary, notableSongs, and spotifyTopVisibleSongs exports.",
+    "Update CreditsSection.tsx to render the stat cards, notable credits, and searchable verified credits table.",
+    "Filter out status === 'NEEDS_RESEARCH' in all public UI.",
+    "Add a small transparency note about unresolved Spotify-reported credits pending verification.",
+    "Run lint/build/test scripts present in package.json.",
+    "Write songwriting_credits_implementation_report.md."
+  ],
+  "acceptanceCriteria": [
+    "No invented songwriting credits are added.",
+    "The page displays 347 as a Spotify-reported count, not as 347 fully enumerated verified rows.",
+    "The visible public table only includes verifiedPublicCredits or non-NEEDS_RESEARCH entries.",
+    "Notable records are highlighted above the table.",
+    "CreditsSection preserves the site's existing style and section order.",
+    "Build passes or known failures are documented honestly."
+  ],
+  "doNotDo": [
+    "Do not render unresolved placeholder rows publicly.",
+    "Do not claim every one of the 347 titles has been individually verified.",
+    "Do not call external AI APIs at runtime.",
+    "Do not replace the whole app or redesign unrelated sections."
+  ]
+}
