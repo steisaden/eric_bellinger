@@ -44,15 +44,18 @@ export function TourDates() {
         {upcomingTours.length > 0 ? (
           <div className="flex flex-col gap-4">
             {upcomingTours.map((tour, i) => {
-              const d = new Date(tour.date);
-              const month = d.toLocaleString("en-US", { month: "short" });
-              const day = d.getDate();
-              const time = d.toLocaleString("en-US", { hour: "numeric", minute: "2-digit" });
+            const d = new Date(tour.date);
+            const month = d.toLocaleString("en-US", { month: "short", timeZone: "UTC" });
+            const day = d.getUTCDate();
+            const time = d.toLocaleString("en-US", { 
+              hour: "numeric", 
+              minute: "2-digit",
+              timeZone: "UTC" 
+            });
 
-              return (
-                <motion.div
-                  key={tour.id}
-                  initial={{ opacity: 0, y: 20 }}
+            return (
+              <motion.div
+                key={tour.id}                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
