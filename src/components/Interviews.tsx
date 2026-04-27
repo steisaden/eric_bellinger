@@ -353,23 +353,23 @@ export function Interviews() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="interview-player-title"
-            initial={{ opacity: 0, y: 80, scale: 0.85 }}
+            initial={{ opacity: 0, y: 40, scale: 0.9 }}
             animate={{
               opacity: 1,
               y: 0,
               scale: 1,
-              width: isMinimized ? 300 : "auto",
-              height: isMinimized ? 170 : "auto",
-              left: isMinimized ? "24px" : "50%",
+              width: isMinimized ? "90%" : "95%",
+              height: isMinimized ? 200 : "auto",
+              left: isMinimized ? "5%" : "50%",
               bottom: isMinimized ? "24px" : "50%",
-              x: isMinimized ? 0 : "-50%",
+              x: "-50%",
               translateY: isMinimized ? 0 : "50%",
             }}
             exit={{ opacity: 0, y: 40, scale: 0.9 }}
             transition={{ type: "spring", damping: 26, stiffness: 210 }}
             className={cn(
               "fixed z-[100] flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_70px_rgba(0,0,0,0.4)]",
-              !isMinimized && "w-[90vw] max-w-3xl aspect-video",
+              !isMinimized && "max-w-3xl aspect-video w-[95vw]",
             )}
             style={{ position: "fixed" }}
           >
