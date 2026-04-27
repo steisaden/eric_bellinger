@@ -112,7 +112,7 @@ export function Footer() {
           </div>
 
           <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
-            {FOOTER_COPY.copyright.replace("{CURRENTYEAR}", new Date().getFullYear().toString())}
+            {FOOTER_COPY.copyright.replace("{CURRENTYEAR}", "2026")}
           </p>
         </div>
       </div>
