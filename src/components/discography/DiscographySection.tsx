@@ -43,23 +43,46 @@ export function DiscographySection() {
 
   useEffect(() => {
     const track = trackRef.current;
-    if (track) {
-      track.scrollTo({
-        left: activePage * track.offsetWidth,
-        behavior: reduceMotion ? "auto" : "smooth",
-      });
-    }
-  }, [activePage, reduceMotion]);
+    if (!track) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute("data-page-index"));
+            if (!isNaN(index)) {
+              setActivePage(index);
+            }
+          }
+        });
+      },
+      {
+        root: track,
+        threshold: 0.5,
+      }
+    );
+
+    const els = track.querySelectorAll("[data-page-index]");
+    els.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [pages]);
 
   const goToPage = (direction: 'next' | 'prev') => {
     if (!pages.length) return;
-
-    setActivePage((current) => {
-      if (direction === 'next') {
-        return (current + 1) % pages.length;
-      }
-      return (current - 1 + pages.length) % pages.length;
-    });
+    let nextPage = 0;
+    if (direction === 'next') {
+      nextPage = (activePage + 1) % pages.length;
+    } else {
+      nextPage = (activePage - 1 + pages.length) % pages.length;
+    }
+    const pageEl = pageRefs.current[nextPage];
+    if (pageEl && trackRef.current) {
+      trackRef.current.scrollTo({
+        left: pageEl.offsetLeft,
+        behavior: reduceMotion ? "auto" : "smooth",
+      });
+    }
   };
 
   return (
@@ -108,14 +131,15 @@ export function DiscographySection() {
         </div>
 
         <div className="overflow-hidden rounded-[36px] border border-slate-200 bg-white/[0.02] p-3 shadow-[0_18px_80px_rgba(0,0,0,0.22)] md:p-4">
-          <div ref={trackRef} className="flex overflow-x-auto" style={{ scrollbarWidth: "none" }}>
+          <div ref={trackRef} className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth overscroll-x-contain" style={{ scrollbarWidth: "none" }}>
             {pages.map((page, pageIndex) => (
               <div
                 key={`discography-page-${pageIndex}`}
+                data-page-index={pageIndex}
                 ref={(node) => {
                   pageRefs.current[pageIndex] = node;
                 }}
-                className="w-full flex-none px-1"
+                className="w-full flex-none snap-start px-1"
               >
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-4">
                   {page.map((item) => (

@@ -63,6 +63,17 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   return (
     <>
       <motion.nav
@@ -153,23 +164,10 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
             onClick={() => setMobileOpen(true)}
           >
             <Menu className="h-6 w-6" />
-          useEffect(() => {
-            if (mobileOpen) {
-              document.body.style.overflow = "hidden";
-            } else {
-              document.body.style.overflow = "";
-            }
-            return () => {
-              document.body.style.overflow = "";
-            };
-          }, [mobileOpen]);
-
-          return (
-            <>
-              <motion.nav
-                initial={{ y: -100 }}
-          ...
-              <AnimatePresence>
+          </button>
+        </div>
+      </motion.nav>
+      <AnimatePresence>
                 {mobileOpen && (
                   <motion.div
                     initial={{ opacity: 0 }}

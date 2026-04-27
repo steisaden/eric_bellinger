@@ -49,22 +49,30 @@ export function Interviews() {
 
   useEffect(() => {
     const track = trackRef.current;
-    const page = pageRefs.current[activePage];
-    if (!track || !page) return;
-    track.scrollTo({ left: page.offsetLeft, behavior: reduceMotion ? "auto" : "smooth" });
-  }, [activePage, reduceMotion]);
-
-  const handleScroll = () => {
-    const track = trackRef.current;
     if (!track) return;
-    const scrollLeft = track.scrollLeft;
-    const width = track.clientWidth;
-    if (width === 0) return;
-    const newPage = Math.round(scrollLeft / width);
-    if (newPage !== activePage && newPage >= 0 && newPage < pages.length) {
-      setActivePage(newPage);
-    }
-  };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute("data-page-index"));
+            if (!isNaN(index)) {
+              setActivePage(index);
+            }
+          }
+        });
+      },
+      {
+        root: track,
+        threshold: 0.5,
+      }
+    );
+
+    const els = track.querySelectorAll("[data-page-index]");
+    els.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [pages]);
 
   useEffect(() => {
     if (!activeVideo) return;
@@ -75,7 +83,11 @@ export function Interviews() {
 
   const goToPage = (i: number) => {
     if (!pages.length) return;
-    setActivePage(((i % pages.length) + pages.length) % pages.length);
+    const nextPage = ((i % pages.length) + pages.length) % pages.length;
+    const pageEl = pageRefs.current[nextPage];
+    if (pageEl && trackRef.current) {
+      trackRef.current.scrollTo({ left: pageEl.offsetLeft, behavior: reduceMotion ? "auto" : "smooth" });
+    }
   };
 
   const activeInterview = activeVideo
@@ -129,13 +141,13 @@ export function Interviews() {
         <div className="overflow-hidden">
           <div
             ref={trackRef}
-            onScroll={handleScroll}
             className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth overscroll-x-contain scrollbar-hide"
             style={{ scrollbarWidth: "none" }}
           >
             {pages.map((page, pageIndex) => (
               <div
                 key={`page-${pageIndex}`}
+                data-page-index={pageIndex}
                 ref={(node) => { pageRefs.current[pageIndex] = node; }}
                 className="w-full flex-none snap-start"
               >

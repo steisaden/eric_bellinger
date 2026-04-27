@@ -43,30 +43,40 @@ export function FeaturedSongsSection() {
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-    const pageEl = pageRefs.current[activePage];
-    if (!pageEl) return;
-    track.scrollTo({
-      left: pageEl.offsetLeft,
-      behavior: reduceMotion ? "auto" : "smooth",
-    });
-  }, [activePage, reduceMotion]);
 
-  const handleScroll = () => {
-    const track = trackRef.current;
-    if (!track) return;
-    const scrollLeft = track.scrollLeft;
-    const width = track.clientWidth;
-    if (width === 0) return;
-    const newPage = Math.round(scrollLeft / width);
-    if (newPage !== activePage && newPage >= 0 && newPage < pages.length) {
-      setActivePage(newPage);
-    }
-  };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute("data-page-index"));
+            if (!isNaN(index)) {
+              setActivePage(index);
+            }
+          }
+        });
+      },
+      {
+        root: track,
+        threshold: 0.5,
+      }
+    );
+
+    const els = track.querySelectorAll("[data-page-index]");
+    els.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [pages]);
 
   const goToPage = (pageIndex: number) => {
     if (!pages.length) return;
     const nextPage = ((pageIndex % pages.length) + pages.length) % pages.length;
-    setActivePage(nextPage);
+    const pageEl = pageRefs.current[nextPage];
+    if (pageEl && trackRef.current) {
+      trackRef.current.scrollTo({
+        left: pageEl.offsetLeft,
+        behavior: reduceMotion ? "auto" : "smooth",
+      });
+    }
   };
 
   return (
@@ -110,10 +120,11 @@ export function FeaturedSongsSection() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="overflow-hidden overflow-y-hidden rounded-[36px] border border-slate-200 bg-white/[0.02] p-4 shadow-[0_18px_80px_rgba(0,0,0,0.22)]">
-          <div ref={trackRef} onScroll={handleScroll} className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth overscroll-x-contain" style={{ scrollbarWidth: "none" }}>
+          <div ref={trackRef} className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth overscroll-x-contain" style={{ scrollbarWidth: "none" }}>
             {pages.map((page, pageIndex) => (
               <div
                 key={`feature-page-${pageIndex}`}
+                data-page-index={pageIndex}
                 ref={(node) => { pageRefs.current[pageIndex] = node; }}
                 className="w-full flex-none snap-start px-2"
               >
