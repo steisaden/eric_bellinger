@@ -40,27 +40,33 @@ export function DiscographySection() {
   }, [activePage, pages.length]);
 
   const trackRef = useRef<HTMLDivElement | null>(null);
+  const isNavigating = useRef(false);
 
   useEffect(() => {
     const track = trackRef.current;
     if (track) {
-      // Calculate scroll position based on full width of container, 
-      // adding a small buffer to account for padding/gaps
+      isNavigating.current = true;
       track.scrollTo({
         left: activePage * track.offsetWidth,
         behavior: reduceMotion ? "auto" : "smooth",
       });
+      
+      // Reset lock after animation duration
+      setTimeout(() => {
+        isNavigating.current = false;
+      }, 600);
     }
   }, [activePage, reduceMotion]);
 
   const handleScroll = () => {
+    if (isNavigating.current) return;
+
     const track = trackRef.current;
     if (!track) return;
     const scrollLeft = track.scrollLeft;
     const width = track.offsetWidth;
     if (width === 0) return;
     
-    // Use a threshold to avoid jittery page updates
     const newPage = Math.round(scrollLeft / width);
     if (newPage !== activePage && newPage >= 0 && newPage < pages.length) {
       setActivePage(newPage);
