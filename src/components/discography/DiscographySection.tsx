@@ -121,14 +121,14 @@ export function DiscographySection() {
         </div>
 
         <div className="overflow-hidden rounded-[36px] border border-slate-200 bg-white/[0.02] p-3 shadow-[0_18px_80px_rgba(0,0,0,0.22)] md:p-4">
-          <div ref={trackRef} onScroll={handleScroll} className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth" style={{ scrollbarWidth: "none" }}>
+          <div ref={trackRef} onScroll={handleScroll} className="flex snap-x snap-mandatory overflow-x-auto" style={{ scrollbarWidth: "none" }}>
             {pages.map((page, pageIndex) => (
               <div
                 key={`discography-page-${pageIndex}`}
                 ref={(node) => {
                   pageRefs.current[pageIndex] = node;
                 }}
-                className="w-full flex-none snap-start px-1"
+                className="w-full flex-none snap-center px-1"
               >
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-4">
                   {page.map((item) => (
