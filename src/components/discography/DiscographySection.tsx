@@ -40,38 +40,17 @@ export function DiscographySection() {
   }, [activePage, pages.length]);
 
   const trackRef = useRef<HTMLDivElement | null>(null);
-  const isNavigating = useRef(false);
 
   useEffect(() => {
     const track = trackRef.current;
     if (track) {
-      isNavigating.current = true;
       track.scrollTo({
         left: activePage * track.offsetWidth,
         behavior: reduceMotion ? "auto" : "smooth",
       });
-      
-      // Reset lock after animation duration
-      setTimeout(() => {
-        isNavigating.current = false;
-      }, 600);
     }
   }, [activePage, reduceMotion]);
 
-  const handleScroll = () => {
-    if (isNavigating.current) return;
-
-    const track = trackRef.current;
-    if (!track) return;
-    const scrollLeft = track.scrollLeft;
-    const width = track.offsetWidth;
-    if (width === 0) return;
-    
-    const newPage = Math.round(scrollLeft / width);
-    if (newPage !== activePage && newPage >= 0 && newPage < pages.length) {
-      setActivePage(newPage);
-    }
-  };
   const goToPage = (pageIndex: number) => {
     if (!pages.length) {
       return;
@@ -127,14 +106,14 @@ export function DiscographySection() {
         </div>
 
         <div className="overflow-hidden rounded-[36px] border border-slate-200 bg-white/[0.02] p-3 shadow-[0_18px_80px_rgba(0,0,0,0.22)] md:p-4">
-          <div ref={trackRef} onScroll={handleScroll} className="flex snap-x snap-mandatory overflow-x-auto" style={{ scrollbarWidth: "none" }}>
+          <div ref={trackRef} className="flex overflow-x-auto" style={{ scrollbarWidth: "none" }}>
             {pages.map((page, pageIndex) => (
               <div
                 key={`discography-page-${pageIndex}`}
                 ref={(node) => {
                   pageRefs.current[pageIndex] = node;
                 }}
-                className="w-full flex-none snap-center px-1"
+                className="w-full flex-none px-1"
               >
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-4">
                   {page.map((item) => (
