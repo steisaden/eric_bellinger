@@ -153,32 +153,43 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
             onClick={() => setMobileOpen(true)}
           >
             <Menu className="h-6 w-6" />
-          </button>
-        </div>
-      </motion.nav>
+          useEffect(() => {
+            if (mobileOpen) {
+              document.body.style.overflow = "hidden";
+            } else {
+              document.body.style.overflow = "";
+            }
+            return () => {
+              document.body.style.overflow = "";
+            };
+          }, [mobileOpen]);
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] flex items-end justify-center bg-white/70 px-3 pb-3 pt-16 backdrop-blur-md lg:hidden"
-            onClick={() => setMobileOpen(false)}
-          >
-            <motion.div
-              id="mobile-nav-menu"
-              role="dialog"
-              aria-modal="true"
-              aria-label="Mobile navigation menu"
-              initial={{ y: 32 }}
-              animate={{ y: 0 }}
-              exit={{ y: 32 }}
-              transition={{ type: "spring", damping: 28, stiffness: 260 }}
-              className="flex w-full max-w-md flex-col gap-6 rounded-t-[32px] border border-slate-200 border-b-0 bg-[#faf7f0]/95 p-6 shadow-[0_-20px_80px_rgba(0,0,0,0.55)]"
-              onClick={(event) => event.stopPropagation()}
-            >
+          return (
+            <>
+              <motion.nav
+                initial={{ y: -100 }}
+          ...
+              <AnimatePresence>
+                {mobileOpen && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 z-[60] flex items-end justify-center bg-white/70 px-3 pb-3 pt-16 backdrop-blur-md lg:hidden"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    <motion.div
+                      id="mobile-nav-menu"
+                      role="dialog"
+                      aria-modal="true"
+                      aria-label="Mobile navigation menu"
+                      initial={{ y: 32 }}
+                      animate={{ y: 0 }}
+                      exit={{ y: 32 }}
+                      transition={{ type: "spring", damping: 28, stiffness: 260 }}
+                      className="flex w-full max-w-md flex-col gap-6 rounded-t-[32px] border border-slate-200 border-b-0 bg-[#faf7f0]/95 p-6 shadow-[0_-20px_80px_rgba(0,0,0,0.55)] max-h-[80vh] overflow-y-auto"
+                      onClick={(event) => event.stopPropagation()}
+                    >
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[10px] font-bold uppercase tracking-[0.35em] text-slate-600/35">Navigate</span>
                 <button
