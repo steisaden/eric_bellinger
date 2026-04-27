@@ -42,16 +42,13 @@ export function DiscographySection() {
   const trackRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const page = pageRefs.current[activePage];
-    if (!page) {
-      return;
+    const track = trackRef.current;
+    if (track) {
+      track.scrollTo({
+        left: activePage * track.clientWidth,
+        behavior: reduceMotion ? "auto" : "smooth",
+      });
     }
-
-    page.scrollIntoView({
-      behavior: reduceMotion ? "auto" : "smooth",
-      inline: "start",
-      block: "nearest",
-    });
   }, [activePage, reduceMotion]);
 
   const handleScroll = () => {
@@ -65,7 +62,6 @@ export function DiscographySection() {
       setActivePage(newPage);
     }
   };
-
   const goToPage = (pageIndex: number) => {
     if (!pages.length) {
       return;
