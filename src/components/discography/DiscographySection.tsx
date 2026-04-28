@@ -39,10 +39,10 @@ export function DiscographySection() {
     const result: typeof albums[] = [];
     const remaining = [...albums];
     if (remaining.length > 0) {
-      result.push(remaining.splice(0, 10));
+      result.push(remaining.splice(0, 12));
     }
     while (remaining.length > 0) {
-      result.push(remaining.splice(0, 20));
+      result.push(remaining.splice(0, 15));
     }
     return result;
   }, [albums, isMobile]);
@@ -219,7 +219,7 @@ export function DiscographySection() {
                 <div
                   className={cn(
                     "mobile-carousel-grid grid gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-4",
-                    !isMobile && pageIndex >= 1 && "lg:grid-cols-5 sm:grid-cols-5"
+                    !isMobile && "lg:grid-cols-5 sm:grid-cols-5"
                   )}
                 >
                   {page.map((item, index) => (
