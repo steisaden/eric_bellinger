@@ -240,10 +240,10 @@ export function FeaturedSongsSection() {
           </div>
 
           <div className="mt-1 flex flex-col items-end justify-between gap-1 sm:flex-row sm:items-center sm:gap-4">
-            <p className="text-[10px] uppercase tracking-[0.32em] text-white/42">
+            <p className="order-2 text-right text-[10px] uppercase tracking-[0.32em] text-white/42 sm:order-1 sm:text-left">
               Voice-led guest records, collaborations, and cross-catalog appearances.
             </p>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/26 p-1 text-white/72">
+            <div className="order-1 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/26 p-1 text-white/72 sm:order-2">
               <button
                 type="button"
                 onClick={() => goToPage(activePage - 1)}
