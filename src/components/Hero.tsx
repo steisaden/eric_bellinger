@@ -7,7 +7,7 @@ function HeroCover() {
   return (
     <motion.img
       whileHover={{ scale: 1.02 }}
-      src="/cry_in_front_of_you_hero.jpg"
+      src="./cry_in_front_of_you_hero.jpg"
       alt="Eric Bellinger"
       loading="eager"
       decoding="async"
