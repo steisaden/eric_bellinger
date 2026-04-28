@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 import { AnimatePresence, motion } from "motion/react";
-import { Calendar, Disc, Menu, Mic, MoonStar, Music, PenTool, SunMedium, Youtube, X } from "lucide-react";
+import { Calendar, Disc, Menu, Mic, Music, PenTool, Youtube, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { NAVIGATION_COPY, TOUR_COPY } from "@/data";
-import type { ThemeMode } from "@/hooks/useThemeMode";
 import { NavBrandLogo } from "./text/NavBrandLogo";
 
 const NAV_LINKS = NAVIGATION_COPY.links.map((link) => {
@@ -25,14 +24,9 @@ const NAV_LINKS = NAVIGATION_COPY.links.map((link) => {
   };
 });
 
-type NavbarProps = {
-  theme: ThemeMode;
-  onToggleTheme: () => void;
-};
-
 const hasActiveTourDates = TOUR_COPY.activeTourDates.length > 0;
 
-export function Navbar({ theme, onToggleTheme }: NavbarProps) {
+export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -122,15 +116,6 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
           </div>
 
           <div className="hidden items-center justify-end gap-2 lg:flex xl:gap-3">
-            <button
-              type="button"
-              onClick={onToggleTheme}
-              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/6 px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-white/78 transition-colors hover:border-white/18 hover:bg-white/10 xl:px-4"
-            >
-              {theme === "dark" ? <SunMedium className="h-4 w-4" /> : <MoonStar className="h-4 w-4" />}
-              <span className="hidden xl:inline">{theme === "dark" ? "Light" : "Dark"}</span>
-            </button>
             <a
               href={hasActiveTourDates ? "#tour" : NAVIGATION_COPY.cta.href}
               className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-white/10 bg-gradient-to-r from-[#ff9d00] via-[#ffd36e] to-[#f7b72d] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.32em] text-black shadow-[0_12px_32px_rgba(255,157,0,0.22)] transition-transform hover:-translate-y-0.5 xl:px-6"
@@ -140,14 +125,6 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
           </div>
 
           <div className="ml-auto flex items-center justify-end gap-1.5 lg:hidden">
-            <button
-              type="button"
-              onClick={onToggleTheme}
-              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-              className="touch-target-44 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/8 text-white/80 transition-colors hover:border-white/16 hover:bg-white/12"
-            >
-              {theme === "dark" ? <SunMedium className="h-4 w-4" /> : <MoonStar className="h-4 w-4" />}
-            </button>
             <button
               type="button"
               aria-label="Open navigation menu"
@@ -185,14 +162,6 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[10px] font-bold uppercase tracking-[0.35em] text-white/32">Navigate</span>
-                <button
-                  type="button"
-                  onClick={onToggleTheme}
-                  aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-                  className="touch-target-44 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/8 text-white/70 transition-colors hover:border-white/16 hover:bg-white/12 hover:text-white"
-                >
-                  {theme === "dark" ? <SunMedium className="h-4 w-4" /> : <MoonStar className="h-4 w-4" />}
-                </button>
                 <button
                   type="button"
                   aria-label="Close navigation menu"

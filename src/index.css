@@ -13,14 +13,15 @@
 }
 
 :root {
-  color-scheme: light;
-  --page-bg: #faf7f0;
-  --page-text: #0f172a;
-  --page-surface: rgba(255, 255, 255, 0.8);
-  --page-surface-strong: rgba(255, 255, 255, 0.95);
-  --page-border: rgba(148, 163, 184, 0.22);
-  --page-muted: rgba(71, 85, 105, 0.72);
-  --selection-bg: #a855f7;
+  color-scheme: dark;
+  --page-bg: #050505;
+  --page-text: #f8fafc;
+  --page-surface: rgba(14, 18, 32, 0.84);
+  --page-surface-strong: rgba(12, 14, 24, 0.96);
+  --page-border: rgba(255, 255, 255, 0.1);
+  --page-muted: rgba(203, 213, 225, 0.72);
+  --color-eb-muted: rgba(255, 255, 255, 0.5);
+  --selection-bg: #facc15;
   --selection-text: #050505;
   --brand-purple: #ad46ff;
   --brand-yellow: #ff9d00;
@@ -28,11 +29,11 @@
   --brand-purple-rgb: 173 70 255;
   --brand-yellow-rgb: 255 157 0;
   --brand-amber-rgb: 255 106 26;
-  --logo-fill-start: #0f172a;
-  --logo-fill-mid: #1f2937;
-  --logo-fill-core: #050505;
-  --logo-fill-end: #0f172a;
-  --logo-shadow: rgba(15, 23, 42, 0.44);
+  --logo-fill-start: #f8fafc;
+  --logo-fill-mid: #cbd5e1;
+  --logo-fill-core: #ffffff;
+  --logo-fill-end: #f8fafc;
+  --logo-shadow: rgba(0, 0, 0, 0.8);
 }
 
   .theme-dark {
@@ -109,6 +110,79 @@
     display: block;
     flex: none;
     overflow: visible;
+  }
+
+  .mobile-nav-logo-orb {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    flex: none;
+    overflow: hidden;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background:
+      linear-gradient(#09060f, #09060f) padding-box,
+      conic-gradient(from 160deg, rgba(173, 70, 255, 0.9), rgba(255, 157, 0, 0.95), rgba(255, 211, 110, 0.92), rgba(173, 70, 255, 0.9)) border-box;
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+      0 10px 28px rgba(173, 70, 255, 0.22),
+      0 8px 22px rgba(255, 157, 0, 0.14);
+    isolation: isolate;
+  }
+
+  .mobile-nav-logo-orb::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    background: radial-gradient(circle at 28% 18%, rgba(255, 255, 255, 0.18), transparent 32%), linear-gradient(135deg, rgba(173, 70, 255, 0.22), rgba(255, 157, 0, 0.08));
+    opacity: 0.95;
+    z-index: -1;
+  }
+
+  .mobile-nav-logo-orb__glow {
+    position: absolute;
+    inset: -34%;
+    background: conic-gradient(from 0deg, transparent, rgba(173, 70, 255, 0.42), rgba(255, 157, 0, 0.46), transparent 74%);
+    filter: blur(8px);
+    opacity: 0.72;
+    animation: mobileLogoAura 7s linear infinite;
+  }
+
+  .mobile-nav-logo-orb__shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 0%, transparent 36%, rgba(255, 255, 255, 0.8) 48%, transparent 60%, transparent 100%);
+    background-size: 240% 100%;
+    mix-blend-mode: screen;
+    opacity: 0.5;
+    animation: brandShimmer 6.5s linear infinite;
+  }
+
+  .mobile-nav-logo-orb__letters {
+    position: relative;
+    z-index: 1;
+    padding-left: 0.12em;
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    background: linear-gradient(90deg, #ffffff 0%, #ffd36e 38%, #ad46ff 76%, #ffffff 100%);
+    background-size: 180% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 14px rgba(255, 157, 0, 0.24);
+    animation: brandGradientShift 8s ease-in-out infinite;
+  }
+
+  @media (min-width: 1280px) {
+    .mobile-nav-logo-orb {
+      display: none;
+    }
   }
 
   .brand-liquid-shadow,
@@ -568,6 +642,31 @@
     }
   }
 
+  @keyframes brandGradientShift {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes mobileLogoAura {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+      transform: rotate(180deg) scale(1.04);
+    }
+
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+
   @keyframes shimmer {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
@@ -588,6 +687,9 @@
     .brand-wordmark-shimmer,
     .brand-wordmark-rule,
     .brand-icon-sheen,
+    .mobile-nav-logo-orb__glow,
+    .mobile-nav-logo-orb__shine,
+    .mobile-nav-logo-orb__letters,
     .brand-morph-text {
       animation: none;
     }

@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 import { TOUR_COPY } from "@/data";
@@ -9,6 +9,7 @@ import { useTourLogic } from "./tour/useTourLogic";
 export function TourDates() {
   const { archivedTours, upcomingTours, showArchive, toggleArchive } = useTourLogic();
   const activeCount = upcomingTours.length;
+  const reduceMotion = useReducedMotion();
 
   return (
     <section id="tour" className="relative overflow-hidden py-28 md:py-36">
@@ -62,11 +63,12 @@ export function TourDates() {
               return (
                 <motion.article
                   key={tour.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-120px" }}
-                  transition={{ duration: 0.5, delay: i * 0.05 }}
-                  whileHover={{ y: -4 }}
+                  initial={reduceMotion ? false : { opacity: 0.96, y: 10 }}
+                  whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.18, margin: "0px 0px -80px 0px" }}
+                  transition={{ duration: 0.62, delay: Math.min(i * 0.035, 0.22), ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={reduceMotion ? undefined : { y: -3 }}
+                  style={{ backfaceVisibility: "hidden", transform: "translateZ(0)" }}
                   className={cn("group relative overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.04] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.22)] backdrop-blur-sm transition-all duration-300 md:p-6", isPrimary && "bg-white/[0.06]")}
                 >
                   <div className="relative z-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">

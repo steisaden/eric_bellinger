@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight, Guitar, PlayCircle } from "lucide-react";
 
@@ -76,7 +77,8 @@ function buildShortArtistLine(artist: string) {
 }
 
 export function FeaturedSongCard({ song, index, reduceMotion, expanded, touchLike, onActivate, onOpen }: FeaturedSongCardProps) {
-  const hasCover = Boolean(song.coverUrl);
+  const [imageFailed, setImageFailed] = useState(false);
+  const hasCover = Boolean(song.coverUrl) && !imageFailed;
   const displayTitle = useDisplaySongTitle(song.title);
   const displayArtistLine = buildShortArtistLine(song.artist);
   const acoustic = isAcousticRelease(song);
@@ -130,6 +132,7 @@ export function FeaturedSongCard({ song, index, reduceMotion, expanded, touchLik
               alt={song.title}
               loading="lazy"
               decoding="async"
+              onError={() => setImageFailed(true)}
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
             />
           ) : (

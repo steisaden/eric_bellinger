@@ -56,7 +56,7 @@ export function DiscographyCard({ item, onOpen, reduceMotion, featured = false }
       whileTap={reduceMotion ? undefined : { scale: 0.99 }}
       className={[
         "group flex h-full w-full min-w-0 max-w-full flex-col overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.05] text-left transition-colors hover:border-[#ffd36e]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70 sm:rounded-[28px]",
-        featured ? "md:col-span-2 md:row-span-2" : "",
+        featured ? "md:col-span-1 md:row-span-2" : "",
       ].join(" ")}
       aria-label={`Open discography details for ${item.title}`}
     >
