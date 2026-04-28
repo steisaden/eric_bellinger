@@ -81,17 +81,17 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
         animate={{ y: isVisible ? 0 : -100 }}
         transition={{ duration: 0.28 }}
         className={cn(
-          "fixed top-4 left-3 right-3 z-50 h-16 rounded-full border px-4 shadow-2xl backdrop-blur-2xl transition-all duration-500 lg:left-1/2 lg:top-5 lg:right-auto lg:w-[min(1240px,calc(100vw-1.5rem))] lg:-translate-x-1/2 lg:px-5 xl:w-[min(1280px,calc(100vw-2rem))] xl:px-6",
+          "fixed top-4 left-3 right-3 z-50 h-16 rounded-full border px-3 shadow-2xl backdrop-blur-2xl transition-all duration-500 sm:px-4 lg:left-1/2 lg:top-5 lg:right-auto lg:w-[min(1240px,calc(100vw-1.5rem))] lg:-translate-x-1/2 lg:px-5 xl:w-[min(1280px,calc(100vw-2rem))] xl:px-6",
           isScrolled
             ? "border-white/10 bg-black/70 shadow-[0_20px_60px_rgba(0,0,0,0.46)]"
             : "border-white/8 bg-black/46 shadow-[0_18px_50px_rgba(0,0,0,0.3)]",
         )}
       >
-        <div className="grid h-full w-full grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 md:gap-3">
+        <div className="grid h-full w-full grid-cols-[auto_auto] items-center justify-between gap-2 xl:grid-cols-[auto_minmax(0,1fr)_auto] xl:justify-normal xl:gap-3">
           <a
             href="#project"
             aria-label={`${NAVIGATION_COPY.brand} – back to top`}
-            className="group flex min-w-0 shrink-0 items-center"
+            className="group flex min-w-0 shrink items-center xl:shrink-0"
           >
             <NavBrandLogo />
           </a>
@@ -139,12 +139,12 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
             </a>
           </div>
 
-          <div className="flex items-center gap-1.5 lg:hidden">
+          <div className="ml-auto flex items-center justify-end gap-1.5 lg:hidden">
             <button
               type="button"
               onClick={onToggleTheme}
               aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/8 p-2 text-white/80 transition-colors hover:border-white/16 hover:bg-white/12"
+              className="touch-target-44 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/8 text-white/80 transition-colors hover:border-white/16 hover:bg-white/12"
             >
               {theme === "dark" ? <SunMedium className="h-4 w-4" /> : <MoonStar className="h-4 w-4" />}
             </button>
@@ -153,7 +153,7 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
               aria-label="Open navigation menu"
               aria-controls="mobile-nav-menu"
               aria-expanded={mobileOpen}
-              className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/6 p-2 text-white/82 transition-colors hover:border-white/16 hover:bg-white/12 hover:text-white"
+              className="touch-target-44 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/6 text-white/82 transition-colors hover:border-white/16 hover:bg-white/12 hover:text-white"
               onClick={() => setMobileOpen(true)}
             >
               <Menu className="h-6 w-6" />
@@ -189,14 +189,14 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
                   type="button"
                   onClick={onToggleTheme}
                   aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-                  className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/8 p-2 text-white/70 transition-colors hover:border-white/16 hover:bg-white/12 hover:text-white"
+                  className="touch-target-44 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/8 text-white/70 transition-colors hover:border-white/16 hover:bg-white/12 hover:text-white"
                 >
                   {theme === "dark" ? <SunMedium className="h-4 w-4" /> : <MoonStar className="h-4 w-4" />}
                 </button>
                 <button
                   type="button"
                   aria-label="Close navigation menu"
-                  className="rounded-full p-2 text-white/60 transition-colors hover:text-white"
+                  className="touch-target-44 inline-flex items-center justify-center rounded-full text-white/60 transition-colors hover:text-white"
                   onClick={() => setMobileOpen(false)}
                 >
                   <X className="h-6 w-6" />

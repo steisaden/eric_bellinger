@@ -18,7 +18,7 @@ export function Footer() {
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div>
               <p className="artist-eyebrow text-[#ffd36e]">STAY IN THE WORLD</p>
-              <h2 className="mt-4 text-balance font-display text-5xl font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
+              <h2 className="safe-text mt-4 text-balance font-display text-[clamp(2.45rem,12vw,3rem)] font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
                 {FOOTER_COPY.heading}
               </h2>
               <p className="mt-4 max-w-2xl text-lg leading-7 text-white/68 md:text-xl">Get updates on new music, live dates, videos, merch, and the next era.</p>

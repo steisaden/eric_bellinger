@@ -55,7 +55,7 @@ export function DiscographyCard({ item, onOpen, reduceMotion, featured = false }
       whileHover={reduceMotion ? undefined : { y: -4 }}
       whileTap={reduceMotion ? undefined : { scale: 0.99 }}
       className={[
-        "group flex h-full w-full min-w-0 flex-col overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.05] text-left transition-colors hover:border-[#ffd36e]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70",
+        "group flex h-full w-full min-w-0 max-w-full flex-col overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.05] text-left transition-colors hover:border-[#ffd36e]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70 sm:rounded-[28px]",
         featured ? "md:col-span-2 md:row-span-2" : "",
       ].join(" ")}
       aria-label={`Open discography details for ${item.title}`}
@@ -64,7 +64,7 @@ export function DiscographyCard({ item, onOpen, reduceMotion, featured = false }
         animate={reduceMotion || !hasMotionCover ? undefined : { y: [0, -2, 0], scale: [1, 1.01, 1] }}
         transition={reduceMotion || !hasMotionCover ? undefined : { duration: 8, repeat: Infinity, ease: "easeInOut" }}
         className={[
-          "relative overflow-hidden rounded-[24px] border border-white/10 bg-black/30 p-1.5 shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl",
+          "relative overflow-hidden rounded-[20px] border border-white/10 bg-black/30 p-1.5 shadow-[0_18px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:rounded-[24px]",
           featured ? "aspect-[4/5]" : "aspect-square",
         ].join(" ")}
       >
@@ -80,8 +80,8 @@ export function DiscographyCard({ item, onOpen, reduceMotion, featured = false }
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.06),transparent_40%,rgba(0,0,0,0.7))]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,157,0,0.08),transparent_28%),linear-gradient(135deg,transparent,rgba(173,70,255,0.08))] opacity-70" />
 
-          <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
-            <div className="flex flex-wrap items-center gap-2">
+          <div className="absolute inset-x-0 bottom-0 p-3 md:p-5">
+            <div className="hidden flex-wrap items-center gap-2 sm:flex">
               <span className="artist-pill-inset inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.32em] text-[#ffd36e]">
                 {acoustic ? <Guitar className="h-3.5 w-3.5" /> : null}
                 {acoustic ? "Acoustic" : item.type}
@@ -96,24 +96,24 @@ export function DiscographyCard({ item, onOpen, reduceMotion, featured = false }
               ) : null}
             </div>
 
-            <div className="mt-4 grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <div className="mt-3 grid gap-3 sm:mt-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
               <div className="min-w-0">
                 <h3
                   className={[
-                    "min-w-0 text-balance font-display font-light tracking-tighter text-white",
-                    featured ? "min-h-[4.8rem] text-2xl leading-[0.98] md:min-h-[6rem] md:text-4xl" : "min-h-[3.4rem] text-lg leading-[1.02] md:min-h-[4rem] md:text-[1.2rem]",
+                    "title-clamp-2 min-w-0 font-display font-light tracking-tighter text-white",
+                    featured ? "text-2xl leading-[0.98] md:text-4xl" : "text-[clamp(1rem,4.8vw,1.15rem)] leading-[1.04] md:text-[1.2rem]",
                   ].join(" ")}
                 >
                   {displayTitle}
                 </h3>
                 {featured ? (
-                  <p className="mt-2 max-w-lg text-sm leading-6 text-white/72">
+                  <p className="copy-clamp-2 mt-2 max-w-lg text-sm leading-6 text-white/72">
                     A curated entry point into Eric’s current run—cover art, tracklist, credits, and video details are inside.
                   </p>
                 ) : null}
               </div>
 
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/88 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-black transition-colors group-hover:bg-[#ffd36e] sm:self-end">
+              <div className="inline-flex min-h-9 items-center justify-center gap-2 rounded-full bg-white/88 px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-black transition-colors group-hover:bg-[#ffd36e] sm:self-end">
                 <PlayCircle className="h-4 w-4" />
                 View
               </div>
@@ -122,14 +122,14 @@ export function DiscographyCard({ item, onOpen, reduceMotion, featured = false }
         </div>
       </motion.div>
 
-      <div className={featured ? "flex flex-1 flex-col gap-2 p-5 md:p-6" : "flex flex-1 flex-col gap-1.5 p-4 md:p-[18px]"}>
+      <div className={featured ? "flex min-w-0 flex-1 flex-col gap-2 p-5 md:p-6" : "flex min-w-0 flex-1 flex-col gap-1.5 p-3 sm:p-4 md:p-[18px]"}>
         <div className="flex items-center justify-between gap-3">
-          <p className="font-mono text-[9px] uppercase tracking-[0.35em] text-white/42 md:text-[10px]">{item.releaseDate ?? String(item.year)}</p>
-          <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-[0.3em] text-[#ffd36e]/84">
+          <p className="safe-text min-w-0 truncate font-mono text-[9px] uppercase tracking-[0.25em] text-white/42 md:text-[10px]">{item.releaseDate ?? String(item.year)}</p>
+          <span className="inline-flex shrink-0 items-center gap-1 text-[10px] uppercase tracking-[0.2em] text-[#ffd36e]/84 sm:tracking-[0.3em]">
             Details <ArrowUpRight className="h-3.5 w-3.5" />
           </span>
         </div>
-        <p className={featured ? "max-w-2xl text-sm leading-6 text-white/68" : "mt-1 h-10 overflow-hidden text-[12px] leading-5 text-white/60 md:text-[13px]"}>
+        <p className={featured ? "copy-clamp-2 max-w-2xl text-sm leading-6 text-white/68" : "copy-clamp-2 mt-1 text-[12px] leading-5 text-white/60 md:text-[13px]"}>
           {featured ? item.sourcePage : "Tap for the tracklist, credits, and embedded video details."}
         </p>
       </div>

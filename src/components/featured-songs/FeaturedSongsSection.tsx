@@ -24,6 +24,7 @@ export function FeaturedSongsSection() {
   const [isMobile, setIsMobile] = useState(false);
   const [touchLike, setTouchLike] = useState(false);
   const [expandedSongId, setExpandedSongId] = useState<string | null>(null);
+  const [isCarouselPaused, setIsCarouselPaused] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
@@ -121,6 +122,16 @@ export function FeaturedSongsSection() {
     }
   };
 
+  useEffect(() => {
+    if (reduceMotion || isCarouselPaused || pages.length <= 1 || activeSong) return;
+
+    const timer = window.setInterval(() => {
+      goToPage(activePage + 1);
+    }, 6500);
+
+    return () => window.clearInterval(timer);
+  }, [activePage, activeSong, isCarouselPaused, pages.length, reduceMotion]);
+
   const handleCardActivate = (id: string) => {
     setExpandedSongId(id);
   };
@@ -140,7 +151,7 @@ export function FeaturedSongsSection() {
         <div className="mb-10 flex flex-col gap-6 md:mb-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p className="artist-eyebrow mb-4 text-[#ffd36e]">FEATURES &amp; GUEST APPEARANCES</p>
-            <h2 className="text-balance font-display text-5xl font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
+            <h2 className="safe-text text-balance font-display text-[clamp(2.45rem,12vw,3rem)] font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
               {FEATURES_COPY.heading}
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-7 text-white/68 md:text-xl">
@@ -187,7 +198,14 @@ export function FeaturedSongsSection() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.03] p-4 shadow-[0_18px_80px_rgba(0,0,0,0.22)] md:p-5">
+          <div
+            className="overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.03] p-3 shadow-[0_18px_80px_rgba(0,0,0,0.22)] md:p-4"
+            onMouseEnter={() => setIsCarouselPaused(true)}
+            onMouseLeave={() => setIsCarouselPaused(false)}
+            onFocusCapture={() => setIsCarouselPaused(true)}
+            onBlurCapture={() => setIsCarouselPaused(false)}
+            onPointerDown={() => setIsCarouselPaused(true)}
+          >
             <div
               ref={trackRef}
               className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth overscroll-x-contain"
@@ -200,9 +218,9 @@ export function FeaturedSongsSection() {
                   ref={(node) => {
                     pageRefs.current[pageIndex] = node;
                   }}
-                  className="w-full flex-none snap-start px-2"
+                  className="w-full flex-none snap-start px-1"
                 >
-                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+                  <div className="mobile-carousel-grid grid gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-4">
                     {page.map((song, index) => (
                       <FeaturedSongCard
                         key={song.id}
@@ -221,27 +239,26 @@ export function FeaturedSongsSection() {
             </div>
           </div>
 
-          <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="artist-pill-inset inline-flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-white/72">
-              <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#ffd36e]">Page</span>
-              <span className="text-[10px] uppercase tracking-[0.32em] text-white/64">
-                {Math.min(activePage + 1, Math.max(pages.length, 1))}/{Math.max(pages.length, 1)}
-              </span>
-            </div>
-
-            <div className="artist-pill-inset inline-flex items-center gap-2 rounded-full px-1.5 py-1 text-white/72">
+          <div className="mt-1 flex flex-col items-end justify-between gap-1 sm:flex-row sm:items-center sm:gap-4">
+            <p className="text-[10px] uppercase tracking-[0.32em] text-white/42">
+              Voice-led guest records, collaborations, and cross-catalog appearances.
+            </p>
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/26 p-1 text-white/72">
               <button
                 type="button"
                 onClick={() => goToPage(activePage - 1)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
+                className="touch-target-44 inline-flex items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
                 aria-label="Previous carousel page"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
+              <span className="min-w-20 px-2 text-center text-[10px] font-bold uppercase tracking-widest text-white/55">
+                {Math.min(activePage + 1, Math.max(pages.length, 1))}/{Math.max(pages.length, 1)}
+              </span>
               <button
                 type="button"
                 onClick={() => goToPage(activePage + 1)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
+                className="touch-target-44 inline-flex items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
                 aria-label="Next carousel page"
               >
                 <ChevronRight className="h-4 w-4" />

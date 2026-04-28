@@ -67,7 +67,7 @@ export function CreditsSection() {
         <div className="mb-12 flex flex-col gap-6 md:mb-16 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p className="artist-eyebrow mb-4 text-[#ffd36e]">THE PEN</p>
-            <h2 className="text-balance font-display text-5xl font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
+            <h2 className="safe-text text-balance font-display text-[clamp(2.45rem,12vw,3rem)] font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
               You’ve heard the pen, even when you didn’t know it was his.
             </h2>
             <p className="mt-4 max-w-3xl text-lg leading-7 text-white/68 md:text-xl">
@@ -138,7 +138,7 @@ export function CreditsSection() {
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder="Search songs, artists, roles..."
-                  className="w-full min-w-[220px] bg-transparent text-sm text-white placeholder:text-white/30 focus:outline-none"
+                  className="w-full min-w-0 bg-transparent text-sm text-white placeholder:text-white/30 focus:outline-none"
                 />
               </div>
             </div>

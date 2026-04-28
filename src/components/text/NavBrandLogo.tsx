@@ -52,7 +52,7 @@ export function NavBrandLogo({ className }: NavBrandLogoProps) {
   return (
     <span
       className={cn(
-        "inline-flex h-[1.18rem] min-w-[clamp(152px,16vw,188px)] items-center justify-center overflow-hidden align-middle",
+        "inline-flex h-[1.18rem] w-[clamp(150px,42vw,188px)] max-w-full shrink items-center justify-start overflow-hidden align-middle xl:justify-center",
         className,
       )}
       aria-live="polite"

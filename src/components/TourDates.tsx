@@ -17,7 +17,7 @@ export function TourDates() {
         <div className="mb-12 flex flex-col gap-6 md:mb-16 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p className="artist-eyebrow mb-4 text-[#ffd36e]">LIVE DATES</p>
-            <h2 className="text-balance font-display text-5xl font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
+            <h2 className="safe-text text-balance font-display text-[clamp(2.45rem,12vw,3rem)] font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
               Catch Eric Live
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-7 text-white/68 md:text-xl">

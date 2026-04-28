@@ -101,7 +101,7 @@ export function Interviews() {
         {/* Header */}
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="font-display text-5xl font-light uppercase tracking-tighter italic text-glow md:text-7xl">
+            <h2 className="safe-text font-display text-[clamp(2.35rem,11vw,3rem)] font-light uppercase tracking-tighter italic text-glow md:text-7xl">
               {INTERVIEWS_COPY.heading}
             </h2>
             <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-[#ff9d00]">
@@ -151,7 +151,7 @@ export function Interviews() {
                 ref={(node) => { pageRefs.current[pageIndex] = node; }}
                 className="w-full flex-none snap-start"
               >
-                <div className="grid grid-cols-2 gap-4 md:block md:divide-y md:divide-slate-100">
+                <div className="mobile-carousel-grid grid gap-3 md:block md:divide-y md:divide-slate-100">
                   {page.map((item, index) => {
                     const canWatch = item.isPlayable && item.videoId;
                     const date = formatDate(item.publishedDate);
@@ -163,7 +163,7 @@ export function Interviews() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-40px" }}
                         transition={{ delay: index * 0.04, duration: 0.3 }}
-                        className="group flex flex-col gap-3 py-4 md:grid md:grid-cols-[160px_1fr_auto] md:gap-6 md:py-5"
+                        className="group flex min-w-0 flex-col gap-3 rounded-2xl bg-white/95 p-3 py-4 md:grid md:grid-cols-[160px_1fr_auto] md:gap-6 md:rounded-none md:bg-transparent md:p-0 md:py-5"
                       >
                         {/* Thumbnail */}
                         <div className="relative w-full shrink-0 overflow-hidden rounded-xl md:w-40">
@@ -188,7 +188,7 @@ export function Interviews() {
                               type="button"
                               onClick={() => openPlayable(item.videoId ?? "")}
                               aria-label={`Play: ${item.title}`}
-                              className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                              className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-100 transition-opacity duration-200 md:opacity-0 md:group-hover:opacity-100"
                             >
                               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 shadow-lg">
                                 <Play className="ml-0.5 h-4 w-4 fill-black text-black" />
@@ -200,8 +200,8 @@ export function Interviews() {
                         {/* Info */}
                         <div className="min-w-0">
                           {/* Source + date */}
-                          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                            <span className="font-mono text-[10px] uppercase tracking-widest text-slate-500">
+                          <div className="flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 md:gap-x-3">
+                            <span className="max-w-full truncate font-mono text-[9px] uppercase tracking-widest text-slate-500 md:text-[10px]">
                               {item.sourceHost}
                             </span>
                             {item.year && (
@@ -217,12 +217,12 @@ export function Interviews() {
                           </div>
 
                           {/* Title */}
-                          <h3 className="mt-2 line-clamp-2 font-display text-lg font-light uppercase tracking-tight text-slate-900 md:text-xl">
+                          <h3 className="title-clamp-2 mt-2 font-display text-[clamp(1rem,5vw,1.125rem)] font-light uppercase tracking-tight text-slate-900 md:text-xl">
                             {item.title}
                           </h3>
 
                           {/* Publisher */}
-                          <p className="mt-1 text-xs uppercase tracking-[0.24em] text-slate-500">
+                          <p className="copy-clamp-2 mt-1 text-[10px] uppercase tracking-[0.18em] text-slate-500 md:text-xs md:tracking-[0.24em]">
                             {item.showOrPublisher}
                           </p>
 
@@ -256,7 +256,7 @@ export function Interviews() {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   title={url}
-                                  className="font-mono text-[9px] uppercase tracking-widest text-slate-500 underline underline-offset-2 hover:text-slate-900"
+                                  className="max-w-full truncate font-mono text-[9px] uppercase tracking-widest text-slate-500 underline underline-offset-2 hover:text-slate-900"
                                 >
                                   Alt {i + 1}
                                 </a>
@@ -382,7 +382,7 @@ export function Interviews() {
                   type="button"
                   onClick={(e) => { e.stopPropagation(); togglePlayerSize(); }}
                   aria-label={isMinimized ? "Expand player" : "Minimize player"}
-                  className="rounded-full p-2.5 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
+                  className="touch-target-44 inline-flex items-center justify-center rounded-full text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
                 >
                   {isMinimized ? <Maximize2 className="h-3.5 w-3.5" /> : <Minimize2 className="h-3.5 w-3.5" />}
                 </button>
@@ -390,7 +390,7 @@ export function Interviews() {
                   type="button"
                   onClick={closePlayer}
                   aria-label="Close player"
-                  className="rounded-full p-2.5 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
+                  className="touch-target-44 inline-flex items-center justify-center rounded-full text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
                 >
                   <X className="h-3.5 w-3.5" />
                 </button>

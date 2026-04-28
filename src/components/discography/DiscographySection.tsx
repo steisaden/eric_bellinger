@@ -23,6 +23,7 @@ const chunkAlbums = <T,>(items: T[], size: number) => {
 export function DiscographySection() {
   const { albums, activeAlbum, activeLinks, reduceMotion, openAlbum, closeAlbum } = useDiscography();
   const [isMobile, setIsMobile] = useState(false);
+  const [isCarouselPaused, setIsCarouselPaused] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 640);
@@ -83,6 +84,20 @@ export function DiscographySection() {
     }
   };
 
+  useEffect(() => {
+    if (reduceMotion || isCarouselPaused || pages.length <= 1 || activeAlbum) return;
+
+    const timer = window.setInterval(() => {
+      const nextPage = (activePage + 1) % pages.length;
+      const pageEl = pageRefs.current[nextPage];
+      if (pageEl && trackRef.current) {
+        trackRef.current.scrollTo({ left: pageEl.offsetLeft, behavior: "smooth" });
+      }
+    }, 6500);
+
+    return () => window.clearInterval(timer);
+  }, [activeAlbum, activePage, isCarouselPaused, pages.length, reduceMotion]);
+
   const latestItem = albums[0];
   const modernCount = albums.filter((album) => album.year >= 2020).length;
   const albumCount = albums.filter((album) => album.type.toLowerCase().includes("album")).length;
@@ -95,7 +110,7 @@ export function DiscographySection() {
         <div className="mb-10 flex flex-col gap-6 md:mb-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
             <p className="artist-eyebrow mb-4 text-[#ffd36e]">CURATED CATALOG</p>
-            <h2 className="text-balance font-display text-5xl font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
+            <h2 className="safe-text text-balance font-display text-[clamp(2.45rem,12vw,3rem)] font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
               Discography
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-7 text-white/68 md:text-xl">
@@ -166,7 +181,14 @@ export function DiscographySection() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.03] p-3 shadow-[0_18px_80px_rgba(0,0,0,0.22)] md:p-4">
+        <div
+          className="overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.03] p-3 shadow-[0_18px_80px_rgba(0,0,0,0.22)] md:p-4"
+          onMouseEnter={() => setIsCarouselPaused(true)}
+          onMouseLeave={() => setIsCarouselPaused(false)}
+          onFocusCapture={() => setIsCarouselPaused(true)}
+          onBlurCapture={() => setIsCarouselPaused(false)}
+          onPointerDown={() => setIsCarouselPaused(true)}
+        >
           <div
             ref={trackRef}
             className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth overscroll-x-contain"
@@ -181,14 +203,14 @@ export function DiscographySection() {
                 }}
                 className="w-full flex-none snap-start px-1"
               >
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-4">
+                <div className="mobile-carousel-grid grid gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-4">
                   {page.map((item, index) => (
                     <DiscographyCard
                       key={item.id}
                       item={item}
                       onOpen={openAlbum}
                       reduceMotion={reduceMotion}
-                      featured={pageIndex === 0 && index === 0}
+                      featured={!isMobile && pageIndex === 0 && index === 0}
                     />
                   ))}
                 </div>
@@ -197,7 +219,7 @@ export function DiscographySection() {
           </div>
         </div>
 
-        <div className="mt-5 flex items-center justify-between gap-4">
+        <div className="mt-1 flex flex-col items-end justify-between gap-1 sm:flex-row sm:items-center sm:gap-4">
           <p className="text-[10px] uppercase tracking-[0.32em] text-white/42">
             {DISCOGRAPHY_COPY.introCopy}
           </p>
@@ -205,7 +227,7 @@ export function DiscographySection() {
             <button
               type="button"
               onClick={() => goToPage("prev")}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
+              className="touch-target-44 inline-flex items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
               aria-label="Previous carousel page"
             >
               <ChevronLeft className="h-4 w-4" />
@@ -216,7 +238,7 @@ export function DiscographySection() {
             <button
               type="button"
               onClick={() => goToPage("next")}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
+              className="touch-target-44 inline-flex items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
               aria-label="Next carousel page"
             >
               <ChevronRight className="h-4 w-4" />

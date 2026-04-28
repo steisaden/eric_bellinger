@@ -169,7 +169,7 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
       initial={reduceMotion ? false : { opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-white/70 p-3 backdrop-blur-md md:items-start md:p-6"
+      className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-white/70 p-3 pt-[max(0.75rem,env(safe-area-inset-top))] backdrop-blur-md md:items-start md:p-6"
       onClick={onClose}
     >
       <motion.div
@@ -177,13 +177,13 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
         animate={{ y: 0, scale: 1 }}
         exit={reduceMotion ? undefined : { y: 48, scale: 0.98 }}
         transition={{ type: "spring", damping: 28, stiffness: 240 }}
-        className="flex w-full max-w-4xl max-h-[calc(100dvh-1.5rem)] flex-col overflow-hidden rounded-[28px] border border-slate-200 bg-[#fffdf8] shadow-[0_30px_80px_rgba(0,0,0,0.5)] md:mt-2"
+        className="flex max-h-[calc(100dvh-1.5rem)] w-full max-w-4xl min-w-0 flex-col overflow-hidden rounded-[24px] border border-slate-200 bg-[#fffdf8] shadow-[0_30px_80px_rgba(0,0,0,0.5)] md:mt-2 md:rounded-[28px]"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="shrink-0 flex items-start justify-between gap-4 border-b border-slate-200 px-5 py-4 md:px-6">
-          <div>
+        <div className="flex shrink-0 items-start justify-between gap-3 border-b border-slate-200 px-4 py-4 md:gap-4 md:px-6">
+          <div className="min-w-0 flex-1">
             <p className="text-[10px] font-mono uppercase tracking-widest text-eb-accent">{DISCOGRAPHY_COPY.detailsSheetTitle}</p>
-            <h3 id={`discography-title-${album.id}`} className="mt-2 text-2xl font-display font-light md:text-3xl">
+            <h3 id={`discography-title-${album.id}`} className="title-clamp-2 mt-2 font-display text-[clamp(1.45rem,7vw,1.9rem)] font-light leading-tight md:text-3xl">
               {album.title}
             </h3>
             <p className="mt-1 text-sm text-slate-600">
@@ -193,14 +193,14 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
           <button
             type="button"
             onClick={onClose}
-            className="rounded-full border border-slate-200 bg-white/80 p-3 text-slate-700 transition-colors hover:bg-slate-100/80 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-eb-accent/70"
+            className="touch-target-44 inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white/80 text-slate-700 transition-colors hover:bg-slate-100/80 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-eb-accent/70"
             aria-label={`Close details for ${album.title}`}
           >
             <X className="h-5 w-5" />
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto px-5 py-5 md:px-6 md:py-6">
+        <div className="flex-1 overflow-y-auto px-4 py-5 md:px-6 md:py-6">
           <div className="grid items-start gap-6 md:grid-cols-[minmax(220px,280px)_minmax(0,1fr)]">
             <div className="self-start rounded-[24px] border border-slate-200 bg-white/95 p-2 shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl md:sticky md:top-6">
               <div className="aspect-[4/5] w-full overflow-hidden rounded-[20px] bg-white/85">
@@ -214,7 +214,7 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
               </div>
             </div>
 
-            <div className="space-y-5">
+            <div className="min-w-0 space-y-5">
               <div>
                 <p className="text-[10px] font-mono uppercase tracking-widest text-slate-500">{DISCOGRAPHY_COPY.contextLabel}</p>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-700 md:text-base">
@@ -247,7 +247,7 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
                     href={album.sourcePage}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-1 inline-flex items-center gap-2 text-sm text-slate-900/80 underline decoration-white/20 underline-offset-4 transition-colors hover:text-slate-900"
+                    className="safe-text mt-1 inline-flex max-w-full items-center gap-2 text-sm text-slate-900/80 underline decoration-white/20 underline-offset-4 transition-colors hover:text-slate-900"
                   >
                     {album.sourcePage}
                     <ExternalLink className="h-3.5 w-3.5" />
@@ -293,7 +293,7 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
                   <p className="text-[10px] font-mono uppercase tracking-widest text-slate-500">Album credits</p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {album.credits.map((credit) => (
-                      <span key={`${credit.role}-${credit.name}`} className="rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-[10px] uppercase tracking-widest text-slate-800/70">
+                      <span key={`${credit.role}-${credit.name}`} className="safe-text max-w-full rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-[10px] uppercase tracking-widest text-slate-800/70">
                         {credit.role}: {credit.name}
                       </span>
                     ))}
@@ -343,15 +343,15 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
                           return (
                             <div
                               key={`${getDiscNumber(track)}-${getTrackNumber(track)}-${normalize(getTrackTitle(track))}`}
-                              className="group rounded-2xl border border-slate-200 bg-white/80 px-4 py-3 text-sm text-slate-800/75 transition-colors hover:border-slate-200/80 hover:bg-white/95"
+                              className="group rounded-2xl border border-slate-200 bg-white/80 px-3 py-3 text-sm text-slate-800/75 transition-colors hover:border-slate-200/80 hover:bg-white/95 sm:px-4"
                             >
-                              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4">
+                              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-2 sm:gap-4">
                                 <div className="min-w-0 space-y-2">
-                                  <div className="flex min-w-0 items-center gap-2">
+                                  <div className="flex min-w-0 flex-wrap items-center gap-2">
                                     <span className="shrink-0 text-[10px] uppercase tracking-widest text-slate-500">
                                       {hasMultipleDiscs ? `Disc ${getDiscNumber(track)} • ${getTrackNumber(track)}` : getTrackNumber(track)}
                                     </span>
-                                    <span className="min-w-0 truncate font-medium text-slate-900/80" title={getTrackTitle(track)}>
+                                    <span className="title-clamp-2 min-w-0 flex-1 basis-[9rem] font-medium leading-5 text-slate-900/80" title={getTrackTitle(track)}>
                                       {getTrackTitle(track)}
                                     </span>
                                     {track.musicVideoUrl && (
@@ -365,7 +365,7 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
                                           })
                                         }
                                         aria-label={`Play music video for ${getTrackTitle(track)}`}
-                                        className="inline-flex shrink-0 items-center gap-1 rounded-full border border-red-500/30 bg-red-500/10 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-red-700 transition-colors hover:bg-red-500/20 hover:text-red-900"
+                                        className="touch-target-44 inline-flex shrink-0 items-center gap-1 rounded-full border border-red-500/30 bg-red-500/10 px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-red-700 transition-colors hover:bg-red-500/20 hover:text-red-900"
                                       >
                                         <Youtube className="h-4 w-4" />
                                         Video
@@ -374,13 +374,13 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
                                   </div>
 
                                   {featured.length > 0 && (
-                                    <p className="truncate text-[10px] uppercase tracking-widest text-slate-600" title={featured.join(", ")}>
+                                    <p className="copy-clamp-2 text-[10px] uppercase tracking-widest text-slate-600" title={featured.join(", ")}>
                                       Feat. {featured.join(", ")}
                                     </p>
                                   )}
 
                                   {(writers.length > 0 || producers.length > 0 || personnel.length > 0) && (
-                                    <p className="truncate text-[10px] uppercase tracking-widest text-slate-600" title={[...writers, ...producers, ...personnel].join(" • ")}>
+                                    <p className="copy-clamp-2 text-[10px] uppercase tracking-widest text-slate-600" title={[...writers, ...producers, ...personnel].join(" • ")}>
                                       {[writers.length > 0 ? `Writers: ${writers.join(", ")}` : null, producers.length > 0 ? `Producers: ${producers.join(", ")}` : null, personnel.length > 0 ? `Credits: ${personnel.join(", ")}` : null]
                                         .filter(Boolean)
                                         .join(" | ")}
@@ -432,7 +432,7 @@ export function DiscographyDetailsSheet({ album, links, onClose, reduceMotion }:
                         <button
                           type="button"
                           onClick={() => setActiveVideo(null)}
-                          className="rounded-full border border-slate-200 bg-white/80 p-3 text-slate-700 transition-colors hover:bg-slate-100/80 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-eb-accent/70"
+                          className="touch-target-44 inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white/80 text-slate-700 transition-colors hover:bg-slate-100/80 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-eb-accent/70"
                           aria-label={`Close music video for ${activeVideo.title}`}
                         >
                           <X className="h-5 w-5" />

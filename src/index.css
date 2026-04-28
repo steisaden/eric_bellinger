@@ -475,6 +475,45 @@
     text-overflow: ellipsis;
   }
 
+  .safe-text {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .touch-target-44 {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .mobile-carousel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 380px) {
+    .mobile-carousel-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (min-width: 640px) {
+    .mobile-carousel-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .mobile-carousel-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .mobile-carousel-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
   .receipt-card {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: linear-gradient(180deg, rgba(15, 18, 28, 0.92), rgba(8, 10, 16, 0.92));

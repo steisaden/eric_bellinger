@@ -113,14 +113,14 @@ export function FeaturedSongCard({ song, index, reduceMotion, expanded, touchLik
       initial={reduceMotion ? false : { opacity: 0, y: 24 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: reduceMotion ? 0.01 : 0.6, delay: index * 0.02 }}
+      transition={{ duration: reduceMotion ? 0.01 : 0.45, delay: index * 0.02 }}
       whileHover={reduceMotion ? undefined : { y: -3 }}
-      className="group w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
+      className="group w-full min-w-0 max-w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
       aria-label={`Open feature details for ${song.title}`}
       aria-expanded={touchLike ? expanded : undefined}
       data-feature-card={song.id}
     >
-      <div className="overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_18px_50px_rgba(0,0,0,0.3)] transition-colors group-hover:border-[#ffd36e]/20">
+      <div className="overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.04] shadow-[0_18px_50px_rgba(0,0,0,0.3)] transition-colors group-hover:border-[#ffd36e]/20 sm:rounded-[28px]">
         <div className="relative aspect-[4/5] overflow-hidden">
           {hasCover ? (
             <motion.img
@@ -141,33 +141,33 @@ export function FeaturedSongCard({ song, index, reduceMotion, expanded, touchLik
             className={`absolute inset-x-0 bottom-0 h-[34%] bg-[linear-gradient(180deg,transparent_0%,rgba(4,6,12,0.04)_28%,rgba(4,6,12,0.72)_100%)] transition-all duration-300 ease-out ${touchLike ? (expanded ? "h-[58%]" : "") : "group-hover:h-[58%]"}`}
           />
 
-          <div className="absolute inset-x-0 bottom-0 p-3 md:p-4">
-            <div className={`rounded-[22px] border border-white/8 bg-[rgba(8,10,16,0.16)] p-4 shadow-[0_10px_24px_rgba(0,0,0,0.12)] backdrop-blur-[10px] transition-transform duration-300 ease-out ${overlayTranslateClass}`}>
+          <div className="absolute inset-x-0 bottom-0 p-2.5 sm:p-3 md:p-4">
+            <div className={`rounded-[18px] border border-white/8 bg-[rgba(8,10,16,0.28)] p-3 shadow-[0_10px_24px_rgba(0,0,0,0.12)] backdrop-blur-[10px] transition-transform duration-[260ms] ease-out sm:rounded-[22px] sm:p-4 ${overlayTranslateClass}`}>
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0 flex-1">
-                  <p className="text-[9px] font-bold uppercase tracking-[0.32em] text-[#ffd36e]/88">{acoustic ? "Acoustic" : "Guest record"}</p>
-                  <h3 className="mt-2 line-clamp-2 max-w-full font-display text-xl font-light leading-[1.02] tracking-tighter text-white md:text-[1.55rem]">
+                  <p className="truncate text-[8px] font-bold uppercase tracking-[0.24em] text-[#ffd36e]/88 sm:text-[9px] sm:tracking-[0.32em]">{acoustic ? "Acoustic" : "Guest record"}</p>
+                  <h3 className="title-clamp-2 mt-1.5 max-w-full font-display text-[clamp(1rem,5vw,1.25rem)] font-light leading-[1.02] tracking-tighter text-white md:text-[1.55rem]">
                     {displayTitle}
                   </h3>
                 </div>
-                <div className="mt-0.5 rounded-full border border-white/10 bg-white/8 p-2 text-white/86 transition-colors group-hover:bg-[#ffd36e] group-hover:text-black">
+                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/8 text-white/86 transition-colors group-hover:bg-[#ffd36e] group-hover:text-black">
                   {acoustic ? <Guitar className="h-5 w-5" /> : <PlayCircle className="h-5 w-5" />}
                 </div>
               </div>
 
-              <div className={`mt-3 flex min-w-0 flex-wrap items-center gap-2 ${metaRevealClass}`}>
-                <span className="artist-pill-inset max-w-full rounded-full px-2.5 py-1 text-[9px] font-medium uppercase tracking-[0.28em] text-white/72 backdrop-blur-sm">
-                  <span className="line-clamp-2 block max-w-[14rem] break-words">{displayArtistLine}</span>
+              <div className={`mt-2 flex min-w-0 flex-wrap items-center gap-1.5 sm:mt-3 sm:gap-2 ${metaRevealClass}`}>
+                <span className="artist-pill-inset max-w-full rounded-full px-2 py-1 text-[8px] font-medium uppercase tracking-[0.18em] text-white/72 backdrop-blur-sm sm:px-2.5 sm:text-[9px] sm:tracking-[0.28em]">
+                  <span className="copy-clamp-2 block max-w-full break-words sm:max-w-[14rem]">{displayArtistLine}</span>
                 </span>
-                <span className="artist-pill-inset max-w-full rounded-full px-2.5 py-1 text-[9px] font-medium uppercase tracking-[0.28em] text-white/58 backdrop-blur-sm">
-                  <span className="block max-w-[10rem] truncate">{song.source}</span>
+                <span className="artist-pill-inset max-w-full rounded-full px-2 py-1 text-[8px] font-medium uppercase tracking-[0.18em] text-white/58 backdrop-blur-sm sm:px-2.5 sm:text-[9px] sm:tracking-[0.28em]">
+                  <span className="block max-w-[8rem] truncate sm:max-w-[10rem]">{song.source}</span>
                 </span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-3 flex items-center justify-between px-1 text-[10px] uppercase tracking-[0.3em] text-white/42">
+      <div className="mt-3 flex min-w-0 items-center justify-between gap-2 px-1 text-[10px] uppercase tracking-[0.22em] text-white/42 sm:tracking-[0.3em]">
         <span>Open record</span>
         <ArrowUpRight className="h-4 w-4" />
       </div>
