@@ -1,130 +1,119 @@
 import { motion } from "motion/react";
-import { Calendar, ExternalLink, Play } from "lucide-react";
+import { ArrowUpRight, Calendar, ExternalLink, Play } from "lucide-react";
 
-import { HERO_COPY, LATEST_PROJECT } from "@/data";
+import { HERO_COPY, LATEST_PROJECT, TOUR_COPY } from "@/data";
 
 function HeroCover() {
-  if (LATEST_PROJECT.coverUrl) {
-    return (
-      <motion.img
-        whileHover={{ scale: 1.02, rotateY: 5, rotateX: 5 }}
-        src={LATEST_PROJECT.coverUrl}
-        alt={LATEST_PROJECT.title}
-        loading="eager"
-        decoding="async"
-        fetchPriority="high"
-        className="relative z-10 h-full w-full rounded-3xl border border-slate-200 object-cover shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-500 will-change-transform"
-      />
-    );
-  }
-
   return (
-      <div className="relative z-10 flex h-full w-full flex-col justify-between rounded-3xl border border-slate-200 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.9),transparent_42%),linear-gradient(135deg,rgba(255,255,255,0.98),rgba(237,233,254,0.96),rgba(250,204,21,0.16))] p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
-      <div className="space-y-4">
-        <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-slate-700/45">{HERO_COPY.eyebrow}</p>
-        <div>
-          <p className="text-3xl font-display font-light tracking-tighter text-slate-900">{LATEST_PROJECT.title}</p>
-          <p className="mt-2 max-w-sm text-sm leading-6 text-slate-800/70">{LATEST_PROJECT.description}</p>
-        </div>
-      </div>
-
-      <div className="grid gap-3 rounded-[24px] border border-slate-200 bg-white/85 p-4 text-sm text-slate-800/75 backdrop-blur-sm">
-        <div className="flex items-center justify-between gap-4">
-          <span className="text-[10px] uppercase tracking-[0.35em] text-slate-600/40">{LATEST_PROJECT.type}</span>
-          <span className="text-[10px] uppercase tracking-[0.35em] text-slate-600/40">{LATEST_PROJECT.releaseDate}</span>
-        </div>
-        <p>{LATEST_PROJECT.genre} • {LATEST_PROJECT.length}</p>
-        <p className="text-[11px] uppercase tracking-[0.3em] text-slate-600/35">{LATEST_PROJECT.coverStatus}</p>
-      </div>
-    </div>
+    <motion.img
+      whileHover={{ scale: 1.02 }}
+      src="/cry_in_front_of_you_hero.jpg"
+      alt="Eric Bellinger"
+      loading="eager"
+      decoding="async"
+      fetchPriority="high"
+      className="relative z-10 h-full w-full rounded-[28px] border border-white/10 object-cover shadow-[0_24px_70px_rgba(0,0,0,0.55)] transition-transform duration-500 will-change-transform"
+    />
   );
 }
 
 export function Hero() {
-  const spotlight = HERO_COPY.tourSpotlight;
+  const spotlight = HERO_COPY.tourSpotlight?.slice(0, 3) ?? [];
+  const primaryTicketUrl = TOUR_COPY.activeTourDates.find((date) => Boolean(date.ticketsUrl))?.ticketsUrl ?? "#tour";
+  const listenUrl = LATEST_PROJECT.listenUrl ?? LATEST_PROJECT.links?.appleMusic ?? LATEST_PROJECT.links?.spotify ?? "#discography";
 
   return (
-    <section id="project" className="relative flex min-h-[100svh] items-center overflow-hidden pb-12 pt-24">
-      <div className="pointer-events-none absolute inset-0 h-full w-full">
+    <section id="project" className="relative overflow-hidden pb-14 pt-24 md:pb-20 md:pt-28">
+      <div className="pointer-events-none absolute inset-0">
         <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-            rotate: [0, 90, 0],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -left-[10%] -top-[20%] h-[60%] w-[60%] rounded-full bg-eb-accent/10 blur-[120px]"
+          animate={{ opacity: [0.15, 0.4, 0.15], scale: [1, 1.08, 1] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -left-16 top-10 h-[28rem] w-[28rem] rounded-full bg-[#ff9d00]/12 blur-[140px]"
         />
         <motion.div
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.2, 0.4, 0.2],
-            rotate: [0, -90, 0],
-          }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute right-[0%] top-[40%] h-[50%] w-[50%] rounded-full bg-purple-900/20 blur-[140px]"
+          animate={{ opacity: [0.1, 0.28, 0.1], scale: [1, 1.12, 1] }}
+          transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute right-[-8%] top-[8%] h-[30rem] w-[30rem] rounded-full bg-[#ad46ff]/14 blur-[160px]"
         />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_30%),linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.35))]" />
       </div>
 
-      <div className="mx-auto w-full max-w-7xl px-6 relative z-10">
-        <div className="grid items-center gap-12 rounded-[40px] border border-slate-200 bg-gradient-to-br from-white/5 to-transparent p-8 md:p-16 lg:grid-cols-2 lg:gap-24">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            className="order-2 lg:order-1 flex flex-col items-start"
-          >
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-600/20 px-3 py-1 pb-1.5 text-[10px] font-bold uppercase tracking-widest text-purple-300">
-              <span>{HERO_COPY.eyebrow}</span>
-            </div>
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 relative z-10">
+        <div className="hero-billboard relative overflow-hidden rounded-[40px] p-5 md:p-8 lg:p-10">
+          <div className="pointer-events-none absolute inset-0 opacity-60 grain-overlay" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#ffd36e]/60 to-transparent" />
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+            <motion.div
+              initial={{ opacity: 0, x: -18 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.85, ease: "easeOut" }}
+              className="order-2 lg:order-1 flex flex-col items-start"
+            >
+              <p className="artist-eyebrow mb-4 text-[#ffd36e]">{HERO_COPY.eyebrow}</p>
 
-            <h1 className="mb-6 font-display text-5xl font-light leading-[0.9] tracking-tighter md:text-7xl lg:text-8xl">
-              {HERO_COPY.headline}
-            </h1>
+              <h1 className="text-balance font-display text-5xl font-light leading-[0.92] tracking-tighter text-white md:text-7xl lg:text-[7.5rem]">
+                Eric Bellinger
+              </h1>
 
-            <p className="mb-6 max-w-xl text-lg font-light leading-relaxed text-slate-700/55 mix-blend-screen md:text-xl">
-              {HERO_COPY.summary}
-            </p>
+              <div className="mt-5 space-y-3 max-w-2xl">
+                <p className="text-pretty text-lg font-light leading-relaxed text-white/78 md:text-xl">
+                  The voice, pen, and catalog behind a generation of R&B.
+                </p>
+                <p className="text-pretty text-base leading-7 text-white/66 md:text-lg">
+                  New single: <span className="text-white">Cry In Front Of You</span>. 2026 live dates now available.
+                </p>
+              </div>
 
-            <div className="mb-8 grid w-full max-w-xl gap-3">
-              {spotlight.map((date) => (
-                <div key={date.id} className="flex items-center justify-between gap-4 rounded-2xl border border-slate-200 bg-white/80 px-4 py-3">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-purple-300">{date.venue}</p>
-                    <p className="text-sm text-slate-800/70">{date.city}</p>
+              <div className="mt-8 flex flex-wrap items-center gap-3 md:gap-4">
+                <a href={primaryTicketUrl} className="artist-button-primary inline-flex items-center gap-2 rounded-full px-6 py-4 text-sm font-bold uppercase tracking-[0.3em] transition-transform hover:-translate-y-0.5">
+                  <Calendar className="h-4 w-4" />
+                  Get Tickets
+                </a>
+                <a href={listenUrl} className="artist-button-secondary inline-flex items-center gap-2 rounded-full px-6 py-4 text-sm font-bold uppercase tracking-[0.3em] transition-colors hover:border-white/20 hover:bg-white/8">
+                  <Play className="h-4 w-4 fill-current" />
+                  Listen Now
+                </a>
+                <a href="#discography" className="artist-button-tertiary inline-flex items-center gap-2 rounded-full px-2 py-4 text-sm font-bold uppercase tracking-[0.3em] transition-colors hover:text-[#ffd36e]">
+                  <ExternalLink className="h-4 w-4" />
+                  Explore the Archive
+                </a>
+              </div>
+
+              <div className="mt-9 grid w-full max-w-2xl gap-3 sm:grid-cols-3">
+                {spotlight.map((date) => (
+                  <div key={date.id} className="rounded-[22px] border border-white/10 bg-white/[0.04] px-4 py-4 backdrop-blur-sm">
+                    <p className="text-[10px] uppercase tracking-[0.32em] text-[#ffd36e]/78">{date.venue}</p>
+                    <p className="mt-2 text-sm text-white/72">{date.city}</p>
+                    <p className="mt-4 text-[10px] uppercase tracking-[0.28em] text-white/46">{date.displayDate}</p>
                   </div>
-                  <span className="text-[10px] uppercase tracking-widest text-slate-700/50">{date.displayDate}</span>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.95, delay: 0.15 }}
+              className="order-1 lg:order-2 relative"
+            >
+              <div className="absolute inset-0 -m-6 rounded-[36px] bg-[radial-gradient(circle_at_center,rgba(255,157,0,0.2),transparent_50%)] blur-2xl" />
+              <div className="relative mx-auto aspect-[4/5] w-full max-w-[36rem] overflow-hidden rounded-[34px] border border-white/10 bg-black/30 p-2 shadow-[0_30px_100px_rgba(0,0,0,0.52)]">
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),transparent_28%,rgba(0,0,0,0.36))] pointer-events-none" />
+                <HeroCover />
+                <div className="absolute inset-x-4 bottom-4 rounded-[24px] border border-white/10 bg-black/45 px-4 py-4 backdrop-blur-md">
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-white/45">Campaign line</p>
+                      <p className="mt-2 text-sm text-white/88">{HERO_COPY.summary}</p>
+                    </div>
+                    <span className="rounded-full border border-[#ffd36e]/18 bg-[#ffd36e]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-[#ffd36e]">
+                      2026
+                    </span>
+                  </div>
                 </div>
-              ))}
-            </div>
-
-            <div className="mb-8 flex flex-wrap items-center gap-4">
-              <a href={LATEST_PROJECT.listenUrl ?? LATEST_PROJECT.links.appleMusic ?? LATEST_PROJECT.links.spotify ?? "#discography"} className="inline-flex items-center gap-2 rounded-2xl bg-white px-8 py-4 text-sm font-bold text-black transition-colors hover:bg-purple-100">
-                <Play className="h-5 w-5 fill-current" />
-                {HERO_COPY.primaryAction}
-              </a>
-              <a href="#tour" className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-100/80 px-8 py-4 text-sm font-bold transition-colors hover:bg-slate-100/90">
-                <Calendar className="h-5 w-5" />
-                {HERO_COPY.secondaryAction}
-              </a>
-              <a href="#discography" className="inline-flex items-center gap-2 px-5 py-4 text-sm font-bold uppercase tracking-widest text-slate-700/50 transition-colors hover:text-slate-900">
-                <ExternalLink className="h-4 w-4" />
-                {HERO_COPY.archiveAction}
-              </a>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.15 }}
-            className="order-1 lg:order-2 relative perspective-1000"
-          >
-            <div className="relative aspect-square w-full max-w-md mx-auto group">
-              <div className="absolute inset-0 bg-[linear-gradient(110deg,#fef3c7,45%,#fbbf24,55%,#fef3c7)] bg-[length:200%_100%] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-shimmer" />
-              <HeroCover />
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
