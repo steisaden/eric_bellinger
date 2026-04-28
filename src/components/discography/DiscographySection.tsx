@@ -32,7 +32,20 @@ export function DiscographySection() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const pages = useMemo(() => chunkAlbums(albums, isMobile ? 4 : PAGE_SIZE), [albums, isMobile]);
+  const pages = useMemo(() => {
+    if (isMobile) {
+      return chunkAlbums(albums, 4);
+    }
+    const result: typeof albums[] = [];
+    const remaining = [...albums];
+    if (remaining.length > 0) {
+      result.push(remaining.splice(0, 10));
+    }
+    while (remaining.length > 0) {
+      result.push(remaining.splice(0, 20));
+    }
+    return result;
+  }, [albums, isMobile]);
   const [activePage, setActivePage] = useState(0);
   const pageRefs = useRef<Array<HTMLDivElement | null>>([]);
 
@@ -203,7 +216,12 @@ export function DiscographySection() {
                 }}
                 className="w-full flex-none snap-start px-1"
               >
-                <div className="mobile-carousel-grid grid gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-4">
+                <div
+                  className={cn(
+                    "mobile-carousel-grid grid gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-4",
+                    !isMobile && pageIndex >= 1 && "lg:grid-cols-5 sm:grid-cols-5"
+                  )}
+                >
                   {page.map((item, index) => (
                     <DiscographyCard
                       key={item.id}
