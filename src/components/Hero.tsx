@@ -24,24 +24,8 @@ export function Hero() {
 
   return (
     <section id="project" className="relative overflow-hidden pb-14 pt-24 md:pb-20 md:pt-28">
-      <div className="pointer-events-none absolute inset-0">
-        <motion.div
-          animate={{ opacity: [0.15, 0.4, 0.15], scale: [1, 1.08, 1] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -left-16 top-10 h-[28rem] w-[28rem] rounded-full bg-[#ff9d00]/12 blur-[140px]"
-        />
-        <motion.div
-          animate={{ opacity: [0.1, 0.28, 0.1], scale: [1, 1.12, 1] }}
-          transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute right-[-8%] top-[8%] h-[30rem] w-[30rem] rounded-full bg-[#ad46ff]/14 blur-[160px]"
-        />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),transparent_30%),linear-gradient(180deg,rgba(0,0,0,0.05),rgba(0,0,0,0.35))]" />
-      </div>
-
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 relative z-10">
-        <div className="hero-billboard relative overflow-hidden rounded-[40px] p-5 md:p-8 lg:p-10">
-          <div className="pointer-events-none absolute inset-0 opacity-60 grain-overlay" />
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#ffd36e]/60 to-transparent" />
+        <div className="relative overflow-hidden rounded-[40px] p-5 md:p-8 lg:p-10">
           <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
             <motion.div
               initial={{ opacity: 0, x: -18 }}
@@ -96,9 +80,7 @@ export function Hero() {
               transition={{ duration: 0.95, delay: 0.15 }}
               className="order-1 lg:order-2 relative"
             >
-              <div className="absolute inset-0 -m-6 rounded-[36px] bg-[radial-gradient(circle_at_center,rgba(255,157,0,0.2),transparent_50%)] blur-2xl" />
               <div className="relative mx-auto aspect-[4/5] w-full max-w-[36rem] overflow-hidden rounded-[34px] border border-white/10 bg-black/30 p-2 shadow-[0_30px_100px_rgba(0,0,0,0.52)]">
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),transparent_28%,rgba(0,0,0,0.36))] pointer-events-none" />
                 <HeroCover />
                 <div className="absolute inset-x-4 bottom-4 rounded-[24px] border border-white/10 bg-black/45 px-4 py-4 backdrop-blur-md">
                   <div className="flex items-center justify-between gap-4">

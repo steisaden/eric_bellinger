@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
-import { Music2, X } from "lucide-react";
+import { ExternalLink, Headphones, Music2, X } from "lucide-react";
+
+import { getFeaturedSongListenLinks } from "@/data/featuredSongLinks";
 
 import type { FeaturedSong } from "./useFeaturedSongs";
 
@@ -21,8 +23,19 @@ function PlaceholderCover({ title, source }: { title: string; source: string }) 
   );
 }
 
+const listenOrder = [
+  { key: "appleMusic", label: "Apple Music" },
+  { key: "spotify", label: "Spotify" },
+  { key: "youtubeMusic", label: "YouTube Music" },
+  { key: "youtube", label: "YouTube" },
+  { key: "tidal", label: "TIDAL" },
+  { key: "amazonMusic", label: "Amazon Music" },
+  { key: "deezer", label: "Deezer" },
+] as const;
+
 export function FeaturedSongDetailsSheet({ song, onClose, reduceMotion }: FeaturedSongDetailsSheetProps) {
   const hasCover = Boolean(song.coverUrl);
+  const listenLinks = getFeaturedSongListenLinks(song);
 
   return (
     <motion.div
@@ -77,22 +90,44 @@ export function FeaturedSongDetailsSheet({ song, onClose, reduceMotion }: Featur
               )}
             </div>
 
-            <div className="space-y-5">
-              <div>
-                <p className="text-[10px] font-mono uppercase tracking-widest text-slate-500">Feature context</p>
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-700 md:text-base">
-                  This section now includes every feature-song record from the verified JSON file, including the five manual-review items.
-                </p>
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-slate-200 bg-white/95 p-4">
+                <p className="text-[10px] font-mono uppercase tracking-widest text-slate-500">Credits</p>
+                <p className="mt-2 text-sm leading-6 text-slate-700 md:text-base">{song.artist}</p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-white/95 p-4">
+                <div className="flex items-center gap-2">
+                  <Headphones className="h-4 w-4 text-eb-accent" />
+                  <p className="text-[10px] font-mono uppercase tracking-widest text-slate-500">Listen</p>
+                </div>
+                <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                  {listenOrder.map((platform) => {
+                    const link = listenLinks[platform.key];
+                    const isVerified = link.status === "verified";
+                    return (
+                      <a
+                        key={platform.key}
+                        href={link.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 transition-colors hover:border-eb-accent/30 hover:bg-slate-50"
+                      >
+                        <span>{isVerified ? `Listen on ${platform.label}` : `Search ${platform.label}`}</span>
+                        <ExternalLink className="h-4 w-4 text-slate-400" />
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
 
               <div className="rounded-2xl border border-slate-200 bg-white/95 p-4">
                 <p className="text-[10px] font-mono uppercase tracking-widest text-slate-500">Artwork note</p>
-                <p className="mt-1 text-sm text-slate-900">{song.note}</p>
-              </div>
-
-              <div className="flex items-center gap-2 rounded-2xl border border-slate-200 bg-white/95 px-4 py-3 text-[10px] uppercase tracking-widest text-slate-600">
-                <Music2 className="h-4 w-4 text-eb-accent" />
-                Source: {song.source}
+                <p className="mt-2 text-sm text-slate-900">{song.note}</p>
+                <div className="mt-3 flex items-center gap-2 text-[10px] uppercase tracking-widest text-slate-500">
+                  <Music2 className="h-4 w-4 text-eb-accent" />
+                  Source: {song.source}
+                </div>
               </div>
             </div>
           </div>

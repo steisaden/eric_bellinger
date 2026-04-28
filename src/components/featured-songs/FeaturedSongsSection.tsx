@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { AnimatePresence } from "motion/react";
+
+import { FEATURES_COPY } from "@/data";
 
 import { FeaturedSongCard } from "./FeaturedSongCard";
 import { FeaturedSongDetailsSheet } from "./FeaturedSongDetailsSheet";
 import { useFeaturedSongs } from "./useFeaturedSongs";
-import { FEATURES_COPY } from "@/data";
 
 const PAGE_SIZE = 10;
 
@@ -20,6 +22,9 @@ const chunkSongs = <T,>(items: T[], size: number) => {
 export function FeaturedSongsSection() {
   const { songs, activeSong, closeSong, openSong, reduceMotion } = useFeaturedSongs();
   const [isMobile, setIsMobile] = useState(false);
+  const [touchLike, setTouchLike] = useState(false);
+  const [expandedSongId, setExpandedSongId] = useState<string | null>(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 640);
@@ -28,7 +33,44 @@ export function FeaturedSongsSection() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const pages = useMemo(() => chunkSongs(songs, isMobile ? 4 : 10), [songs, isMobile]);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(hover: none), (pointer: coarse)");
+
+    const updateTouchLike = () => setTouchLike(mediaQuery.matches);
+    updateTouchLike();
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", updateTouchLike);
+      return () => mediaQuery.removeEventListener("change", updateTouchLike);
+    }
+
+    mediaQuery.addListener(updateTouchLike);
+    return () => mediaQuery.removeListener(updateTouchLike);
+  }, []);
+
+  useEffect(() => {
+    if (!activeSong) {
+      return;
+    }
+
+    setExpandedSongId(null);
+  }, [activeSong]);
+
+  useEffect(() => {
+    if (!touchLike || !expandedSongId) return;
+
+    const onPointerDown = (event: PointerEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (sectionRef.current && target && !target.closest("[data-feature-card]")) {
+        setExpandedSongId(null);
+      }
+    };
+
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [touchLike, expandedSongId]);
+
+  const pages = useMemo(() => chunkSongs(songs, isMobile ? 4 : PAGE_SIZE), [songs, isMobile]);
   const [activePage, setActivePage] = useState(0);
   const pageRefs = useRef<Array<HTMLDivElement | null>>([]);
 
@@ -49,7 +91,7 @@ export function FeaturedSongsSection() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Number(entry.target.getAttribute("data-page-index"));
-            if (!isNaN(index)) {
+            if (!Number.isNaN(index)) {
               setActivePage(index);
             }
           }
@@ -58,7 +100,7 @@ export function FeaturedSongsSection() {
       {
         root: track,
         threshold: 0.5,
-      }
+      },
     );
 
     const els = track.querySelectorAll("[data-page-index]");
@@ -79,75 +121,137 @@ export function FeaturedSongsSection() {
     }
   };
 
+  const handleCardActivate = (id: string) => {
+    setExpandedSongId(id);
+  };
+
+  const handleCardOpen = (id: string) => {
+    setExpandedSongId(null);
+    openSong(id);
+  };
+
+  const featuredCount = songs.length;
+  const newestSong = songs[0];
+
   return (
-    <section id="features" className="relative overflow-hidden bg-[#fffdf8] py-32">
-      <div className="max-w-7xl mx-auto px-6 mb-16 relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div>
-          <h2 className="text-balance font-display font-light text-5xl md:text-7xl uppercase tracking-tighter mb-4 text-glow italic">
-            {FEATURES_COPY.heading}
-          </h2>
-          <p className="mt-32 font-mono text-[#ff9d00] text-[35px] md:text-5xl tracking-widest uppercase opacity-60">
-            {FEATURES_COPY.subheading}
-          </p>
-        </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <div className="rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-[10px] uppercase tracking-[0.35em] text-slate-700/55">
+    <section ref={sectionRef} id="features" className="relative overflow-hidden py-28 md:py-36">
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="mb-10 flex flex-col gap-6 md:mb-12 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="artist-eyebrow mb-4 text-[#ffd36e]">FEATURES &amp; GUEST APPEARANCES</p>
+            <h2 className="text-balance font-display text-5xl font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
+              {FEATURES_COPY.heading}
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-7 text-white/68 md:text-xl">
+              Collaborations, guest vocals, and cross-catalog appearances from Eric Bellinger’s career.
+            </p>
+          </div>
+
+          <div className="artist-pill-inset inline-flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-white/76">
+            <Sparkles className="h-4 w-4 text-[#ffd36e]" />
             {FEATURES_COPY.countPill}
           </div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 p-1 text-slate-800/70">
-            <button
-              type="button"
-              onClick={() => goToPage(activePage - 1)}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-slate-100/80 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-eb-accent/70"
-              aria-label="Previous carousel page"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-            <span className="min-w-20 px-2 text-center text-[10px] font-bold uppercase tracking-widest text-slate-700/55">
-              {Math.min(activePage + 1, Math.max(pages.length, 1))}/{Math.max(pages.length, 1)}
-            </span>
-            <button
-              type="button"
-              onClick={() => goToPage(activePage + 1)}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-slate-100/80 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-eb-accent/70"
-              aria-label="Next carousel page"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
         </div>
-      </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="overflow-hidden overflow-y-hidden rounded-[36px] border border-slate-200 bg-white/[0.02] p-4 shadow-[0_18px_80px_rgba(0,0,0,0.22)]">
-          <div ref={trackRef} className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth overscroll-x-contain" style={{ scrollbarWidth: "none" }}>
-            {pages.map((page, pageIndex) => (
-              <div
-                key={`feature-page-${pageIndex}`}
-                data-page-index={pageIndex}
-                ref={(node) => { pageRefs.current[pageIndex] = node; }}
-                className="w-full flex-none snap-start px-2"
-              >
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
-                  {page.map((song, index) => (
-                    <FeaturedSongCard
-                      key={song.id}
-                      song={song}
-                      index={pageIndex * PAGE_SIZE + index}
-                      reduceMotion={reduceMotion}
-                      onOpen={openSong}
-                    />
-                  ))}
-                </div>
+        <div className="mb-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+          <article className="editorial-panel overflow-hidden p-5 md:p-6">
+            <p className="artist-eyebrow text-[#ffd36e]">VOICE ACROSS THE INDUSTRY</p>
+            <h3 className="mt-3 font-display text-3xl font-light tracking-tighter text-white md:text-4xl">
+              Eric’s voice across the industry
+            </h3>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/64 md:text-base">
+              This shelf gathers collaborations and guest appearances into a more editorial view, so the page reads like a living record instead of a table.
+            </p>
+            {newestSong ? (
+              <div className="mt-5 rounded-[24px] border border-white/10 bg-black/26 p-4">
+                <p className="text-[10px] uppercase tracking-[0.32em] text-white/42">Featured record</p>
+                <p className="mt-2 text-xl font-light text-white">{newestSong.title}</p>
+                <p className="mt-1 text-sm text-white/56">{newestSong.artist}</p>
               </div>
-            ))}
+            ) : null}
+          </article>
+
+          <div className="grid gap-4">
+            <div className="editorial-panel p-5">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-white/42">Total features</p>
+              <p className="mt-3 text-3xl font-light text-white">{featuredCount}</p>
+              <p className="mt-2 text-sm text-white/56">Verified guest records in the archive.</p>
+            </div>
+            <div className="editorial-panel p-5">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-white/42">Presentation</p>
+              <p className="mt-3 text-3xl font-light text-white">Curated</p>
+              <p className="mt-2 text-sm text-white/56">Cover art when verified, tasteful fallback when not.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.03] p-4 shadow-[0_18px_80px_rgba(0,0,0,0.22)] md:p-5">
+            <div
+              ref={trackRef}
+              className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth overscroll-x-contain"
+              style={{ scrollbarWidth: "none" }}
+            >
+              {pages.map((page, pageIndex) => (
+                <div
+                  key={`feature-page-${pageIndex}`}
+                  data-page-index={pageIndex}
+                  ref={(node) => {
+                    pageRefs.current[pageIndex] = node;
+                  }}
+                  className="w-full flex-none snap-start px-2"
+                >
+                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+                    {page.map((song, index) => (
+                      <FeaturedSongCard
+                        key={song.id}
+                        song={song}
+                        index={pageIndex * PAGE_SIZE + index}
+                        reduceMotion={reduceMotion}
+                        expanded={expandedSongId === song.id}
+                        touchLike={touchLike}
+                        onActivate={handleCardActivate}
+                        onOpen={handleCardOpen}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="artist-pill-inset inline-flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-white/72">
+              <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#ffd36e]">Page</span>
+              <span className="text-[10px] uppercase tracking-[0.32em] text-white/64">
+                {Math.min(activePage + 1, Math.max(pages.length, 1))}/{Math.max(pages.length, 1)}
+              </span>
+            </div>
+
+            <div className="artist-pill-inset inline-flex items-center gap-2 rounded-full px-1.5 py-1 text-white/72">
+              <button
+                type="button"
+                onClick={() => goToPage(activePage - 1)}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
+                aria-label="Previous carousel page"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => goToPage(activePage + 1)}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-white/8 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd36e]/70"
+                aria-label="Next carousel page"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      <AnimatePresence>
-        {activeSong && <FeaturedSongDetailsSheet song={activeSong} onClose={closeSong} reduceMotion={reduceMotion} />}
-      </AnimatePresence>
+      <AnimatePresence>{activeSong && <FeaturedSongDetailsSheet song={activeSong} onClose={closeSong} reduceMotion={reduceMotion} />}</AnimatePresence>
     </section>
   );
 }

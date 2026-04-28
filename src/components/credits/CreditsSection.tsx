@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
+
 import { PenTool, Search, Sparkles } from "lucide-react";
+
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 import { CreditRow } from "./CreditRow";
 import { useCredits } from "./useCredits";
-import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const filterOptions = [
   { id: "all", label: "All" },
@@ -13,8 +15,21 @@ const filterOptions = [
   { id: "2020s", label: "2020s" },
 ] as const;
 
+function splitFeaturedTitle(title: string) {
+  const match = title.match(/^(.*?)(?:\s*\((?:feat\.?|ft\.?|featuring)\s*(.+)\))$/i);
+
+  if (!match) {
+    return { baseTitle: title, featureText: null };
+  }
+
+  return {
+    baseTitle: match[1].trim(),
+    featureText: `feat. ${match[2].trim()}`,
+  };
+}
+
 export function CreditsSection() {
-  const { credits, sectionCopy, summary, spotifyTopVisibleSongs, notableSongs, latestYear } = useCredits();
+  const { credits, sectionCopy, summary, spotifyTopVisibleSongs, latestYear } = useCredits();
   const reduceMotion = usePrefersReducedMotion();
   const [query, setQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState<(typeof filterOptions)[number]["id"]>("all");
@@ -46,18 +61,31 @@ export function CreditsSection() {
   }, [activeFilter, credits, query]);
 
   return (
-    <section id="credits" className="relative bg-[#faf7f0] py-24 md:py-32">
-      <div className="pointer-events-none absolute right-0 top-0 h-[500px] w-1/2 rounded-full bg-eb-accent/5 blur-[150px]" />
+    <section id="credits" className="relative overflow-hidden py-28 md:py-36">
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="mb-12 text-center md:mb-16">
-          <PenTool className="mx-auto mb-6 h-12 w-12 text-eb-accent opacity-50" />
-          <h2 className="text-balance font-display text-4xl font-light uppercase tracking-tighter text-glow italic md:text-6xl">{sectionCopy.heading}</h2>
-          <p className="mx-auto mt-4 max-w-3xl font-mono text-[10px] uppercase tracking-widest text-[#ff9d00] md:text-xs">
-            {sectionCopy.subheading}
-            {latestYear ? ` · Latest credit year ${latestYear}` : ""}
-          </p>
-          <p className="mx-auto mt-5 max-w-4xl text-pretty text-sm leading-relaxed text-[#ff9d00] md:text-base">{sectionCopy.lede}</p>
+        <div className="mb-12 flex flex-col gap-6 md:mb-16 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="artist-eyebrow mb-4 text-[#ffd36e]">THE PEN</p>
+            <h2 className="text-balance font-display text-5xl font-light uppercase tracking-tighter text-white md:text-7xl lg:text-[5.5rem]">
+              You’ve heard the pen, even when you didn’t know it was his.
+            </h2>
+            <p className="mt-4 max-w-3xl text-lg leading-7 text-white/68 md:text-xl">
+              Eric Bellinger’s songwriting credits stretch across modern R&amp;B and pop, with records performed by artists including Chris Brown, Usher, Justin Bieber, Wale, Brandy, and more.
+              {latestYear ? ` Latest credit year ${latestYear}.` : ""}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="artist-pill-inset inline-flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-white/76">
+              <PenTool className="h-4 w-4 text-[#ffd36e]" />
+              {sectionCopy.heading}
+            </div>
+            <div className="artist-pill-inset inline-flex items-center gap-2.5 rounded-full px-3.5 py-2.5 text-white/76">
+              <Sparkles className="h-4 w-4 text-[#ffd36e]" />
+              Spotify lists {summary.spotifyReportedSongsWritten} songs
+            </div>
+          </div>
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
@@ -66,95 +94,51 @@ export function CreditsSection() {
             { label: "Verified public credits", value: summary.verifiedPublicCreditsInThisFile.toString(), caption: "rows safe for the public table" },
             { label: "Notable highlights", value: summary.notableHighlightsCount.toString(), caption: "featured records and anchors" },
           ].map((stat) => (
-            <div key={stat.label} className="rounded-[28px] border border-slate-200 bg-white/95 p-6 backdrop-blur-sm">
-              <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#ff9d00]">{stat.label}</div>
-              <div className="mt-3 text-4xl font-light text-slate-900 md:text-5xl">{stat.value}</div>
-              <div className="mt-2 text-sm text-slate-600">{stat.caption}</div>
+            <div key={stat.label} className="editorial-panel p-6">
+              <div className="text-[10px] uppercase tracking-[0.28em] text-[#ffd36e]">{stat.label}</div>
+              <div className="mt-3 text-4xl font-light text-white md:text-5xl">{stat.value}</div>
+              <div className="mt-2 text-sm text-white/58">{stat.caption}</div>
             </div>
-          ))}        </div>
+          ))}
+        </div>
 
-        <div className="mt-10 rounded-[32px] border border-slate-200 bg-gradient-to-br from-white/[0.05] to-transparent p-6 backdrop-blur-sm md:p-8">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+        <div className="mt-10 rounded-[28px] border border-white/10 bg-white/[0.035] p-5 shadow-[0_18px_80px_rgba(0,0,0,0.22)] backdrop-blur-[12px] md:p-6">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-3xl">
-              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#ff9d00]">Spotify top visible songs</div>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700/60 md:text-base">
+              <p className="artist-eyebrow text-[#ffd36e]">PUBLIC NOTE</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/62 md:text-base">
+                Spotify currently lists hundreds of songs written by Eric Bellinger. This archive shows verified public rows and notable highlights only.
               </p>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.25em] text-slate-700/60">
-              <Sparkles className="h-3.5 w-3.5 text-eb-accent" />
-              {spotifyTopVisibleSongs.length} visible public snapshot rows
+            <div className="flex flex-wrap gap-2 lg:justify-end">
+              <div className="artist-pill-inset rounded-full px-3.5 py-2.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white/72">
+                {summary.spotifyReportedSongsWritten} songs written
+              </div>
+              <div className="artist-pill-inset rounded-full px-3.5 py-2.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white/72">
+                {summary.verifiedPublicCreditsInThisFile} verified rows
+              </div>
+              <div className="artist-pill-inset rounded-full px-3.5 py-2.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white/72">
+                {summary.notableHighlightsCount} notable highlights
+              </div>
             </div>
-          </div>
-
-          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-            {spotifyTopVisibleSongs.map((song) => (
-              <article key={`${song.rank}-${song.title}`} className="rounded-2xl border border-slate-200 bg-white/80 p-4">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-slate-500">#{song.rank}</div>
-                    <h3 className="mt-2 text-base font-medium text-slate-900">{song.title}</h3>
-                  </div>
-                  <div className="rounded-full border border-slate-200 bg-white/80 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.25em] text-slate-600">
-                    Spotify
-                  </div>
-                </div>
-                <p className="mt-3 text-sm text-slate-800/68">{song.artist}</p>
-                <p className="mt-3 text-xs leading-relaxed text-slate-600">{song.notabilityReason}</p>
-                <div className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500">
-                  {song.spotifyStreamsSnapshot.toLocaleString()} streams
-                </div>
-              </article>
-            ))}
           </div>
         </div>
 
-        <div className="mt-10 rounded-[32px] border border-slate-200 bg-white/95 p-6 backdrop-blur-sm md:p-8">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#ff9d00]">{sectionCopy.notableHeading}</div>              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-700/60 md:text-base">
-                {summary.publicSiteDisplayRecommendation}
-              </p>
-            </div>
-            <div className="rounded-full border border-slate-200 bg-white/80 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.25em] text-slate-600">
-              {notableSongs.length} notable records
-            </div>
-          </div>
-
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {notableSongs.map((song) => (
-              <article key={`${song.title}-${song.year}`} className="rounded-2xl border border-slate-200 bg-white/80 p-5">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-slate-500">{song.year}</div>
-                    <h3 className="mt-2 text-lg font-medium text-slate-900">{song.title}</h3>
-                  </div>
-                  <span className="rounded-full border border-slate-200 bg-white/80 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.25em] text-slate-600">
-                    {song.role}
-                  </span>
-                </div>
-                <p className="mt-3 text-sm text-slate-800/70">{song.artist}</p>
-                <p className="mt-4 text-sm leading-relaxed text-slate-600">{song.whyItMatters}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-10 overflow-hidden rounded-[32px] border border-slate-200 bg-[linear-gradient(110deg,#fef3c7,45%,#fbbf24,55%,#fef3c7)] bg-[length:200%_100%] backdrop-blur-sm animate-shimmer">
-          <div className="border-b border-slate-200 px-4 py-5 md:px-6 md:py-6">
+        <div className="mt-10 overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-sm">
+          <div className="border-b border-white/8 px-4 py-5 md:px-6 md:py-6">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
-                <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#ff9d00]">{sectionCopy.tableHeading}</div>
-                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-700/60 md:text-base">
-                </p>
+                <p className="artist-eyebrow text-[#ffd36e]">{sectionCopy.notableHeading}</p>
+                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/60 md:text-base">{sectionCopy.lede}</p>
               </div>
-              <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/80 px-4 py-3">
-                <Search className="h-4 w-4 text-eb-accent/80" />
+              <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-4 py-3">
+                <Search className="h-4 w-4 text-[#ffd36e]/80" />
                 <input
                   type="search"
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder="Search songs, artists, roles..."
-                  className="w-full min-w-[220px] bg-transparent text-sm text-slate-900 placeholder:text-slate-500/30 focus:outline-none"
+                  className="w-full min-w-[220px] bg-transparent text-sm text-white placeholder:text-white/30 focus:outline-none"
                 />
               </div>
             </div>
@@ -169,22 +153,22 @@ export function CreditsSection() {
                     onClick={() => setActiveFilter(option.id)}
                     className={`rounded-full border px-4 py-2 font-mono text-[10px] uppercase tracking-[0.25em] transition-colors ${
                       active
-                        ? "border-eb-accent/40 bg-eb-accent/15 text-slate-900"
-                        : "border-slate-200 bg-white/95 text-slate-600 hover:border-slate-200/80 hover:bg-white/[0.06] hover:text-slate-900"
+                        ? "border-[#ffd36e]/30 bg-[#ffd36e]/12 text-white"
+                        : "border-white/10 bg-white/[0.03] text-white/56 hover:border-white/16 hover:bg-white/[0.06] hover:text-white"
                     }`}
                   >
                     {option.label}
                   </button>
                 );
               })}
-              <div className="ml-auto font-mono text-[10px] uppercase tracking-[0.25em] text-slate-500">
+              <div className="ml-auto font-mono text-[10px] uppercase tracking-[0.25em] text-white/42">
                 Showing {filteredCredits.length} of {credits.length}
               </div>
             </div>
           </div>
 
           <div className="overflow-hidden">
-            <div className="hidden grid-cols-12 gap-4 border-b border-slate-200 px-6 py-4 font-mono text-[10px] font-bold uppercase tracking-widest text-[#ff9d00] md:grid">
+            <div className="hidden grid-cols-12 gap-4 border-b border-white/8 px-6 py-4 font-mono text-[10px] font-bold uppercase tracking-widest text-[#ffd36e] md:grid">
               <div className="col-span-1">Year</div>
               <div className="col-span-3">Song</div>
               <div className="col-span-3">Artist</div>
@@ -193,13 +177,13 @@ export function CreditsSection() {
               <div className="col-span-1 text-right">Notes</div>
             </div>
 
-            <div className="max-h-[760px] overflow-y-auto scrollbar-hide bg-white/80">
+            <div className="max-h-[760px] overflow-y-auto scrollbar-hide bg-black/20">
               {filteredCredits.length > 0 ? (
                 filteredCredits.map((credit, index) => (
                   <CreditRow key={credit.id} credit={credit} index={index} reduceMotion={reduceMotion} />
                 ))
               ) : (
-                <div className="px-6 py-12 text-center text-sm text-slate-600">
+                <div className="px-6 py-12 text-center text-sm text-white/58">
                   No public songwriting credits match your search yet.
                 </div>
               )}
@@ -207,12 +191,47 @@ export function CreditsSection() {
           </div>
         </div>
 
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <div className="rounded-3xl border border-slate-200 bg-white/80 p-5 text-sm leading-relaxed text-slate-700">
-            {sectionCopy.unresolvedNote}
-          </div>
-          <div className="rounded-3xl border border-slate-200 bg-white/80 p-5 text-sm leading-relaxed text-slate-600">
-            Spotify reports 347 songs written on Eric Bellinger’s songwriter page; the public archive shown here only lists the verified rows and notable highlights that are safe to display.
+        <div className="mt-6 rounded-3xl border border-white/10 bg-white/[0.03] p-5 text-sm leading-relaxed text-white/58">
+          {sectionCopy.unresolvedNote}
+        </div>
+
+        <div className="mt-10 rounded-[28px] border border-white/10 bg-white/[0.035] p-5 md:p-6">
+          <p className="artist-eyebrow text-[#ffd36e]">NOTABLE RECORDS</p>
+          <div className="mt-3 grid gap-5 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            {spotifyTopVisibleSongs.map((song) => {
+              const { baseTitle, featureText } = splitFeaturedTitle(song.title);
+
+              return (
+                <article
+                  key={`${song.rank}-${song.title}`}
+                  className="receipt-card flex h-full flex-col rounded-[26px] p-5 shadow-[0_18px_50px_rgba(0,0,0,0.22)]"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="text-[10px] uppercase tracking-[0.28em] text-[#ffd36e]">#{song.rank}</div>
+                    <div className="rounded-full border border-white/10 bg-white/6 px-2.5 py-1 text-[9px] uppercase tracking-[0.24em] text-white/42">
+                      Spotify snapshot
+                    </div>
+                  </div>
+
+                  <div className="mt-4 min-w-0">
+                    <h4 className="text-[1.1rem] font-medium leading-tight text-white md:text-[1.28rem]">{baseTitle}</h4>
+                    {featureText ? <p className="mt-1 text-sm text-white/58">{featureText}</p> : null}
+                    <p className="mt-2 text-sm text-white/72">{song.artist}</p>
+                  </div>
+
+                  {song.notabilityReason ? (
+                    <p className="copy-clamp-3 mt-3 text-xs leading-relaxed text-white/52">{song.notabilityReason}</p>
+                  ) : (
+                    <p className="mt-3 text-xs leading-relaxed text-white/40">Highlighted from Spotify’s public songwriter snapshot.</p>
+                  )}
+
+                  <div className="mt-4 flex items-center justify-between border-t border-white/8 pt-3 text-[10px] uppercase tracking-[0.24em] text-white/42">
+                    <span>Visible row</span>
+                    <span>{song.spotifyStreamsSnapshot.toLocaleString()} streams</span>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </div>

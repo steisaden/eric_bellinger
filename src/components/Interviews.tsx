@@ -95,7 +95,7 @@ export function Interviews() {
     : null;
 
   return (
-    <section id="interviews" className="relative border-t border-slate-100 bg-[#fffdf8] py-24 md:py-32">
+    <section id="interviews" className="relative border-t border-white/10 bg-transparent py-24 md:py-32">
       <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6">
 
         {/* Header */}

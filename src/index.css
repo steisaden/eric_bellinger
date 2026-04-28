@@ -22,6 +22,12 @@
   --page-muted: rgba(71, 85, 105, 0.72);
   --selection-bg: #a855f7;
   --selection-text: #050505;
+  --brand-purple: #ad46ff;
+  --brand-yellow: #ff9d00;
+  --brand-amber: #ff6a1a;
+  --brand-purple-rgb: 173 70 255;
+  --brand-yellow-rgb: 255 157 0;
+  --brand-amber-rgb: 255 106 26;
   --logo-fill-start: #0f172a;
   --logo-fill-mid: #1f2937;
   --logo-fill-core: #050505;
@@ -29,34 +35,52 @@
   --logo-shadow: rgba(15, 23, 42, 0.44);
 }
 
-.theme-dark {
-  color-scheme: dark;
-  --page-bg: #050505;
-  --page-text: #f8fafc;
-  --page-surface: rgba(15, 23, 42, 0.84);
-  --page-surface-strong: rgba(15, 23, 42, 0.96);
-  --page-border: rgba(255, 255, 255, 0.12);
-  --page-muted: rgba(203, 213, 225, 0.72);
-  --color-eb-muted: rgba(255, 255, 255, 0.5);
-  --selection-bg: #facc15;
-  --selection-text: #050505;
-  --logo-fill-start: #f8fafc;
-  --logo-fill-mid: #cbd5e1;
-  --logo-fill-core: #ffffff;
-  --logo-fill-end: #f8fafc;
-  --logo-shadow: rgba(0, 0, 0, 0.8);
-}
+  .theme-dark {
+    color-scheme: dark;
+    --page-bg: #050505;
+    --page-text: #f8fafc;
+    --page-surface: rgba(14, 18, 32, 0.84);
+    --page-surface-strong: rgba(12, 14, 24, 0.96);
+    --page-border: rgba(255, 255, 255, 0.1);
+    --page-muted: rgba(203, 213, 225, 0.72);
+    --color-eb-muted: rgba(255, 255, 255, 0.5);
+    --selection-bg: #facc15;
+    --selection-text: #050505;
+    --brand-purple: #ad46ff;
+    --brand-yellow: #ff9d00;
+    --brand-amber: #ff6a1a;
+    --brand-purple-rgb: 173 70 255;
+    --brand-yellow-rgb: 255 157 0;
+    --brand-amber-rgb: 255 106 26;
+    --logo-fill-start: #f8fafc;
+    --logo-fill-mid: #cbd5e1;
+    --logo-fill-core: #ffffff;
+    --logo-fill-end: #f8fafc;
+    --logo-shadow: rgba(0, 0, 0, 0.8);
+  }
 
 @layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
   html {
     scroll-behavior: smooth;
-    background: var(--page-bg);
+    background: #05030a;
   }
 
   body {
-    @apply bg-[var(--page-bg)] text-[var(--page-text)] font-sans antialiased;
-    color: var(--page-text);
-    background: var(--page-bg);
+    @apply text-white font-sans antialiased;
+    margin: 0;
+    color: #ffffff;
+    background: #05030a;
+    overflow-x: hidden;
+  }
+
+  #root {
+    background: transparent;
   }
 
   ::selection {
@@ -151,6 +175,40 @@
     border: 1px solid rgba(148, 163, 184, 0.4);
     background: linear-gradient(145deg, rgba(30, 41, 59, 0.98), rgba(71, 85, 105, 0.96));
     box-shadow: 0 10px 26px rgba(15, 23, 42, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .brand-mark {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    flex: none;
+    overflow: visible;
+  }
+
+  .brand-mark img {
+    display: block;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  .brand-mark-glow {
+    position: absolute;
+    inset: -16%;
+    filter: blur(14px) saturate(1.15);
+    opacity: 0.55;
+    transform: scale(1.1);
+    mix-blend-mode: screen;
+    pointer-events: none;
+    animation: logoGlowPulse 8s ease-in-out infinite;
+  }
+
+  .brand-mark-main {
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.26));
   }
 
   .brand-stack {
@@ -323,16 +381,143 @@
     text-shadow: 0 0 12px rgba(250, 204, 21, 0.08);
   }
 
-  @keyframes brandGradientShift {
-    0%,
-    100% {
-      background-position: 0% 50%;
+  .eb-shader-fallback {
+    background:
+      radial-gradient(circle at 18% 14%, rgb(var(--brand-yellow-rgb) / 0.18), transparent 32%),
+      radial-gradient(circle at 82% 16%, rgb(var(--brand-purple-rgb) / 0.18), transparent 36%),
+      radial-gradient(circle at 50% 80%, rgb(var(--brand-purple-rgb) / 0.08), transparent 45%),
+      #05030a;
+  }
+
+  .grain-overlay {
+    display: none;
+  }
+
+
+  .artist-surface {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+    border: 1px solid var(--page-border);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(18px);
+  }
+
+  .artist-surface--warm {
+    background: linear-gradient(135deg, rgba(255, 157, 0, 0.1), rgba(173, 70, 255, 0.05) 50%, rgba(255, 255, 255, 0.03));
+  }
+
+  .artist-eyebrow {
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: rgba(255, 211, 122, 0.85);
+  }
+
+  .artist-kicker {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(226, 232, 240, 0.62);
+  }
+
+  .artist-button-primary {
+    background: linear-gradient(135deg, #ff9d00, #ffd36e 55%, #f7b72d);
+    color: #050505;
+    box-shadow: 0 12px 30px rgba(255, 157, 0, 0.24);
+  }
+
+  .artist-button-secondary {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(248, 250, 252, 0.94);
+  }
+
+  .artist-button-tertiary {
+    color: rgba(255, 211, 122, 0.92);
+  }
+
+  .artist-pill,
+  .artist-pill-inset {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+      linear-gradient(180deg, rgba(10, 12, 20, 0.72), rgba(14, 16, 26, 0.56));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      inset 0 -1px 3px rgba(0, 0, 0, 0.45),
+      0 8px 18px rgba(0, 0, 0, 0.16);
+    color: rgba(248, 250, 252, 0.88);
+    backdrop-filter: blur(12px);
+  }
+
+  .title-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    text-overflow: ellipsis;
+  }
+
+  .copy-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    text-overflow: ellipsis;
+  }
+
+  .copy-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    text-overflow: ellipsis;
+  }
+
+  .receipt-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(180deg, rgba(15, 18, 28, 0.92), rgba(8, 10, 16, 0.92));
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+  }
+
+  .hero-billboard {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .tour-stage {
+    background: transparent;
+  }
+
+  .editorial-panel {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--page-border);
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(14px);
+  }
+
+  .section-divider {
+    position: relative;
+  }
+
+  .section-divider::before {
+    content: none;
+  }
+
+  @keyframes logoGlowPulse {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1.04);
     }
 
     50% {
-      background-position: 100% 50%;
+      opacity: 0.7;
+      transform: scale(1.14);
     }
   }
+
 
   @keyframes brandShimmer {
     0% {
