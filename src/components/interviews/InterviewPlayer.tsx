@@ -24,30 +24,41 @@ export function InterviewPlayer({
       role="dialog"
       aria-modal="true"
       aria-labelledby="interview-player-title"
-      initial={{ opacity: 0, y: 40, scale: 0.9 }}
+      layout
+      initial={{ opacity: 0, y: 40, scale: 0.95 }}
       animate={{
         opacity: 1,
-        y: 0,
+        y: isMinimized ? 0 : 0,
+        x: isMinimized ? 0 : "-50%",
         scale: 1,
-        width: isMinimized ? "90%" : "95%",
-        height: isMinimized ? 200 : "auto",
-        left: isMinimized ? "5%" : "50%",
-        bottom: isMinimized ? "24px" : "50%",
-        x: "-50%",
-        translateY: isMinimized ? 0 : "50%",
+        width: isMinimized ? "var(--pip-width, 320px)" : "min(95vw, 840px)",
+        height: "auto",
       }}
-      exit={{ opacity: 0, y: 40, scale: 0.9 }}
-      transition={{ type: "spring", damping: 26, stiffness: 210 }}
+      exit={{ opacity: 0, y: 40, scale: 0.95 }}
+      transition={{ type: "spring", damping: 28, stiffness: 220 }}
       className={cn(
-        "fixed z-[100] flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_30px_70px_rgba(0,0,0,0.4)]",
-        !isMinimized && "max-w-3xl aspect-video w-[95vw]",
+        "fixed z-[100] flex flex-col overflow-hidden rounded-[22px] border border-white/20 bg-[#0a0a0a]/80 shadow-[0_32px_80px_rgba(0,0,0,0.6)] backdrop-blur-2xl transition-shadow duration-300",
+        isMinimized
+          ? "bottom-20 right-4 [--pip-width:180px] sm:bottom-8 sm:right-8 sm:[--pip-width:320px] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
+          : "bottom-1/2 left-1/2 translate-y-1/2"
       )}
-      style={{ position: "fixed" }}
     >
-      <div className="flex shrink-0 items-center justify-between border-b border-slate-100 bg-white px-4 py-2.5">
-        <span id="interview-player-title" className="font-mono text-[10px] uppercase tracking-widest text-slate-600">
-          {activeInterview?.title ?? INTERVIEWS_COPY.playingLabel}
-        </span>
+      <div className={cn(
+        "flex shrink-0 items-center justify-between bg-white/[0.03] px-4 py-2.5",
+        isMinimized && "px-3 py-2"
+      )}>
+        <div className="flex min-w-0 items-center gap-2">
+          {isMinimized && <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" />}
+          <span
+            id="interview-player-title"
+            className={cn(
+              "truncate font-mono text-[9px] font-medium uppercase tracking-[0.2em] text-white/60",
+              isMinimized && "max-w-[100px] text-[8px]"
+            )}
+          >
+            {activeInterview?.title ?? INTERVIEWS_COPY.playingLabel}
+          </span>
+        </div>
         <div className="flex gap-1">
           <button
             type="button"
@@ -56,17 +67,17 @@ export function InterviewPlayer({
               togglePlayerSize();
             }}
             aria-label={isMinimized ? "Expand player" : "Minimize player"}
-            className="touch-target-44 inline-flex items-center justify-center rounded-full text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
+            className="flex h-7 w-7 items-center justify-center rounded-full bg-white/5 text-white/50 transition-all hover:bg-white/15 hover:text-white"
           >
-            {isMinimized ? <Maximize2 className="h-3.5 w-3.5" /> : <Minimize2 className="h-3.5 w-3.5" />}
+            {isMinimized ? <Maximize2 className="h-3 w-3" /> : <Minimize2 className="h-3 w-3" />}
           </button>
           <button
             type="button"
             onClick={closePlayer}
             aria-label="Close player"
-            className="touch-target-44 inline-flex items-center justify-center rounded-full text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
+            className="flex h-7 w-7 items-center justify-center rounded-full bg-white/5 text-white/50 transition-all hover:bg-white/15 hover:text-white"
           >
-            <X className="h-3.5 w-3.5" />
+            <X className="h-3 w-3" />
           </button>
         </div>
       </div>
