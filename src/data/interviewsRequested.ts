@@ -1038,25 +1038,13 @@ type RequestedInterviewsSource = typeof REQUESTED_INTERVIEWS_SOURCE;
 
 type RequestedInterviewSourceItem = RequestedInterviewsSource["items"][number];
 
-export type RequestedInterview = {
-  id: string;
-  title: string;
+import type { Interview } from "@/types";
+
+export type RequestedInterview = Interview & {
   type: string;
-  typeLabel: string;
-  showOrPublisher: string;
   hostOrChannel: string;
-  publishedDate: string | null;
-  year: number | null;
-  sourceUrl: string;
-  alternateUrls: readonly string[];
-  topics: readonly string[];
   verificationStatus: string;
   verificationLabel: string;
-  sourceHost: string;
-  isPlayable: boolean;
-  videoId: string | null;
-  embedId: string | null;
-  thumbnailUrl: string | null;
 };
 
 const TYPE_LABELS: Record<string, string> = {

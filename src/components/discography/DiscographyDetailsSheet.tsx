@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Calendar, ExternalLink, Music2, Youtube, X } from "lucide-react";
 
-import type { Credit, DiscographyItem, DiscographyTrack } from "@/data/discography";
+import type { Credit, DiscographyItem, DiscographyTrack } from "@/types";
 import { CoverMedia } from "./CoverMedia";
 import type { DiscographyLink } from "./useDiscography";
 import { DISCOGRAPHY_COPY } from "@/data";

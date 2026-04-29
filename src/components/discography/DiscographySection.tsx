@@ -5,20 +5,11 @@ import { AnimatePresence } from "motion/react";
 
 import { cn } from "@/lib/utils";
 import { DISCOGRAPHY_COPY } from "@/data";
+import { chunkArray } from "@/lib/array";
 
 import { DiscographyCard } from "./DiscographyCard";
 import { DiscographyDetailsSheet } from "./DiscographyDetailsSheet";
 import { useDiscography } from "./useDiscography";
-
-const PAGE_SIZE = 10;
-
-const chunkAlbums = <T,>(items: T[], size: number) => {
-  const pages: T[][] = [];
-  for (let index = 0; index < items.length; index += size) {
-    pages.push(items.slice(index, index + size));
-  }
-  return pages;
-};
 
 export function DiscographySection() {
   const { albums, activeAlbum, activeLinks, reduceMotion, openAlbum, closeAlbum } = useDiscography();
@@ -34,7 +25,7 @@ export function DiscographySection() {
 
   const pages = useMemo(() => {
     if (isMobile) {
-      return chunkAlbums(albums, 4);
+      return chunkArray(albums, 4);
     }
     const result: typeof albums[] = [];
     const remaining = [...albums];

@@ -1,4 +1,6 @@
-export type FeaturedSong = {
+import type { FeaturedSong } from "@/types";
+
+export type RawFeaturedSong = {
   id: string;
   title: string;
   artist: string;
@@ -7,7 +9,7 @@ export type FeaturedSong = {
   source: string;
 };
 
-export const FEATURED_SONGS: FeaturedSong[] = [
+export const FEATURED_SONGS: RawFeaturedSong[] = [
   {
     id: "fa-001",
     title: "#YAK (You Already Know)",

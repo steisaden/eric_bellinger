@@ -1,9 +1,11 @@
 import { motion } from "motion/react";
 
-import { formatCreditArtist, getCreditSearchTerms, type VerifiedPublicCredit } from "@/data/credits";
+import { formatCreditArtist, getCreditSearchTerms } from "@/data/credits";
+import type { SongwritingCredit } from "@/types";
 
 type CreditRowProps = {
-  credit: VerifiedPublicCredit;
+  key?: string | number;
+  credit: SongwritingCredit;
   index: number;
   reduceMotion: boolean;
 };
@@ -46,7 +48,7 @@ export function CreditRow({ credit, index, reduceMotion }: CreditRowProps) {
 
       <div className="md:col-span-2 min-w-0">
         <div className="title-clamp-2 text-sm text-white/72">{credit.parentProject ?? "—"}</div>
-        <div className="copy-clamp-2 mt-2 text-sm leading-relaxed text-white/56">{credit.notableAchievement}</div>
+        <div className="copy-clamp-2 mt-2 text-sm leading-relaxed text-white/56">{credit.notabilityReason}</div>
         {hasNotes ? <div className="copy-clamp-2 mt-2 text-xs leading-relaxed text-white/40">{credit.notes}</div> : null}
       </div>
     </motion.article>

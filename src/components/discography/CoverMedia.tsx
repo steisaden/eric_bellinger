@@ -1,4 +1,4 @@
-import type { CoverAsset } from "@/data/discography";
+import type { CoverAsset } from "@/types";
 import { buildResponsiveSrcSet } from "@/lib/image";
 
 type CoverMediaProps = {

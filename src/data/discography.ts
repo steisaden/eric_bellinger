@@ -1,37 +1,12 @@
-export type Credit = {
-  role: string;
-  name: string;
-};
-
-export type TrackMusicVideo = {
-  has_music_video: boolean;
-  youtube_url: string | null;
-  youtube_video_id: string | null;
-  youtube_status: string;
-  video_type: string | null;
-  confidence: string;
-  notes?: string;
-  non_youtube_evidence?: unknown;
-};
-
-export type DiscographyTrack = {
-  num: number;
-  title: string;
-  duration: string;
-  credits: Credit[];
-  musicVideoUrl?: string | null;
-  videoEmbed?: string | null;
-  hasVideo: boolean;
-  disc_number?: number;
-  track_number?: number;
-  display_title?: string;
-  primary_artists?: string[];
-  featured_artists?: string[];
-  credits_status?: string;
-  music_video?: TrackMusicVideo | null;
-  track_source?: string;
-  track_confidence?: string;
-};
+import type {
+  Credit,
+  CoverAsset,
+  PlatformLink,
+  PlatformLinks,
+  StreamingStats,
+  DiscographyTrack,
+  DiscographyItem,
+} from "@/types";
 
 export type DiscographyReleaseSource = {
   page: string;
@@ -39,31 +14,8 @@ export type DiscographyReleaseSource = {
   confidence: string;
 };
 
-export type CoverAsset = {
-  kind: "image" | "gif" | "video";
-  src: string;
-  poster?: string;
-};
-
-export type PlatformLink = {
-  value: string;
-  valid: boolean;
-};
-
 import { ALBUM_STREAMING_ROUTES_BY_TITLE } from "./albumStreamingRoutes";
 import { REQUESTED_ALBUM_TRACKLISTS_BY_TITLE, type RequestedAlbumTracklist } from "./albumTracklistsRequested";
-
-export type PlatformLinks = {
-  spotify: PlatformLink;
-  appleMusic: PlatformLink;
-  youtube: PlatformLink;
-};
-
-export type StreamingStats = {
-  source: string;
-  status: string;
-  date: string;
-};
 
 export type RawDiscographyRelease = {
   id: string;
@@ -75,24 +27,6 @@ export type RawDiscographyRelease = {
   coverUrl?: string;
   coverAsset?: CoverAsset;
   links: PlatformLinks;
-  streamingStats: StreamingStats | null;
-  credits: Credit[];
-  tracklist: DiscographyTrack[];
-  videoEmbed: string | null;
-};
-
-export type DiscographyItem = {
-  id: string;
-  title: string;
-  year: number;
-  type: string;
-  releaseDate: string | null;
-  sourcePage: string;
-  sourceRefs: string[];
-  sourceConfidence: string;
-  coverUrl: string;
-  coverAsset: CoverAsset;
-  platformLinks: PlatformLinks;
   streamingStats: StreamingStats | null;
   credits: Credit[];
   tracklist: DiscographyTrack[];

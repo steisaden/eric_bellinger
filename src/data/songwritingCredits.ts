@@ -1,6 +1,8 @@
+import type { SongwritingCredit } from "@/types";
+
 export type SongwritingCreditRecord = {
   id: string;
-  year: number;
+  year: number | null;
   title: string;
   primaryArtist: string;
   featuredArtists: string[];

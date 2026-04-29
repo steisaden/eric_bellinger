@@ -1,8 +1,7 @@
 import { useMemo, useState } from "react";
 
 import { ACTIVE_TOUR_DATES, ARCHIVED_TOUR_DATES } from "@/data";
-
-export type TourDate = (typeof ACTIVE_TOUR_DATES)[number];
+import type { TourDate } from "@/types";
 
 export function useTourLogic() {
   const [showArchive, setShowArchive] = useState(false);

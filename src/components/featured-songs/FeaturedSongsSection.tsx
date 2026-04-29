@@ -4,20 +4,13 @@ import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { AnimatePresence } from "motion/react";
 
 import { FEATURES_COPY } from "@/data";
+import { chunkArray } from "@/lib/array";
 
 import { FeaturedSongCard } from "./FeaturedSongCard";
 import { FeaturedSongDetailsSheet } from "./FeaturedSongDetailsSheet";
 import { useFeaturedSongs } from "./useFeaturedSongs";
 
 const PAGE_SIZE = 10;
-
-const chunkSongs = <T,>(items: T[], size: number) => {
-  const pages: T[][] = [];
-  for (let index = 0; index < items.length; index += size) {
-    pages.push(items.slice(index, index + size));
-  }
-  return pages;
-};
 
 export function FeaturedSongsSection() {
   const { songs, activeSong, closeSong, openSong, reduceMotion } = useFeaturedSongs();
@@ -71,7 +64,7 @@ export function FeaturedSongsSection() {
     return () => document.removeEventListener("pointerdown", onPointerDown);
   }, [touchLike, expandedSongId]);
 
-  const pages = useMemo(() => chunkSongs(songs, isMobile ? 4 : PAGE_SIZE), [songs, isMobile]);
+  const pages = useMemo(() => chunkArray(songs, isMobile ? 4 : PAGE_SIZE), [songs, isMobile]);
   const [activePage, setActivePage] = useState(0);
   const pageRefs = useRef<Array<HTMLDivElement | null>>([]);
 
