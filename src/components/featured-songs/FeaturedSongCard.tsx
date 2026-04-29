@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight, Guitar, PlayCircle } from "lucide-react";
 
-import type { FeaturedSong } from "./useFeaturedSongs";
+import { type FeaturedSong } from "@/types";
 
 type FeaturedSongCardProps = {
   song: FeaturedSong;
@@ -76,7 +76,7 @@ function buildShortArtistLine(artist: string) {
   return normalized;
 }
 
-export function FeaturedSongCard({ song, index, reduceMotion, expanded, touchLike, onActivate, onOpen }: FeaturedSongCardProps) {
+export function FeaturedSongCard({ song, index, reduceMotion, expanded, touchLike, onActivate, onOpen }: FeaturedSongCardProps & { key?: string }) {
   const [imageFailed, setImageFailed] = useState(false);
   const hasCover = Boolean(song.coverUrl) && !imageFailed;
   const displayTitle = useDisplaySongTitle(song.title);

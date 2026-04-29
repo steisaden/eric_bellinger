@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
-import { DISCOGRAPHY, type DiscographyItem } from "@/data/discography";
+import { DISCOGRAPHY } from "@/data/discography";
+import type { DiscographyItem } from "@/types";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 export type DiscographyLink = {

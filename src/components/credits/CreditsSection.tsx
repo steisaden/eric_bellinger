@@ -2,10 +2,14 @@ import { useMemo, useState } from "react";
 
 import { PenTool, Search, Sparkles } from "lucide-react";
 
+import { SongwritingCredit } from "@/types";
+
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 import { CreditRow } from "./CreditRow";
 import { useCredits } from "./useCredits";
+import { CreditStatCard } from "./CreditStatCard";
+import { NotableRecordCard } from "./NotableRecordCard";
 
 const filterOptions = [
   { id: "all", label: "All" },
@@ -14,19 +18,6 @@ const filterOptions = [
   { id: "2010s", label: "2010s" },
   { id: "2020s", label: "2020s" },
 ] as const;
-
-function splitFeaturedTitle(title: string) {
-  const match = title.match(/^(.*?)(?:\s*\((?:feat\.?|ft\.?|featuring)\s*(.+)\))$/i);
-
-  if (!match) {
-    return { baseTitle: title, featureText: null };
-  }
-
-  return {
-    baseTitle: match[1].trim(),
-    featureText: `feat. ${match[2].trim()}`,
-  };
-}
 
 export function CreditsSection() {
   const { credits, sectionCopy, summary, spotifyTopVisibleSongs, latestYear } = useCredits();
@@ -40,7 +31,7 @@ export function CreditsSection() {
     return credits.filter((credit) => {
       const matchesQuery =
         normalizedQuery.length === 0 ||
-        [credit.title, credit.artist, credit.primaryArtist, credit.role, credit.parentProject ?? "", credit.notes, credit.notableAchievement]
+        [credit.title, credit.artist, credit.primaryArtist, credit.role, credit.parentProject ?? "", credit.notes, credit.notabilityReason]
           .join(" ")
           .toLowerCase()
           .includes(normalizedQuery);
@@ -89,17 +80,21 @@ export function CreditsSection() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {[
-            { label: "Spotify songwriter page", value: summary.spotifyReportedSongsWritten.toString(), caption: "songs written reported publicly" },
-            { label: "Verified public credits", value: summary.verifiedPublicCreditsInThisFile.toString(), caption: "rows safe for the public table" },
-            { label: "Notable highlights", value: summary.notableHighlightsCount.toString(), caption: "featured records and anchors" },
-          ].map((stat) => (
-            <div key={stat.label} className="editorial-panel p-6">
-              <div className="text-[10px] uppercase tracking-[0.28em] text-[#ffd36e]">{stat.label}</div>
-              <div className="mt-3 text-4xl font-light text-white md:text-5xl">{stat.value}</div>
-              <div className="mt-2 text-sm text-white/58">{stat.caption}</div>
-            </div>
-          ))}
+          <CreditStatCard
+            label="Spotify songwriter page"
+            value={summary.spotifyReportedSongsWritten.toString()}
+            caption="songs written reported publicly"
+          />
+          <CreditStatCard
+            label="Verified public credits"
+            value={summary.verifiedPublicCreditsInThisFile.toString()}
+            caption="rows safe for the public table"
+          />
+          <CreditStatCard
+            label="Notable highlights"
+            value={summary.notableHighlightsCount.toString()}
+            caption="featured records and anchors"
+          />
         </div>
 
         <div className="mt-10 rounded-[28px] border border-white/10 bg-white/[0.035] p-5 shadow-[0_18px_80px_rgba(0,0,0,0.22)] backdrop-blur-[12px] md:p-6">
@@ -180,7 +175,12 @@ export function CreditsSection() {
             <div className="max-h-[760px] overflow-y-auto scrollbar-hide bg-black/20">
               {filteredCredits.length > 0 ? (
                 filteredCredits.map((credit, index) => (
-                  <CreditRow key={credit.id} credit={credit} index={index} reduceMotion={reduceMotion} />
+                  <CreditRow
+                    key={credit.id}
+                    credit={credit as SongwritingCredit}
+                    index={index}
+                    reduceMotion={reduceMotion}
+                  />
                 ))
               ) : (
                 <div className="px-6 py-12 text-center text-sm text-white/58">
@@ -198,40 +198,12 @@ export function CreditsSection() {
         <div className="mt-10 rounded-[28px] border border-white/10 bg-white/[0.035] p-5 md:p-6">
           <p className="artist-eyebrow text-[#ffd36e]">NOTABLE RECORDS</p>
           <div className="mt-3 grid gap-5 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-            {spotifyTopVisibleSongs.map((song) => {
-              const { baseTitle, featureText } = splitFeaturedTitle(song.title);
-
-              return (
-                <article
-                  key={`${song.rank}-${song.title}`}
-                  className="receipt-card flex h-full flex-col rounded-[26px] p-5 shadow-[0_18px_50px_rgba(0,0,0,0.22)]"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="text-[10px] uppercase tracking-[0.28em] text-[#ffd36e]">#{song.rank}</div>
-                    <div className="rounded-full border border-white/10 bg-white/6 px-2.5 py-1 text-[9px] uppercase tracking-[0.24em] text-white/42">
-                      Spotify snapshot
-                    </div>
-                  </div>
-
-                  <div className="mt-4 min-w-0">
-                    <h4 className="text-[1.1rem] font-medium leading-tight text-white md:text-[1.28rem]">{baseTitle}</h4>
-                    {featureText ? <p className="mt-1 text-sm text-white/58">{featureText}</p> : null}
-                    <p className="mt-2 text-sm text-white/72">{song.artist}</p>
-                  </div>
-
-                  {song.notabilityReason ? (
-                    <p className="copy-clamp-3 mt-3 text-xs leading-relaxed text-white/52">{song.notabilityReason}</p>
-                  ) : (
-                    <p className="mt-3 text-xs leading-relaxed text-white/40">Highlighted from Spotify’s public songwriter snapshot.</p>
-                  )}
-
-                  <div className="mt-4 flex items-center justify-between border-t border-white/8 pt-3 text-[10px] uppercase tracking-[0.24em] text-white/42">
-                    <span>Visible row</span>
-                    <span>{song.spotifyStreamsSnapshot.toLocaleString()} streams</span>
-                  </div>
-                </article>
-              );
-            })}
+            {spotifyTopVisibleSongs.map((song) => (
+              <NotableRecordCard
+                key={`${song.rank}-${song.title}`}
+                song={song as unknown as SongwritingCredit}
+              />
+            ))}
           </div>
         </div>
       </div>

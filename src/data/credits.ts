@@ -1,8 +1,9 @@
 import { songwritingCredits347Snapshot } from "./songwritingCredits347.generated";
+import type { SongwritingCredit } from "@/types";
 
 export type SpotifyTopVisibleSong = (typeof songwritingCredits347Snapshot.spotifyTopVisibleSongs)[number];
 export type NotableSong = (typeof songwritingCredits347Snapshot.notableSongs)[number];
-export type VerifiedPublicCredit = (typeof songwritingCredits347Snapshot.verifiedPublicCredits)[number];
+export type VerifiedPublicCredit = SongwritingCredit;
 export type CreditsSectionCopy = typeof songwritingCredits347Snapshot.sectionCopy;
 export type CreditsSummary = typeof songwritingCredits347Snapshot.summary;
 

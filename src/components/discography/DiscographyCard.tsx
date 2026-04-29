@@ -1,52 +1,22 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, Guitar, PlayCircle } from "lucide-react";
 
-import type { DiscographyItem } from "@/data/discography";
+import type { DiscographyItem } from "@/types";
 import { CoverMedia } from "./CoverMedia";
+import { getAlbumCardTitle, isAcousticRelease } from "@/lib/formatters";
 
 type DiscographyCardProps = {
   item: DiscographyItem;
-  onOpen: (id: DiscographyItem["id"]) => void;
+  onOpen: (id: string) => void;
   reduceMotion: boolean;
   featured?: boolean;
 };
 
-const CARD_TITLE_OVERRIDES: Record<string, string> = {
-  "it'll all make sense later": "It'll All Make Sense",
-  "it'll all make sense later (deluxe)": "It'll All Make Sense Later",
-  "the rebirth 3: the party & the bedroom": "The Rebirth 3: The Party",
-  "the rebirth 3: the party & the bedroom (acoustic)": "The Rebirth 3: The Party",
-  "the rebirth 3: remixes & more": "The Rebirth 3: Remixes",
-};
-
-const normalizeTitle = (value: string) => value.trim().toLowerCase();
-
-const getCardTitle = (item: DiscographyItem) => {
-  const normalized = normalizeTitle(item.title);
-  const override = CARD_TITLE_OVERRIDES[normalized];
-  if (override) {
-    return override;
-  }
-
-  const acousticSuffixStripped = item.title.replace(/\s*\((?:acoustic(?: version)?|acoustics?)\)$/i, "");
-  if (acousticSuffixStripped !== item.title) {
-    return acousticSuffixStripped;
-  }
-
-  if (item.title.length > 32 && item.title.includes(" & ")) {
-    return item.title.split(" & ")[0].trim();
-  }
-
-  return item.title;
-};
-
-const isAcousticRelease = (item: DiscographyItem) => /acoustic/i.test(item.title) || /acoustic/i.test(item.type);
-
-export function DiscographyCard({ item, onOpen, reduceMotion, featured = false }: DiscographyCardProps) {
+export function DiscographyCard({ item, onOpen, reduceMotion, featured = false }: DiscographyCardProps & { key?: string }) {
   const coverAsset = item.coverAsset ?? { kind: "image", src: item.coverUrl, poster: item.coverUrl };
   const hasMotionCover = coverAsset.kind === "video";
-  const displayTitle = getCardTitle(item);
-  const acoustic = isAcousticRelease(item);
+  const displayTitle = getAlbumCardTitle(item.title);
+  const acoustic = isAcousticRelease(item.title, item.type);
 
   return (
     <motion.button
